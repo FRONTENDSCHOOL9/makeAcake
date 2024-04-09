@@ -13,7 +13,7 @@ export default function Header() {
     return (
         <StyledHeader>
           <StyledNav onClick={handleOpenMenu} />
-          {open && <Menu />}
+          {open && <Menu open={open} />}
           <StyledHome />
         </StyledHeader>
     );
