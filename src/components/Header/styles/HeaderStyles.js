@@ -1,4 +1,7 @@
 import styled from "styled-components"
+import logo from "@assets/images/logo.svg"
+import nav from "@assets/images/nav.svg"
+
 
 export const StyledHeader = styled.header`
   background-color: #fff;
@@ -10,7 +13,41 @@ export const StyledHeader = styled.header`
   top: 0;
   width: 100%;
   box-sizing: border-box;
+  display: flex;
+  // flex: 1 1 0;
 `;
+
+export const StyledNav = styled.div`
+  margin: 30px 0;
+  margin-left: 14px;
+
+  // box-shadow: inset 0 0 10px blue;
+  width: 14px;
+  height: 14px;
+  display: flex;
+  align-items: center;
+  background-image: url(${nav});
+  background-size: 100%;
+  
+  position: fixed;
+
+`;
+
+export const StyledHome = styled.div`
+  // box-shadow: inset 0 0 10px red;
+  display: flex;
+  justify-content: center;
+  width: 91px;
+  height: 35px;
+  margin: auto;
+  background-image: url(${logo});
+  // background: no-repeat;
+  background-size: 100%;
+
+  
+
+  `;
+
 
 export const StyledMenu = styled.div`
   margin-top: 70px; // header height만큼 띄우기
@@ -25,6 +62,7 @@ export const StyledMenu = styled.div`
   gap: 10px;
   border-right: 1px solid #000;
   z-index: -1;
+  position:fixed;
 `;
 
 export const StyledMenuContent = styled.div`

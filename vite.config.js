@@ -13,6 +13,7 @@ export default defineConfig({
       { find: "@utils", replacement: "/src/utils" },
       { find: "@state", replacement: "/src/state" },
       { find: "@query", replacement: "/src/query" },
+      { find: "@assets", replacement: "/src/assets" },
     ],
   },
 })

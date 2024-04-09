@@ -1,11 +1,22 @@
 import Menu from "./Menu.jsx";
-import {StyledHeader} from "./styles/HeaderStyles.js";
+import {StyledHeader, StyledNav, StyledHome} from "./styles/HeaderStyles.js";
 
 export default function Header() {
 
     return (
         <StyledHeader>
-          <Menu />
+          <StyledNav>
+
+          </StyledNav>
+          <StyledHome>
+
+          </StyledHome>
+
+          <Menu/>
+
+          
+
         </StyledHeader>
+
     );
 };
