@@ -8,13 +8,13 @@ export const StyledHeader = styled.header`
   color: #fff;
   height: 70px;
   border-bottom: 1px solid #000;
-  position: absolute;
+ /*  position: absolute;
   left: 0;
-  top: 0;
+  top: 0; */
   width: 100%;
   box-sizing: border-box;
   display: flex;
-  // flex: 1 1 0;
+  /* flex: 1 1 0; */
 `;
 
 export const StyledNav = styled.div`
