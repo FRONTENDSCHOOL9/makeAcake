@@ -1,6 +1,6 @@
 import {useState, useEffect} from "react";
 
-import {StyledFilterLabel, StyledFilterSelect, StyledUl} from "./styles/BrowseStyles.js"
+import {StyledFilterLabel, StyledFilterSelect, StyledContainer} from "./styles/BrowseStyles.js"
 import {StyledHeading, StyledLayout} from "@styles/commonStyled.js";
 
 import BrowseGnb from "./components/BrowseGnb.jsx";
@@ -97,11 +97,11 @@ export default function Browse() {
               </StyledFilterSelect>
             </StyledFilterLabel>
 
-            <StyledUl>
+            <StyledContainer>
               {filteredCakes.map(cake => (
                 <Card key={cake.name} cake={cake}/>
               ))}
-            </StyledUl>
+            </StyledContainer>
         </StyledLayout> 
     )
 }
