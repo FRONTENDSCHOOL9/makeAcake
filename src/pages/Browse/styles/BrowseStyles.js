@@ -25,7 +25,7 @@ export const StyledFilterSelect = styled.select`
   margin-left: 8px;
 `
 
-export const StyledUl = styled.ul`
+export const StyledContainer = styled.ul`
   list-style: none;
   margin-top: 40px;
   display: flex;
