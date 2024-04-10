@@ -1,9 +1,9 @@
 import {useState, useEffect} from "react";
 
 import {StyledFilterLabel, StyledFilterSelect, StyledContainer} from "./styles/BrowseStyles.js"
-import {StyledHeading, StyledLayout} from "@styles/commonStyled.js";
+import {StyledLayout} from "@components/Gnb/styles/GnbStyled.js";
 
-import BrowseGnb from "./components/BrowseGnb.jsx";
+import Gnb from "../../components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
 
 export default function Browse() {
@@ -82,9 +82,7 @@ export default function Browse() {
 
     return (
         <StyledLayout>
-            <StyledHeading>케이크 찾기</StyledHeading>
-            <BrowseGnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}/>
-
+            <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>케이크 찾기</Gnb>
             <StyledFilterLabel>
               필터
               <StyledFilterSelect value={selectedTaste} onChange={handleSelectTaste}>

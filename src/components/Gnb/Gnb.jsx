@@ -1,8 +1,10 @@
 import PropTypes from "prop-types";
-import {StyledGnb, StyledGnbItem} from "@styles/commonStyled.js"
+import {StyledHeading, StyledGnb, StyledGnbItem} from "@components/Gnb/styles/GnbStyled.js"
 
-export default function BrowseGnb({categories, selectedCategory, onSelect}) {
+export default function Gnb({children, categories, selectedCategory, onSelect}) {
     return (
+      <>
+        <StyledHeading>{children}</StyledHeading>
         <StyledGnb>
             {categories.map(category => {
                 return (
@@ -12,10 +14,12 @@ export default function BrowseGnb({categories, selectedCategory, onSelect}) {
                 )
             })}
         </StyledGnb>
+      </>
     )
 }
 
-BrowseGnb.propTypes = {
+Gnb.propTypes = {
+  children: PropTypes.node.isRequired,
   categories: PropTypes.array.isRequired,
   selectedCategory: PropTypes.string.isRequired,
   onSelect: PropTypes.func.isRequired
