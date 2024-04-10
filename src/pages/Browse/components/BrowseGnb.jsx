@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import {StyledGnb, StyledGnbItem} from "@pages/Browse/styles/BrowseStyles.js"
+import {StyledGnb, StyledGnbItem} from "@styles/commonStyled.js"
 
 export default function BrowseGnb({categories, selectedCategory, onSelect}) {
     return (

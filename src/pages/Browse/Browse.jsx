@@ -47,7 +47,6 @@ export default function Browse() {
       fetchData();
     }, []); */
     
-
     // 아래는 위의 통신 대신 임시 가짜 데이터 생성
     useEffect (() => {
       const fakeCake = [
