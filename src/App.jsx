@@ -1,6 +1,6 @@
 import GlobalStyles from "@styles/GlobalStyle.js";
-import Header from "./components/Header/Header.jsx";
-import Browse from "@pages/Browse/Browse.jsx";
+import Header from "@components/Header/Header.jsx";
+import MyPage from "@pages/MyPage/MyPage.jsx";
 
 function App() {
 
@@ -8,9 +8,9 @@ function App() {
     <>
       <GlobalStyles />
       <Header/>
-      <Browse />
+      <MyPage/>
     </>
   )
 }
 
-export default App
+export default App;
