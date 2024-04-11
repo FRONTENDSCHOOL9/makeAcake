@@ -1,5 +1,7 @@
 import styled from "styled-components";
 
+const gapSize = 10;
+
 export const StyledMain = styled.div`
   background-color: rgb(0,0,0,0.5);
   width: 100vw;
@@ -37,10 +39,12 @@ export const StyledList = styled.div`
     justify-content: center;
   }
 
-  & .card {
-    box-shadow: inset 0 0 20px green;
-    flex-grow: 1;
-    min-width: 95px;
-    height: 125px;
+  & li {
+    width: calc((100% - ${gapSize * 2}px) / 3);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    cursor: pointer;
+    border: 1px solid #000;
   }
 `
