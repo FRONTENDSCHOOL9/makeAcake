@@ -1,4 +1,5 @@
 import Button from "@components/Button";
+import SearchBox from "@components/SearchBox/SearchBox";
 import { StyledList, StyledMain } from "@pages/Main/styles/MainStyles";
 import { useEffect, useState } from "react";
 
@@ -22,6 +23,7 @@ function Main() {
   }, [])
   return (
     <>
+      <SearchBox/>
       <StyledMain>
         <h1 className="title">당신만의<br/>케이크를<br/>찾아보세요</h1>
       </StyledMain>
@@ -40,8 +42,6 @@ function Main() {
         </StyledList>
         <Button>더 알아보기</Button>
       </div>
-
-
     </>
 
   )
