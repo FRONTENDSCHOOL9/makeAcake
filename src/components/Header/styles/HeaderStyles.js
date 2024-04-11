@@ -13,13 +13,17 @@ export const StyledHeader = styled.header`
   top: 0; */
   width: 100%;
   box-sizing: border-box;
-  display: flex;
-  /* flex: 1 1 0; */
+  // display: flex;
+  // /* flex: 1 1 0; */
+
+  display: grid;
+  grid-template-columns: 60px 1fr 60px;
+  align-items: center;
+  padding: ;
 `;
 
 export const StyledNav = styled.div`
-  margin: 30px 0;
-  margin-left: 14px;
+  margin: 5px 0 0 14px;
 
   // box-shadow: inset 0 0 10px blue;
   width: 14px;

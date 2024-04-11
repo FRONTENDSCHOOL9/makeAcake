@@ -9,6 +9,7 @@
       "@utils/*": ["utils/*"],
       "@state/*": ["state/*"],
       "@query/*": ["query/*"],
+      "@assets/*": ["assets/*"]
     }
   }
 }

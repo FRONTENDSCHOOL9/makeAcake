@@ -1,4 +1,5 @@
-import Button from "@components/Button";
+import Button from "@components/Button/Button.jsx";
+import SearchBox from "@components/SearchBox/SearchBox";
 import { StyledList, StyledMain } from "@pages/Main/styles/MainStyles";
 import { useEffect, useState } from "react";
 
@@ -22,6 +23,7 @@ function Main() {
   }, [])
   return (
     <>
+      <SearchBox/>
       <StyledMain>
         <h1 className="title">당신만의<br/>케이크를<br/>찾아보세요</h1>
       </StyledMain>
@@ -38,10 +40,9 @@ function Main() {
             { cakes.slice(0,6).map(cakes => (<li key={cakes.name}>{cakes.name}</li>)) }
           </ul>
         </StyledList>
-        <Button>더 알아보기</Button>
+          <Button>더 알아보기</Button>
+
       </div>
-
-
     </>
 
   )
