@@ -6,6 +6,7 @@ export const StyledHeading = styled.h1`
     text-align: center;
     padding: 17px 0 17px;
 `
+
 export const StyledGnb = styled.ul`
     display: flex;
     justify-content: center;

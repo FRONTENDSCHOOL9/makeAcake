@@ -1,6 +1,7 @@
+import noneRequest from "../../assets/images/noneRequest2.png";
 import { useState } from "react";
 
-import { StyledLayout } from "@styles/LayoutStyled";
+import { StyledLayout, StyledContainer } from "@styles/LayoutStyled";
 import Gnb from "../../components/Gnb/Gnb.jsx";
 
 export default function MyPage() {
@@ -21,6 +22,9 @@ export default function MyPage() {
   return (
     <StyledLayout>
       <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>My Page</Gnb>
+      <StyledContainer >
+        <img style={{width: "86px"}} src={noneRequest} alt="None Request" />
+      </StyledContainer>
 
       {/* 이후 추가 */}
     </StyledLayout>
