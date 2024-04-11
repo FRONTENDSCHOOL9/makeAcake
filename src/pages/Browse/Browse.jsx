@@ -1,7 +1,7 @@
 import {useState, useEffect} from "react";
 
 import {StyledFilterLabel, StyledFilterSelect, StyledContainer} from "./styles/BrowseStyles.js"
-import {StyledLayout} from "@components/Gnb/styles/GnbStyled.js";
+import {StyledLayout} from "@styles/LayoutStyled.js";
 
 import Gnb from "../../components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
