@@ -30,13 +30,13 @@ function Main() {
         <StyledList>
           <h3>신규 케이크</h3>
           <ul className="card-container">
-            { cakes.map(cakes => (<li key={cakes.name}>{cakes.name}</li>)) }
+            { cakes.slice(0,6).map(cakes => (<li key={cakes.name}>{cakes.name}</li>)) }
           </ul>
         </StyledList>
         <StyledList>
           <h3>인기 케이크</h3>
           <ul className="card-container">
-            { cakes.map(cakes => (<li key={cakes.name}>{cakes.name}</li>)) }
+            { cakes.slice(0,6).map(cakes => (<li key={cakes.name}>{cakes.name}</li>)) }
           </ul>
         </StyledList>
         <Button>더 알아보기</Button>
