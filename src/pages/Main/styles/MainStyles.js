@@ -5,7 +5,7 @@ const gapSize = 10;
 export const StyledMain = styled.div`
   background-color: rgb(0,0,0,0.5);
   width: 100vw;
-  height: 100vh;
+  height: calc(100vh - 70px);
 
   & > .title {
     position: absolute;
