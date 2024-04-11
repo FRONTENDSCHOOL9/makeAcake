@@ -8,9 +8,9 @@ function SearchBox() {
       <label htmlFor="site-search"></label>
       <SearchDiv>
         <Input type="search" id="site-search" placeholder="search cake..."/>
-        <Button>
+        <button type="button">
           <img src={searchImage} alt="검색" />
-        </Button>
+        </button>
       </SearchDiv>
     </SearchBoxDiv>
   )
