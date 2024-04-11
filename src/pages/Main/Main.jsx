@@ -1,5 +1,5 @@
 
-import Button from "@components/Button";
+import Button from "@components/Button/Button.jsx";
 import { StyledList, StyledMain } from "@pages/Main/styles/MainStyles";
 import { useEffect, useState } from "react";
 
@@ -39,7 +39,8 @@ function Main() {
             { cakes.slice(0,6).map(cakes => (<li key={cakes.name}>{cakes.name}</li>)) }
           </ul>
         </StyledList>
-        <Button>더 알아보기</Button>
+          <Button>더 알아보기</Button>
+
       </div>
 
 
