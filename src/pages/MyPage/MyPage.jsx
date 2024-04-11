@@ -11,7 +11,7 @@ export default function MyPage() {
     {name: "정보 수정", type: "info"},
   ];
 
-  const [selectedCategory, setSelectedCategory] = useState(categories[0].name);
+  const [selectedCategory, setSelectedCategory] = useState(categories[0].type);
 
 
   function handleSelectCategory(category) {
