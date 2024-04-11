@@ -34,9 +34,9 @@ export const initData = async (nextSeq) => {
               id: 2,
               name: '회사',
               value: '서울시 강남구 신사동 234',
-            }
-          ]
-        }
+            },
+          ],
+        },
       },
       {
         _id: await nextSeq('user'),
@@ -61,9 +61,9 @@ export const initData = async (nextSeq) => {
               id: 2,
               name: '학교',
               value: '서울시 강남구 역삼동 234',
-            }
-          ]
-        }
+            },
+          ],
+        },
       },
       {
         _id: await nextSeq('user'),
@@ -89,9 +89,9 @@ export const initData = async (nextSeq) => {
               id: 2,
               name: '가게',
               value: '서울시 강남구 학동 234',
-            }
-          ]
-        }
+            },
+          ],
+        },
       },
       {
         _id: await nextSeq('user'),
@@ -116,9 +116,9 @@ export const initData = async (nextSeq) => {
               id: 2,
               name: '집',
               value: '서울시 강동구 성내동 234',
-            }
-          ]
-        }
+            },
+          ],
+        },
       },
     ],
     // 상품
@@ -133,11 +133,13 @@ export const initData = async (nextSeq) => {
         name: '캥거루 스턴트 독 로봇완구',
         quantity: 320,
         buyQuantity: 310,
-        mainImages: [{
-          url: `/files/sample-dog.jpg`,
-          fileName: 'sample-dog.jpg',
-          orgName: '스턴트 독.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-dog.jpg`,
+            name : 'sample-dog.jpg',
+            originalname: '스턴트 독.jpg',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>캥거루 스턴트 독 로봇완구 상세 설명</p>
@@ -149,7 +151,7 @@ export const initData = async (nextSeq) => {
           isBest: true,
           category: ['PC03', 'PC0301'],
           sort: 5,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -161,11 +163,13 @@ export const initData = async (nextSeq) => {
         name: '헬로카봇 스톰다이버',
         quantity: 200,
         buyQuantity: 198,
-        mainImages: [{
-          url: `/files/sample-diver.jpg`,
-          fileName: 'sample-diver.jpg',
-          orgName: '헬로카봇.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-diver.jpg`,
+            name : 'sample-diver.jpg',
+            originalname: '헬로카봇.jpg',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>헬로카봇 스톰다이버 상세 설명</p>
@@ -177,7 +181,7 @@ export const initData = async (nextSeq) => {
           isBest: true,
           category: ['PC01', 'PC0103'],
           sort: 4,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -189,11 +193,13 @@ export const initData = async (nextSeq) => {
         name: '레고 클래식 라지 조립 박스 10698',
         quantity: 100,
         buyQuantity: 99,
-        mainImages: [{
-          url: `/files/sample-classic.jpg`,
-          fileName: 'sample-classic.jpg',
-          orgName: '레고 클래식.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-classic.jpg`,
+            name : 'sample-classic.jpg',
+            originalname: '레고 클래식.jpg',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>레고 클래식 라지 조립 박스 10698 상세 설명</p>
@@ -205,7 +211,7 @@ export const initData = async (nextSeq) => {
           isBest: true,
           category: ['PC01', 'PC0103'],
           sort: 3,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -217,11 +223,13 @@ export const initData = async (nextSeq) => {
         name: '레고 테크닉 42151 부가티 볼리드',
         quantity: 100,
         buyQuantity: 89,
-        mainImages: [{
-          url: `/files/sample-bugatti.png`,
-          fileName: 'sample-bugatti.png',
-          orgName: '부가티.png'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-bugatti.png`,
+            name : 'sample-bugatti.png',
+            originalname: '부가티.png',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>레고 테크닉 42151 부가티 볼리드 상세 설명</p>
@@ -233,7 +241,7 @@ export const initData = async (nextSeq) => {
           isBest: true,
           category: ['PC03', 'PC0303'],
           sort: 1,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -245,11 +253,13 @@ export const initData = async (nextSeq) => {
         name: '레고 마인크래프트 21246 깊고 어두운 전장',
         quantity: 100,
         buyQuantity: 98,
-        mainImages: [{
-          url: `/files/sample-minecraft.png`,
-          fileName: 'sample-minecraft.png',
-          orgName: '마인크래프트.png'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-minecraft.png`,
+            name : 'sample-minecraft.png',
+            originalname: '마인크래프트.png',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>레고 마인크래프트 21246 깊고 어두운 전장 상세 설명</p>
@@ -262,7 +272,7 @@ export const initData = async (nextSeq) => {
           today: true,
           category: ['PC03', 'PC0303'],
           sort: 2,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -274,11 +284,13 @@ export const initData = async (nextSeq) => {
         name: '레고 마블 76247 헐크버스터: 와칸다의 전투',
         quantity: 100,
         buyQuantity: 99,
-        mainImages: [{
-          url: `/files/sample-hulk.png`,
-          fileName: 'sample-hulk.png',
-          orgName: '헐크.png'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-hulk.png`,
+            name : 'sample-hulk.png',
+            originalname: '헐크.png',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>레고 마블 76247 헐크버스터: 와칸다의 전투 상세 설명</p>
@@ -290,7 +302,7 @@ export const initData = async (nextSeq) => {
           isBest: false,
           category: ['PC03', 'PC0303'],
           sort: 1,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -302,11 +314,13 @@ export const initData = async (nextSeq) => {
         name: '할리갈리 보드게임',
         quantity: 100,
         buyQuantity: 98,
-        mainImages: [{
-          url: `/files/sample-halligalli.jpg`,
-          fileName: 'sample-halligalli.jpg',
-          orgName: '할리갈리.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-halligalli.jpg`,
+            name : 'sample-halligalli.jpg',
+            originalname: '할리갈리.jpg',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>할리갈리 보드게임 상세 설명</p>
@@ -318,7 +332,7 @@ export const initData = async (nextSeq) => {
           isBest: true,
           category: ['PC01', 'PC0102', 'PC010201'],
           sort: 3,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -330,11 +344,13 @@ export const initData = async (nextSeq) => {
         name: '루미큐브 클래식',
         quantity: 100,
         buyQuantity: 97,
-        mainImages: [{
-          url: `/files/sample-rummikub.png`,
-          fileName: 'sample-rummikub.png',
-          orgName: '루미큐브.png'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-rummikub.png`,
+            name : 'sample-rummikub.png',
+            originalname: '루미큐브.png',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>루미큐브 클래식 상세 설명</p>
@@ -346,7 +362,7 @@ export const initData = async (nextSeq) => {
           isBest: true,
           category: ['PC01', 'PC0102', 'PC010202'],
           sort: 8,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -358,11 +374,13 @@ export const initData = async (nextSeq) => {
         name: '짱구는 못말려 숲속 산책 직소퍼즐',
         quantity: 100,
         buyQuantity: 96,
-        mainImages: [{
-          url: `/files/sample-jjangu.jpg`,
-          fileName: 'sample-jjangu.jpg',
-          orgName: '짱구.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-jjangu.jpg`,
+            name : 'sample-jjangu.jpg',
+            originalname: '짱구.jpg',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>짱구는 못말려 숲속 산책 직소퍼즐 상세 설명</p>
@@ -375,7 +393,7 @@ export const initData = async (nextSeq) => {
           today: true,
           category: ['PC03', 'PC0302'],
           sort: 2,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -387,11 +405,13 @@ export const initData = async (nextSeq) => {
         name: '라푼젤 그녀의 꿈 직소퍼즐 KD-1000-001 + 그림 엽서(랜덤) + 품질보증서',
         quantity: 100,
         buyQuantity: 95,
-        mainImages: [{
-          url: `/files/sample-rapunzel.jpg`,
-          fileName: 'sample-rapunzel.jpg',
-          orgName: '라푼젤.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-rapunzel.jpg`,
+            name : 'sample-rapunzel.jpg',
+            originalname: '라푼젤.jpg',
+          },
+        ],
         content: `
           <div class="product-detail">
             <p>라푼젤 그녀의 꿈 직소퍼즐 KD-1000-001 + 그림 엽서(랜덤) + 품질보증서 상세 설명</p>
@@ -403,7 +423,7 @@ export const initData = async (nextSeq) => {
           isBest: true,
           category: ['PC01', 'PC0101'],
           sort: 4,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -415,23 +435,25 @@ export const initData = async (nextSeq) => {
         name: 'KC인증 스키비디 토일렛 피규어 블럭 8종 중국 호환 레고 블록 장난감 어린이 선물',
         quantity: 100,
         buyQuantity: 94,
-        mainImages: [{
-          url: `/files/sample-skibidi01.jpg`,
-          fileName: 'sample-skibidi01.jpg',
-          orgName: '피규어1.jpg'
-        },
-        {
-          url: `/files/sample-skibidi02.jpg`,
-          fileName: 'sample-skibidi02.jpg',
-          orgName: '피규어2.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-skibidi01.jpg`,
+            name : 'sample-skibidi01.jpg',
+            originalname: '피규어1.jpg',
+          },
+          {
+            path : `/files/00-sample/sample-skibidi02.jpg`,
+            name : 'sample-skibidi02.jpg',
+            originalname: '피규어2.jpg',
+          },
+        ],
         content: `
           <div align="center"><p>*크리스마스 배송 안내</p></div>
           <div align="center"><p>택배사 물량 증가로 평소보다 2~3일 더 걸립니다.</p></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi03.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi03.jpg"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi04.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi04.jpg"></div>
           <div align="center"><br></div>
           <div align="center"><p>*반품 안내</p></div>`,
         createdAt: getTime(-16, -60 * 60 * 3),
@@ -442,7 +464,7 @@ export const initData = async (nextSeq) => {
           today: true,
           category: ['PC01', 'PC0103'], // 어린이 > 레고
           sort: 6,
-        }
+        },
       },
       {
         _id: await nextSeq('product'),
@@ -454,19 +476,21 @@ export const initData = async (nextSeq) => {
         name: '스키비디 토일렛 봉제 인형 (25cm-30cm) 시리즈 크리스마스 선물',
         quantity: 999,
         buyQuantity: 800,
-        mainImages: [{
-          url: `/files/sample-skibidi11.jpg`,
-          fileName: 'sample-skibidi11.jpg',
-          orgName: '토일렛.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-skibidi11.jpg`,
+            name : 'sample-skibidi11.jpg',
+            originalname: '토일렛.jpg',
+          },
+        ],
         content: `
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi12.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi12.jpg"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi13.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi13.jpg"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi14.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi14.jpg"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi15.jpg"></div>`,
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi15.jpg"></div>`,
         createdAt: getTime(-11, -60 * 60 * 12),
         updatedAt: getTime(-5, -60 * 60 * 6),
         extra: {
@@ -487,17 +511,19 @@ export const initData = async (nextSeq) => {
         name: 'KC인증 스키비디 토일렛 피규어 블럭 4종 중국 호환 레고 블록 장난감 어린이 선물',
         quantity: 99,
         buyQuantity: 94,
-        mainImages: [{
-          url: `/files/sample-skibidi21.jpg`,
-          fileName: 'sample-skibidi21.jpg',
-          orgName: '스키비디.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-skibidi21.jpg`,
+            name : 'sample-skibidi21.jpg',
+            originalname: '스키비디.jpg',
+          },
+        ],
         content: `
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi22.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi22.jpg"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi23.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi23.jpg"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-skibidi24.jpg"></div>`,
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-skibidi24.jpg"></div>`,
         createdAt: getTime(-10, -60 * 60 * 12),
         updatedAt: getTime(-5, -60 * 60 * 6),
         extra: {
@@ -518,28 +544,30 @@ export const initData = async (nextSeq) => {
         name: '푸쉬팝게임기 팝잇 푸시팝 게임기 두더지게임 핑거 뽁뽁이 애니멀 1+1',
         quantity: 300,
         buyQuantity: 298,
-        mainImages: [{
-          url: `/files/sample-pushpop01.jpg`,
-          fileName: 'sample-pushpop01.jpg',
-          orgName: '푸쉬팝1.jpg'
-        },
-        {
-          url: `/files/sample-pushpop02.jpg`,
-          fileName: 'sample-pushpop02.jpg',
-          orgName: '푸쉬팝2.jpg'
-        },
-        {
-          url: `/files/sample-pushpop03.jpg`,
-          fileName: 'sample-pushpop03.jpg',
-          orgName: '푸쉬팝3.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-pushpop01.jpg`,
+            name : 'sample-pushpop01.jpg',
+            originalname: '푸쉬팝1.jpg',
+          },
+          {
+            path : `/files/00-sample/sample-pushpop02.jpg`,
+            name : 'sample-pushpop02.jpg',
+            originalname: '푸쉬팝2.jpg',
+          },
+          {
+            path : `/files/00-sample/sample-pushpop03.jpg`,
+            name : 'sample-pushpop03.jpg',
+            originalname: '푸쉬팝3.jpg',
+          },
+        ],
         content: `
           <div align="center"><p>푸쉬팝게임기 팝잇 푸시팝 게임기 두더지게임 핑거 뽁뽁이 애니멀을 구매하시는 모든 분께 사은품(무작위)으로 하나 더 드립니다.</p></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-pushpop04.gif"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-pushpop04.gif"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-pushpop05.jpg"></div>
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-pushpop05.jpg"></div>
           <div align="center"><br></div>
-          <div align="center"><img src="${process.env.API_HOST}/api/files/sample-pushpop06.jpg"></div>`,
+          <div align="center"><img src="${process.env.API_HOST}/api/files/00-sample/sample-pushpop06.jpg"></div>`,
         createdAt: getTime(-3, -60 * 60 * 12),
         updatedAt: getTime(-3, -60 * 60 * 12),
         extra: {
@@ -560,16 +588,18 @@ export const initData = async (nextSeq) => {
         name: '샤넬 NO.5',
         quantity: 999999,
         buyQuantity: 0,
-        mainImages: [{
-          url: `/files/sample-pushpop01.jpg`,
-          fileName: 'sample-pushpop01.jpg',
-          orgName: '샤넬.jpg'
-        }],
+        mainImages: [
+          {
+            path: `/files/00-sample/sample-pushpop01.jpg`,
+            name: 'sample-pushpop01.jpg',
+            originalname: '샤넬.jpg',
+          },
+        ],
         content: `샤넬 향수`,
         createdAt: getTime(-3, -60 * 60 * 12),
         updatedAt: getTime(-3, -60 * 60 * 12),
         extra: {
-          depth: 1
+          depth: 1,
         },
       },
       // 16번 상품. 옵션이 있는 경우 옵션 상품 정보. 15번 상품의 하위 상품(옵션)
@@ -583,18 +613,20 @@ export const initData = async (nextSeq) => {
         buyQuantity: 0,
         show: true,
         active: true,
-        mainImages: [{
-          url: `/files/sample-pushpop03.jpg`,
-          fileName: 'sample-pushpop03.jpg',
-          orgName: '샤넬.jpg'
-        }],
+        mainImages: [
+          {
+            path : `/files/00-sample/sample-pushpop03.jpg`,
+            name : 'sample-pushpop03.jpg',
+            originalname: '샤넬.jpg',
+          },
+        ],
         content: `3달 쓴 향수입니다.`,
         createdAt: getTime(-3, -60 * 60 * 12),
         updatedAt: getTime(-3, -60 * 60 * 12),
         extra: {
           depth: 2,
           parent: 15,
-          size: '200mm'
+          size: '200mm',
         },
       },
     ],
@@ -610,11 +642,15 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS020',
             name: '헬로카봇 스톰다이버',
-            image: `/files/sample-diver.jpg`,
+            image: {
+              path : `/files/00-sample/sample-diver.jpg`,
+              name : 'sample-diver.jpg',
+              originalname: '헬로카봇.jpg',
+            },
             quantity: 2,
             price: 34520,
             reply_id: 3,
-          }
+          },
         ],
         cost: {
           products: 34520,
@@ -623,14 +659,14 @@ export const initData = async (nextSeq) => {
             products: 0,
             shippingFees: 0,
           },
-          total: 37020
+          total: 37020,
         },
         address: {
           name: '회사',
           value: '서울시 강남구 신사동 234',
         },
         createdAt: getTime(-6, -60 * 60 * 3),
-        updatedAt: getTime(-6, -60 * 60 * 3)
+        updatedAt: getTime(-6, -60 * 60 * 3),
       },
       {
         _id: await nextSeq('order'),
@@ -642,7 +678,11 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS010',
             name: '레고 클래식 라지 조립 박스 10698',
-            image: `/files/sample-classic.jpg`,
+            image: {
+              path : `/files/00-sample/sample-classic.jpg`,
+              name : 'sample-classic.jpg',
+              originalname: '레고 클래식.jpg',
+            },
             quantity: 1,
             price: 48870,
           },
@@ -651,11 +691,15 @@ export const initData = async (nextSeq) => {
             seller_id: 3,
             state: 'OS010',
             name: '레고 테크닉 42151 부가티 볼리드',
-            image: `/files/sample-bugatti.png`,
+            image: {
+              path : `/files/00-sample/sample-bugatti.png`,
+              name : 'sample-bugatti.png',
+              originalname: '부가티.png',
+            },
             quantity: 2,
             price: 90000,
             reply_id: 2,
-          }
+          },
         ],
         cost: {
           products: 138840,
@@ -664,14 +708,14 @@ export const initData = async (nextSeq) => {
             products: 13880,
             shippingFees: 3500,
           },
-          total: 124960
+          total: 124960,
         },
         address: {
           name: '집',
           value: '서울시 강남구 역삼동 123',
         },
         createdAt: getTime(-4, -60 * 60 * 22),
-        updatedAt: getTime(-2, -60 * 60 * 12)
+        updatedAt: getTime(-2, -60 * 60 * 12),
       },
       {
         _id: await nextSeq('order'),
@@ -683,11 +727,15 @@ export const initData = async (nextSeq) => {
             seller_id: 3,
             state: 'OS110',
             name: '레고 테크닉 42151 부가티 볼리드',
-            image: `/files/sample-bugatti.png`,
+            image: {
+              path : `/files/00-sample/sample-bugatti.png`,
+              name : 'sample-bugatti.png',
+              originalname: '부가티.png',
+            },
             quantity: 1,
             price: 45000,
             reply_id: 1,
-          }
+          },
         ],
         cost: {
           products: 45000,
@@ -696,45 +744,45 @@ export const initData = async (nextSeq) => {
             products: 4500,
             shippingFees: 0,
           },
-          total: 44000
+          total: 44000,
         },
         address: {
           name: '학교',
           value: '서울시 강남구 역삼동 234',
         },
         payment: {
-          "success": true,
-          "imp_uid": "imp_138601212227",
-          "pay_method": "card",
-          "merchant_uid": "mid_1702540599641",
-          "name": "레고 테크닉 42151 부가티 볼리드",
-          "paid_amount": 45000,
-          "currency": "KRW",
-          "pg_provider": "html5_inicis",
-          "pg_type": "payment",
-          "pg_tid": "StdpayCARDINIpayTest20231214165706277441",
-          "apply_num": "30123157",
-          "buyer_name": "데이지",
-          "buyer_email": "aceppin@daum.net",
-          "buyer_tel": "01044445555",
-          "buyer_addr": "",
-          "buyer_postcode": "",
-          "custom_data": null,
-          "status": "paid",
-          "paid_at": 1702540626,
-          "receipt_url": "https://iniweb.inicis.com/DefaultWebApp/mall/cr/cm/mCmReceipt_head.jsp?noTid=StdpayCARDINIpayTest20231214165706277441&noMethod=1",
-          "card_name": "국민KB카드",
-          "bank_name": null,
-          "card_quota": 0,
-          "card_number": "457973*********5"
+          success: true,
+          imp_uid: 'imp_138601212227',
+          pay_method: 'card',
+          merchant_uid: 'mid_1702540599641',
+          name: '레고 테크닉 42151 부가티 볼리드',
+          paid_amount: 45000,
+          currency: 'KRW',
+          pg_provider: 'html5_inicis',
+          pg_type: 'payment',
+          pg_tid: 'StdpayCARDINIpayTest20231214165706277441',
+          apply_num: '30123157',
+          buyer_name: '데이지',
+          buyer_email: 'aceppin@daum.net',
+          buyer_tel: '01044445555',
+          buyer_addr: '',
+          buyer_postcode: '',
+          custom_data: null,
+          status: 'paid',
+          paid_at: 1702540626,
+          receipt_url: 'https://iniweb.inicis.com/DefaultWebApp/mall/cr/cm/mCmReceipt_head.jsp?noTid=StdpayCARDINIpayTest20231214165706277441&noMethod=1',
+          card_name: '국민KB카드',
+          bank_name: null,
+          card_quota: 0,
+          card_number: '457973*********5',
         },
         delivery: {
-          company: "한진 택배",
-          trackingNumber: "364495958003",
-          url: "https://trace.cjlogistics.com/next/tracking.html?wblNo=364495958003"
+          company: '한진 택배',
+          trackingNumber: '364495958003',
+          url: 'https://trace.cjlogistics.com/next/tracking.html?wblNo=364495958003',
         },
         createdAt: getTime(-3, -60 * 60 * 18),
-        updatedAt: getTime(-1, -60 * 60 * 1)
+        updatedAt: getTime(-1, -60 * 60 * 1),
       },
       {
         _id: await nextSeq('order'),
@@ -746,11 +794,15 @@ export const initData = async (nextSeq) => {
             seller_id: 2,
             state: 'OS310',
             name: '헬로카봇 스톰다이버',
-            image: `/files/sample-diver.jpg`,
+            image: {
+              path : `/files/00-sample/sample-diver.jpg`,
+              name : 'sample-diver.jpg',
+              originalname: '헬로카봇.jpg',
+            },
             quantity: 1,
             price: 17260,
             reply_id: 2,
-          }
+          },
         ],
         cost: {
           products: 17260,
@@ -759,19 +811,19 @@ export const initData = async (nextSeq) => {
             products: 0,
             shippingFees: 0,
           },
-          total: 19760
+          total: 19760,
         },
         address: {
           name: '학교',
           value: '서울시 강남구 역삼동 234',
         },
         delivery: {
-          company: "한진 택배",
-          trackingNumber: "364495958003",
-          url: "https://trace.cjlogistics.com/next/tracking.html?wblNo=364495958003"
+          company: '한진 택배',
+          trackingNumber: '364495958003',
+          url: 'https://trace.cjlogistics.com/next/tracking.html?wblNo=364495958003',
         },
         createdAt: getTime(-3, -60 * 60 * 18),
-        updatedAt: getTime(-1, -60 * 60 * 1)
+        updatedAt: getTime(-1, -60 * 60 * 1),
       },
     ],
     // 후기
@@ -789,7 +841,7 @@ export const initData = async (nextSeq) => {
         _id: await nextSeq('reply'),
         user_id: 2,
         order_id: 4,
-        product_id: 2,      
+        product_id: 2,
         rating: 4,
         content: '배송이 좀 느려요.',
         createdAt: getTime(-3, -60 * 60 * 1),
@@ -802,10 +854,10 @@ export const initData = async (nextSeq) => {
         rating: 1,
         content: '하루만에 고장났어요.',
         extra: {
-          title: '추천하지 않습니다.'
+          title: '추천하지 않습니다.',
         },
         createdAt: getTime(-2, -60 * 60 * 10),
-      }
+      },
     ],
     // 장바구니
     cart: [
@@ -850,19 +902,22 @@ export const initData = async (nextSeq) => {
         product_id: 2,
         memo: '첫째 크리스마스 선물.',
         createdAt: getTime(-3, -60 * 60 * 2),
-      }, {
+      },
+      {
         _id: await nextSeq('bookmark'),
         user_id: 4,
         product_id: 3,
         memo: '둘째 입학 선물',
         createdAt: getTime(-2, -60 * 60 * 20),
-      }, {
+      },
+      {
         _id: await nextSeq('bookmark'),
         user_id: 4,
         product_id: 4,
         memo: '이달 보너스타면 꼭!!!',
         createdAt: getTime(-1, -60 * 60 * 12),
-      }, {
+      },
+      {
         _id: await nextSeq('bookmark'),
         user_id: 2,
         product_id: 4,
@@ -879,7 +934,7 @@ export const initData = async (nextSeq) => {
         seller_id: 2,
         user: {
           _id: 4,
-          name: '데이지'
+          name: '데이지',
         },
         title: '크기가 얼만만한가요?',
         content: '아이가 6살인데 가지고 놀기 적당한 크기인가요?',
@@ -888,84 +943,88 @@ export const initData = async (nextSeq) => {
             _id: 1,
             user: {
               _id: 2,
-              name: '네오'
+              name: '네오',
             },
             content: '크기는 상품 상세정보에 나와 있습니다.',
             createdAt: getTime(-2, -60 * 60 * 20),
-            updatedAt: getTime(-2, -60 * 60 * 2)
+            updatedAt: getTime(-2, -60 * 60 * 2),
           },
           {
             _id: 2,
             user: {
               _id: 4,
-              name: '데이지'
+              name: '데이지',
             },
             content: '어디있나 모르겠어요.',
             createdAt: getTime(-2, -60 * 60 * 10),
-            updatedAt: getTime(-2, -60 * 60 * 1)
+            updatedAt: getTime(-2, -60 * 60 * 1),
           },
           {
             _id: 3,
             user: {
               _id: 2,
-              name: '네오'
+              name: '네오',
             },
             content: '높이 60cm 입니다.',
             createdAt: getTime(-2, -60 * 60 * 9),
-            updatedAt: getTime(-1, -60 * 60 * 20)
+            updatedAt: getTime(-1, -60 * 60 * 20),
           },
         ],
         createdAt: getTime(-3, -60 * 60 * 2),
-        updatedAt: getTime(-3, -60 * 60 * 2)
-      }, {
+        updatedAt: getTime(-3, -60 * 60 * 2),
+      },
+      {
         _id: await nextSeq('post'),
         type: 'qna',
         product_id: 1,
         seller_id: 2,
         user: {
           _id: 4,
-          name: '데이지'
+          name: '데이지',
         },
         title: '이번주 토요일까지 받아볼 수 있을까요?',
         content: '토요일 생일 선물로 준비중인데 그때까지 배송 가능할까요?',
         createdAt: getTime(-2, -60 * 60 * 1),
-        updatedAt: getTime(-1, -60 * 60 * 20)
-      }, {
+        updatedAt: getTime(-1, -60 * 60 * 20),
+      },
+      {
         _id: await nextSeq('post'),
         type: 'qna',
         product_id: 4,
         seller_id: 3,
         user: {
           _id: 2,
-          name: '네오'
+          name: '네오',
         },
         title: '배송 빨리 보내주세요.',
         content: '양품으로 보내주세요.',
         createdAt: getTime(-1, -60 * 60 * 14),
-        updatedAt: getTime(-1, -60 * 60 * 2)
-      }, {
+        updatedAt: getTime(-1, -60 * 60 * 2),
+      },
+      {
         _id: await nextSeq('post'),
         type: 'notice',
         user: {
           _id: 1,
-          name: '무지'
+          name: '무지',
         },
         title: '배송지연 안내',
         content: '크리스마스 물류 증가로 인해 평소보다 2~3일 지연될 예정입니다.',
         createdAt: getTime(-4, -60 * 60 * 2),
-        updatedAt: getTime(-2, -60 * 60 * 13)
-      }, {
+        updatedAt: getTime(-2, -60 * 60 * 13),
+      },
+      {
         _id: await nextSeq('post'),
         type: 'notice',
         user: {
           _id: 1,
-          name: '무지'
+          name: '무지',
         },
         title: '배송비 인상 안내',
         content: '택배사 배송비 인상으로 인해 기존 3,000원에서 3,500원으로 인상됩니다.',
         createdAt: getTime(-6, -60 * 60 * 20),
-        updatedAt: getTime(-4, -60 * 60 * 13)
-      }
+        updatedAt: getTime(-4, -60 * 60 * 13),
+      },
     ],
     // 코드
     code: [
@@ -977,183 +1036,185 @@ export const initData = async (nextSeq) => {
             sort: 2,
             code: 'PC01',
             value: '어린이',
-            depth: 1
+            depth: 1,
           },
           {
             sort: 3,
             code: 'PC0101',
             value: '퍼즐',
             parent: 'PC01',
-            depth: 2
+            depth: 2,
           },
           {
             sort: 1,
             code: 'PC0102',
             value: '보드게임',
             parent: 'PC01',
-            depth: 2
+            depth: 2,
           },
           {
             sort: 2,
             code: 'PC010201',
             value: '2인용',
             parent: 'PC0102',
-            depth: 3
+            depth: 3,
           },
           {
             sort: 1,
             code: 'PC010202',
             value: '3~4인용',
             parent: 'PC0102',
-            depth: 3
+            depth: 3,
           },
           {
             sort: 2,
             code: 'PC0103',
             value: '레고',
             parent: 'PC01',
-            depth: 2
+            depth: 2,
           },
           {
             sort: 4,
             code: 'PC0104',
             value: '로봇',
             parent: 'PC01',
-            depth: 2
+            depth: 2,
           },
 
           {
             sort: 1,
             code: 'PC02',
             value: '스포츠',
-            depth: 1
+            depth: 1,
           },
           {
             sort: 1,
             code: 'PC0201',
             value: '축구',
             parent: 'PC02',
-            depth: 2
+            depth: 2,
           },
           {
             sort: 3,
             code: 'PC0202',
             value: '야구',
             parent: 'PC02',
-            depth: 2
+            depth: 2,
           },
           {
             sort: 2,
             code: 'PC0203',
             value: '농구',
             parent: 'PC02',
-            depth: 2
+            depth: 2,
           },
 
           {
             sort: 3,
             code: 'PC03',
             value: '어른',
-            depth: 1
+            depth: 1,
           },
           {
             sort: 1,
             code: 'PC0301',
             value: '원격 조종',
             parent: 'PC03',
-            depth: 2
+            depth: 2,
           },
           {
             sort: 2,
             code: 'PC0302',
             value: '퍼즐',
             parent: 'PC03',
-            depth: 2
+            depth: 2,
           },
           {
             sort: 3,
             code: 'PC0303',
             value: '레고',
             parent: 'PC03',
-            depth: 2
+            depth: 2,
           },
-        ]
-      }, {
+        ],
+      },
+      {
         _id: 'orderState',
         title: '주문 상태',
         codes: [
           {
             sort: 1,
             code: 'OS010',
-            value: '주문 완료'
+            value: '주문 완료',
           },
           {
             sort: 2,
             code: 'OS020',
-            value: '결제 완료'
+            value: '결제 완료',
           },
           {
             sort: 3,
             code: 'OS030',
-            value: '배송 준비중'
+            value: '배송 준비중',
           },
           {
             sort: 4,
             code: 'OS035',
-            value: '배송중'
+            value: '배송중',
           },
           {
             sort: 5,
             code: 'OS040',
-            value: '배송 완료'
+            value: '배송 완료',
           },
           {
             sort: 6,
             code: 'OS110',
-            value: '반품 요청'
+            value: '반품 요청',
           },
           {
             sort: 7,
             code: 'OS120',
-            value: '반품 처리중'
+            value: '반품 처리중',
           },
           {
             sort: 8,
             code: 'OS130',
-            value: '반품 완료'
+            value: '반품 완료',
           },
           {
             sort: 9,
             code: 'OS210',
-            value: '교환 요청'
+            value: '교환 요청',
           },
           {
             sort: 10,
             code: 'OS220',
-            value: '교환 처리중'
+            value: '교환 처리중',
           },
           {
             sort: 11,
             code: 'OS230',
-            value: '교환 완료'
+            value: '교환 완료',
           },
           {
             sort: 12,
             code: 'OS310',
-            value: '환불 요청'
+            value: '환불 요청',
           },
           {
             sort: 13,
             code: 'OS320',
-            value: '환불 처리중'
+            value: '환불 처리중',
           },
           {
             sort: 14,
             code: 'OS330',
-            value: '환불 완료'
-          }
-        ]
-      }, {
+            value: '환불 완료',
+          },
+        ],
+      },
+      {
         _id: 'membershipClass',
         title: '회원 등급',
         codes: [
@@ -1161,7 +1222,7 @@ export const initData = async (nextSeq) => {
             sort: 1,
             code: 'MC01',
             value: '일반',
-            discountRate: 0,  // 할인율
+            discountRate: 0, // 할인율
           },
           {
             sort: 2,
@@ -1174,21 +1235,22 @@ export const initData = async (nextSeq) => {
             code: 'MC03',
             value: 'VIP',
             discountRate: 20,
-          }
-        ]
-      }
+          },
+        ],
+      },
     ],
     // 설정
     config: [
       {
         _id: 'shippingFees',
         title: '배송비',
-        value: 3500
-      }, {
+        value: 3500,
+      },
+      {
         _id: 'freeShippingFees',
         title: '배송비 무료 금액',
-        value: 50000
-      }
+        value: 50000,
+      },
     ],
-  }
+  };
 };
