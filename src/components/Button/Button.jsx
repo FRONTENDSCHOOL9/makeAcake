@@ -2,7 +2,7 @@ import PropTypes from 'prop-types';
 import styled from 'styled-components';
 
 Button.propTypes = {
-  children: PropTypes.string.isRequired
+  children: PropTypes.node.isRequired
 }
 
 const StyledButtonWrap=styled.div`

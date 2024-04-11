@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-<<<<<<< HEAD
-export default function MyPage() {
-    
-=======
 import { useState } from "react";
 
 import { StyledLayout } from "@styles/LayoutStyled";
@@ -30,15 +25,4 @@ export default function MyPage() {
       {/* 이후 추가 */}
     </StyledLayout>
   )
->>>>>>> feature/button
 }
-=======
-
-function MyPage() {
-  return (
-    <div>MyPage</div>
-  )
-}
-
-export default MyPage
->>>>>>> feature/searchbox
