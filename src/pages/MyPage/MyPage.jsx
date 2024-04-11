@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 export default function MyPage() {
     
 =======
@@ -31,3 +32,13 @@ export default function MyPage() {
   )
 >>>>>>> feature/button
 }
+=======
+
+function MyPage() {
+  return (
+    <div>MyPage</div>
+  )
+}
+
+export default MyPage
+>>>>>>> feature/searchbox
