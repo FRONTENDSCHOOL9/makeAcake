@@ -64,17 +64,25 @@ function Detail() {
       <StyledDetail>
         <h3>{ cakeInfo.name }</h3>
         <div>
-          <p>영업시간 <span>{ cakeInfo.workingday?.start }시 ~ { cakeInfo.workingday?.end }시</span></p>
-          <p>위치 <span>{ cakeInfo.address }</span></p>
-          <p>SNS <span>{ cakeInfo.sns }</span></p>
+          <dl>
+            <dt>영 업 시 간</dt>
+            <dd>{ cakeInfo.workingday?.start }시 ~ { cakeInfo.workingday?.end }시</dd>
+          </dl>
+          <dl>
+            <dt>위 치</dt>
+            <dd>{ cakeInfo.address }</dd>
+          </dl>
+          <dl>
+            <dt>S N S</dt>
+            <dd>{ cakeInfo.sns }</dd>
+          </dl>
         </div>
         <p>{ cakeInfo.content }</p>
         <div>
           <button type="button" onClick={ ()=> {setLike(like + 1)} }><img src={likeDisabled} alt="찜 추가"/></button>
-          <Button>예약하기</Button>
+          <Button>예약하기</Button> 
         </div>
       </StyledDetail>
-
     </div>
   )
 }
