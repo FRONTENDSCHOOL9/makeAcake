@@ -21,17 +21,14 @@ const GlobalStyles = createGlobalStyle`
 
     // 16px 기준
     --font-size-title: 2.5rem; // 24px
-    --font-size-large: 1.25rem; // 20px
-    --font-size-medium: 1rem; // 16px
-    --font-size-smaill: 0.825rem // 14px
+    --font-size-xlarge: 1.25rem; // 20px
+    --font-size-large: 1rem; // 16px
+    --font-size-medium: 0.875rem; // 14px
+    --font-size-small: 0.75rem // 12px
   }
 
 
   ${reset}
-  * {
-    margin: 0;
-    padding: 0;
-  }
 
   html, body, #root {
     font-size: 100%;
