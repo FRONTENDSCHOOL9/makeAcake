@@ -8,10 +8,10 @@ import Card from "@components/Card/Card.jsx";
 
 export default function MyPage() {
     const categories = [
-        {name: "예약 내역", type: "reserve", index: 0},
-        {name: "찜한 상품", type: "wish", index: 1 },
-        {name: "리뷰 관리", type: "review", index: 2},
-        {name: "정보 수정", type: "info", index: 3},
+        {name: "예약 내역", type: "reserve", },
+        {name: "찜한 상품", type: "wish",  },
+        {name: "리뷰 관리", type: "review", },
+        {name: "정보 수정", type: "info", },
     ];
 
     const [selectedCategory, setSelectedCategory] = useState(categories[0].type);
