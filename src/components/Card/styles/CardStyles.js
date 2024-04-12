@@ -17,6 +17,6 @@ export const StyledCardTitle = styled.h3`
 
 export const StyledCardInfo = styled.p`
   font-size: 12px;
-  margin-bottom: 10px;
+  margin-bottom: 4px;
   height: 14px;
 `

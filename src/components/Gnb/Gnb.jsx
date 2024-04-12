@@ -3,7 +3,6 @@ import {useState} from "react";
 import {StyledHeading, StyledGnb, StyledGnbItem} from "@components/Gnb/styles/GnbStyled.js"
 
 export default function Gnb({children, categories, selectedCategory, onSelect}) {
-  const [isSelected, setIsSelected] = useState(false);
     return (
       <>
         <StyledHeading>{children}</StyledHeading>
