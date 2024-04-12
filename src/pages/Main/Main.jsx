@@ -2,6 +2,7 @@ import Button from "@components/Button/Button.jsx";
 import SearchBox from "@components/SearchBox/SearchBox";
 import { StyledList, StyledMain } from "@pages/Main/styles/MainStyles";
 import { useEffect, useState } from "react";
+import { StyledFooter } from "@components/Footer/styles/FooterStyles";
 
 
 function Main() {
@@ -41,6 +42,7 @@ function Main() {
           </ul>
         </StyledList>
           <Button>더 알아보기</Button>
+          <StyledFooter />
 
       </div>
     </>
