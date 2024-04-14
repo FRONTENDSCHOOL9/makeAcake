@@ -1,4 +1,5 @@
-import styled from "styled-components";
+import {styled} from "styled-components";
+
 
 export const StyledHeading = styled.h1`
     font-size: 24px;
@@ -17,5 +18,5 @@ export const StyledGnbItem = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
-    border-bottom: ${({isSelected}) => isSelected ? "1px solid #000" : "none"}
+    border-bottom: ${({isSelected}) => (isSelected ? "1px solid #000" : "none")}
 `;

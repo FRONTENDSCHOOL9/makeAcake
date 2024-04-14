@@ -96,7 +96,7 @@ export default function Browse() {
 
             <StyledContainer>
               {filteredCakes.map(cake => (
-                <Card key={cake.name} cake={cake}/>
+                <Card key={cake.name} cake={cake} location="browse"/>
               ))}
             </StyledContainer>
         </StyledLayout> 

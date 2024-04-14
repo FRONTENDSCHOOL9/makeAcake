@@ -15,7 +15,5 @@ export const StyledContainer = styled.ul`
   margin-top: 40px;
   display: flex;
   flex-wrap: wrap;
-  // justify-content: start;
-
   gap: 10px;
 `
