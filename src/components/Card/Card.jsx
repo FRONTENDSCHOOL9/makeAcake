@@ -1,17 +1,65 @@
 import PropTypes from "prop-types"
 
-import {StyledCard, StyledCardTitle, StyledCardInfo} from "@components/Card/styles/CardStyles.js";
+import {StyledCard} from "@components/Card/styles/CardStyles.js";
 
-export default function Card({cake, locadtion}) {
+export default function Card(data) {
+
+  const {cake, location} = data;
+
   //placeholder 이미지 URL
   const placeholderImageUrl = 'https://via.placeholder.com/130';
 
   return (
-    <StyledCard>
-      <img src={placeholderImageUrl} alt={cake.name}/>
-      <StyledCardTitle>{cake.name}</StyledCardTitle>
-      <StyledCardInfo>₩{cake.price}</StyledCardInfo>
-      <StyledCardInfo>{cake.address}</StyledCardInfo>
+    <StyledCard location = {location}>
+      { 
+        location === "main" && (
+          <img src={placeholderImageUrl} alt={cake.name}/> 
+      )}
+
+      {
+        location === "reserve" && (
+          <>
+            <div className="imgBox">
+              <img src={placeholderImageUrl} alt={cake.name} />
+            </div>
+            <div className="descBox">
+                <h3 className="cardTitle">{cake.name}</h3>
+                <p className="price">₩{cake.price}</p>
+                <p className="pickDate">픽업 일시: {cake.count}</p>
+                <p className="address">픽업 장소: {cake.address}</p>
+            </div>
+          </>
+      )}
+
+      { 
+        location === "wish" && (
+          <>
+             <div className="imgBox">
+              <img src={placeholderImageUrl} alt={cake.name} />
+            </div>
+            <div className="descBox">
+              <h3 className="cardTitle">{cake.name}</h3>
+              <p className="price">₩{cake.price}</p>
+              <p className="address">{cake.address}</p>
+            </div>
+          </>
+      )}
+
+      {
+        location === "review" && (
+          <>
+             <div className="imgBox">
+              <img src={placeholderImageUrl} alt={cake.name} />
+            </div>
+            <div className="descBox">
+                <h3 className="cardTitle">{cake.name}</h3>
+                <p className="price">₩{cake.price}</p>
+                <p className="pickDate">주문 건수: {cake.count}</p>
+                <p className="address">등록 일자: {cake.enrollDate}</p>
+            </div>
+          </>
+        )
+      }
     </StyledCard>
   )
 }

@@ -26,17 +26,20 @@ export default function MyPage() {
             {
                 name: "녹차케이크",
                 price: "48000",
-                address:"서울특별시 강남구 역삼동"
+                address:"서울특별시 강남구 역삼동",
+                enrollDate: "2024-04-12 17:48"
             },
             {
                 name: "딸기케이크",
                 price: "50000",
-                address:"경기도 수원시 영통구 망포동"
+                address:"경기도 수원시 영통구 망포동",
+                enrollDate: "2024-04-10 12:35",
             },
             {
                 name: "초코케이크",
                 price: "52000",
-                address:"부산광역시 해운대구 우동"
+                address:"부산광역시 해운대구 우동",
+                enrollDate: "2024-04-08 08:55",
             },
         ];
 
@@ -53,23 +56,35 @@ export default function MyPage() {
             
             {/* 예약 내역 클릭 시 */}
             {selectedCategory === "reserve"  &&  
-                <StyledContainer >
-                 {/* {cakes.length === 0 ? (
-                     <img style={{width: "86px"}} src={noneRequest} alt="None Request" />
-                     ) : cakes.map(cake => (
-                         <Card key = {cake.name} cake={cake} site="myReserve" />
-                     )   
-                 )} */}
+                <StyledContainer>
+                {cakes.length === 0 ? (
+                    <img src={noneRequest} alt="None Request" />
+                    ) : cakes.map(cake => (
+                        <Card key = {cake.name} cake={cake} location="reserve" />
+                    )   
+                 )}
                 </StyledContainer>
             }
 
             {/* 찜한 상품 클릭 시 */}
             {selectedCategory === "wish" &&
-                <StyledContainer >
+                <StyledContainer>
                     {cakes.length === 0 ? (
-                        <img style={{width: "86px"}} src={noneRequest} alt="None Request" />
+                        <img src={noneRequest} alt="None Request" />
                         ) : cakes.map(cake => (
-                            <Card key = {cake.name} cake={cake} location="myReserve" />
+                            <Card key = {cake.name} cake={cake} location="wish" />
+                        )   
+                    )}
+                </StyledContainer>
+            }
+
+            {/* 리뷰 관리 클릭 시 */}
+            {selectedCategory === "review" &&
+                <StyledContainer>
+                    {cakes.length === 0 ? (
+                        <img src={noneRequest} alt="None Request" />
+                        ) : cakes.map(cake => (
+                            <Card key = {cake.name} cake={cake} location="review" />
                         )   
                     )}
                 </StyledContainer>
