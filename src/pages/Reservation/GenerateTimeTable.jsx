@@ -1,5 +1,6 @@
-import { TimeTable } from '@pages/Reservation/styles/TimeTableStyles';
+import { TimeTableListItem } from '@pages/Reservation/styles/GenerateTimeTableStyles';
 import PropTypes from 'prop-types';
+import { useState } from 'react';
 
 GenerateTimeTable.propTypes = {
   startTime: PropTypes.string,
@@ -7,7 +8,6 @@ GenerateTimeTable.propTypes = {
 }
 
 function GenerateTimeTable({startTime, endTime}) {
-
   const start = new Date(startTime);
   const end = new Date(endTime);
 
@@ -17,12 +17,15 @@ function GenerateTimeTable({startTime, endTime}) {
   }
   
   const buttons = timeTable.map((time, index) => ( 
-    <button key={index} type="button"> 
-      {time.toLocaleTimeString("ko-KR", {hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} 
-    </button>   
+    <TimeTableListItem className="time_item" key={index}>
+      <button key={index} type="button"> 
+        {time.toLocaleTimeString("ko-KR", {hour: "2-digit", minute: "2-digit", hourCycle: "h23" })} 
+      </button>   
+    </TimeTableListItem>
+
   ))
 
-  return (<TimeTable>{buttons}</TimeTable>);
+  return buttons;
 }
 
 export default GenerateTimeTable;
