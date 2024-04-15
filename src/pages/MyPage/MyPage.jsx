@@ -50,46 +50,23 @@ export default function MyPage() {
         setSelectedCategory(category);
     }
 
+    function renderContent(category){
+      return (
+        <StyledContainer>
+        {cakes.length === 0 ? (
+            <img src={noneRequest} alt="None Request" />
+            ) : cakes.map(cake => (
+                <Card key = {cake.name} cake={cake} location={category} />
+            )   
+         )}
+        </StyledContainer>
+      )
+    }
+
     return (
         <StyledLayout>
             <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>My Page</Gnb>
-            
-            {/* 예약 내역 클릭 시 */}
-            {selectedCategory === "reserve"  &&  
-                <StyledContainer>
-                {cakes.length === 0 ? (
-                    <img src={noneRequest} alt="None Request" />
-                    ) : cakes.map(cake => (
-                        <Card key = {cake.name} cake={cake} location="reserve" />
-                    )   
-                 )}
-                </StyledContainer>
-            }
-
-            {/* 찜한 상품 클릭 시 */}
-            {selectedCategory === "wish" &&
-                <StyledContainer>
-                    {cakes.length === 0 ? (
-                        <img src={noneRequest} alt="None Request" />
-                        ) : cakes.map(cake => (
-                            <Card key = {cake.name} cake={cake} location="wish" />
-                        )   
-                    )}
-                </StyledContainer>
-            }
-
-            {/* 리뷰 관리 클릭 시 */}
-            {selectedCategory === "review" &&
-                <StyledContainer>
-                    {cakes.length === 0 ? (
-                        <img src={noneRequest} alt="None Request" />
-                        ) : cakes.map(cake => (
-                            <Card key = {cake.name} cake={cake} location="review" />
-                        )   
-                    )}
-                </StyledContainer>
-            }
-
+            {selectedCategory && renderContent(selectedCategory)}
         </StyledLayout>
     )
 }

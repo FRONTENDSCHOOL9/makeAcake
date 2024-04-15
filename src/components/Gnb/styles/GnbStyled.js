@@ -18,5 +18,6 @@ export const StyledGnbItem = styled.li`
     display: flex;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
     border-bottom: ${({isSelected}) => (isSelected ? "1px solid #000" : "none")}
 `;
