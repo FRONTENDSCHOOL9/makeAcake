@@ -74,20 +74,15 @@ export const StyledCalender = styled(Calendar)`
       border-radius: 5px;
       background-color: var(--gray-color-300);
     }
-
-    // TODO: 날짜 클릭 시 background 색상 안바뀌는거 수정하기
-    .react-calendar__tile--active:enabled:hover, 
-    .react-calendar__tile--active:enabled:focus,
-    .react-calendar__tile:enabled:hover, 
-    .react-calendar__tile:enabled:focus {
-      background-color: var(--primary-pink-color) !important; 
-      border-radius: 5px;
-    }
   }
 
   .react-calendar__tile--active {
     background-color: var(--pink-color-100);
     border-radius: 5px;
-    border: 1px solid var(--secondary-pink-color)
+    border: 2px solid var(--secondary-pink-color)
+  }
+
+  .react-calendar__tile--active:enabled:hover {
+    background-color: var(--pink-color-200);
   }
 `
