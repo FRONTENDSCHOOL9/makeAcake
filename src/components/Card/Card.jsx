@@ -5,13 +5,13 @@ import LikeButton from "@components/Buttons/LikeButton";
 
 export default function Card(data) {
 
-  const {cake, location, onSelect} = data;
+  const {cake, location, onSelect, onClick} = data;
 
   //placeholder 이미지 URL
   const placeholderImageUrl = 'https://via.placeholder.com/130';
 
   return (
-    <StyledCard location = {location}>
+    <StyledCard location = {location} onClick={onClick}>
       { 
         location === "main" && (
           <img src={placeholderImageUrl} alt={cake.name}/> 

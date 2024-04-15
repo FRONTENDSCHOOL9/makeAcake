@@ -1,10 +1,11 @@
 import noneRequest from "../../assets/images/noneRequest2.png";
-import { useState, useEffect } from "react";
+import { useState, useEffect, Fragment } from "react";
 
 import { StyledLayout, StyledContainer } from "@styles/LayoutStyled";
-import Gnb from "../../components/Gnb/Gnb.jsx";
 
+import Gnb from "../../components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
+import ReviewForm from "@components/Review/ReviewForm.jsx";
 
 export default function MyPage() {
     const categories = [
@@ -16,6 +17,7 @@ export default function MyPage() {
 
     const [selectedCategory, setSelectedCategory] = useState(categories[0].type);
     const [cakes, setCakes] = useState([]);
+    const [toggleStates, setToggleStates] = useState({});
 
     /* 가라데이터 */
     /* 예약 데이터 */
@@ -43,12 +45,26 @@ export default function MyPage() {
               enrollDate: "2024-04-08 08:55",
             },
         ];
-
         setCakes(fakeReservationData);
+
+        const initialToggleStates = fakeReservationData.reduce((acc, cake) => {
+          acc[cake.id] = false;
+          return acc;
+        }, {});
+        setToggleStates(initialToggleStates);
     }, [])
 
     function handleSelectCategory(category) {
         setSelectedCategory(category);
+    }
+
+    function handleCardClick(id, category) {
+      if(category === "review") {
+        setToggleStates(prev => ({
+          ...prev,
+          [id]: !prev[id]
+        }));
+      }
     }
 
     function renderContent(category){
@@ -57,7 +73,10 @@ export default function MyPage() {
         {cakes.length === 0 ? (
             <img src={noneRequest} alt="None Request" />
             ) : cakes.map(cake => (
-                <Card key = {cake.name} cake={cake} location={category}/>
+              <Fragment key = {cake.id}>
+                <Card cake={cake} location={category} onClick={() => handleCardClick(cake.id, category)}/>
+                {category === "review" && toggleStates[cake.id] && <ReviewForm cake={cake} />}
+              </Fragment> 
             )
          )}
         </StyledContainer>
@@ -67,7 +86,7 @@ export default function MyPage() {
     return (
         <StyledLayout>
             <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>My Page</Gnb>
-            {selectedCategory && renderContent(selectedCategory)}
+            {renderContent(selectedCategory)}
         </StyledLayout>
     )
 }

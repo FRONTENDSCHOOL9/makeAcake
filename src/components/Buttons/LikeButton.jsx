@@ -6,8 +6,8 @@ import styled from "styled-components";
 import PropTypes from "prop-types";
 
 const LikedButton = styled.button`
-  width: 30px;
-  height: 30px;
+  width: 20px;
+  height: 20px;
   position: absolute;
   bottom: 0;
   right: 0;
