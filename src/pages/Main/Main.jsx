@@ -1,4 +1,4 @@
-import Button from "@components/Button/Button.jsx";
+import Button from "@components/Buttons/Button.jsx";
 import SearchBox from "@components/SearchBox/SearchBox";
 import { StyledList, StyledMain } from "@pages/Main/styles/MainStyles";
 import { useEffect, useState } from "react";

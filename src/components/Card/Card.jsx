@@ -1,10 +1,11 @@
 import PropTypes from "prop-types"
 
 import {StyledCard} from "@components/Card/styles/CardStyles.js";
+import LikeButton from "@components/Buttons/LikeButton";
 
 export default function Card(data) {
 
-  const {cake, location} = data;
+  const {cake, location, onSelect} = data;
 
   //placeholder 이미지 URL
   const placeholderImageUrl = 'https://via.placeholder.com/130';
@@ -31,11 +32,12 @@ export default function Card(data) {
           </>
       )}
 
-      { 
+      {
         location === "wish" && (
           <>
              <div className="imgBox">
               <img src={placeholderImageUrl} alt={cake.name} />
+              <LikeButton location = "wish" onClick={onSelect} />
             </div>
             <div className="descBox">
               <h3 className="cardTitle">{cake.name}</h3>

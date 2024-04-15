@@ -15,31 +15,32 @@ export default function MyPage() {
     ];
 
     const [selectedCategory, setSelectedCategory] = useState(categories[0].type);
-
     const [cakes, setCakes] = useState([]);
 
     /* 가라데이터 */
     /* 예약 데이터 */
-
     useEffect(() => {
         const fakeReservationData = [
             {
-                name: "녹차케이크",
-                price: "48000",
-                address:"서울특별시 강남구 역삼동",
-                enrollDate: "2024-04-12 17:48"
+              id: 1,
+              name: "녹차케이크",
+              price: "48000",
+              address:"서울특별시 강남구 역삼동",
+              enrollDate: "2024-04-12 17:48",
             },
             {
-                name: "딸기케이크",
-                price: "50000",
-                address:"경기도 수원시 영통구 망포동",
-                enrollDate: "2024-04-10 12:35",
+              id: 2,
+              name: "딸기케이크",
+              price: "50000",
+              address:"경기도 수원시 영통구 망포동",
+              enrollDate: "2024-04-10 12:35",
             },
             {
-                name: "초코케이크",
-                price: "52000",
-                address:"부산광역시 해운대구 우동",
-                enrollDate: "2024-04-08 08:55",
+              id: 3,
+              name: "초코케이크",
+              price: "52000",
+              address:"부산광역시 해운대구 우동",
+              enrollDate: "2024-04-08 08:55",
             },
         ];
 
@@ -56,8 +57,8 @@ export default function MyPage() {
         {cakes.length === 0 ? (
             <img src={noneRequest} alt="None Request" />
             ) : cakes.map(cake => (
-                <Card key = {cake.name} cake={cake} location={category} />
-            )   
+                <Card key = {cake.name} cake={cake} location={category}/>
+            )
          )}
         </StyledContainer>
       )
