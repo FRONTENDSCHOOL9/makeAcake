@@ -20,27 +20,47 @@ function SignUp() {
     if (currentSignUpType === "seller") {
       return (
         <>
-          <Input type="email" id="email" placeholder="이메일" required />
-          <Input type="password" id="password" placeholder="비밀번호"/>
-          <Input type="password" id="passwordcheck" placeholder="비밀번호 확인" />
-          <Input type="text" id="name" placeholder="이름" />
-          <Input type="text" id="shopname" placeholder="상호명" />
-          <Input type="text" id="openinghours" placeholder="영업시간" />
-          <Input type="text" id="address" placeholder="주소" />
-          <Input type="text" id="addressDetail" placeholder="상세 주소" />
-          <Input type="number" id="phone" placeholder="휴대폰 번호" />
-          <Input type="number" id="tel" placeholder="유선전화 (선택)" />
+        <form>
+          <label htmlFor="email">
+          <Input type="email" id="email" name="email" placeholder="이메일" required /></label>
+          <label htmlFor="password">
+          <Input type="password" id="password" name="" placeholder="비밀번호"/></label>
+          <label htmlFor="passwordcheck">
+          <Input type="password" id="passwordcheck" name="passwordcheck" placeholder="비밀번호 확인" /></label>
+          <label htmlFor="name">
+          <Input type="text" id="name" name="name" placeholder="이름" /></label>
+          <label htmlFor="shopname">
+          <Input type="text" id="shopname" name="shopname" placeholder="상호명" /></label>
+          <label htmlFor="openinghours">
+          <Input type="text" id="openinghours" name="openinghours" placeholder="영업시간" /></label>
+          <label htmlFor="address">
+          <Input type="text" id="address" name="address" placeholder="주소" /></label>
+          <label htmlFor="addressDetail">
+          <Input type="text" id="addressDetail" name="addressDetail" placeholder="상세 주소" /></label>
+          <label htmlFor="phone">
+          <Input type="number" id="phone" name="phone" placeholder="휴대폰 번호" /></label>
+          <label htmlFor="tel">
+          <Input type="number" id="tel" name="tel" placeholder="유선전화 (선택)" /></label>
+        </form>
         </>
       );
     } else if (currentSignUpType === "user") {
       return (
         <>
-          <Input type="email" id="email" placeholder="이메일" required />
-          <Input type="password" id="password" placeholder="비밀번호"/>
-          <Input type="password" id="passwordcheck" placeholder="비밀번호 확인" />
-          <Input type="text" id="name" placeholder="이름" />
-          <Input type="text" id="nickname" placeholder="닉네임" />
-          <Input type="number" id="phone" placeholder="휴대폰 번호" />
+        <form>
+          <label htmlFor="email">
+          <Input type="email" id="email" placeholder="이메일" required /></label>
+          <label htmlFor="password">
+          <Input type="password" id="password" placeholder="비밀번호"/></label>
+          <label htmlFor="passwordcheck">
+          <Input type="password" id="passwordcheck" placeholder="비밀번호 확인" /></label>
+          <label htmlFor="name">
+          <Input type="text" id="name" placeholder="이름" /></label>
+          <label htmlFor="nickname">
+          <Input type="text" id="nickname" placeholder="닉네임" /></label>
+          <label htmlFor="phone">
+          <Input type="number" id="phone" placeholder="휴대폰 번호" /></label>
+        </form>
         </>
       );
     } else {
@@ -74,12 +94,12 @@ function SignUp() {
           </CurrentSignUpType>
         </div>
         {showForm && (
-          <form>
+          <>
             <div>
               {renderForm()}
             </div>
             <SignUpButton>회원가입</SignUpButton>
-          </form>
+          </>
         )}
       </StyledContainer>
     </div>
