@@ -1,28 +1,58 @@
-import {Input, StyledContainer, LogoWrap, Checkbox, SnsWrap, SignUpWrap, KeepLogin, LoginButton, ErrorWrap } from "./styles/LoginStyles.js"
-import React, { useEffect, useState } from 'react'
+import {Input, StyledContainer, LogoWrap, Checkbox, SnsWrap, SignUpWrap, KeepLogin, LoginButton, Error } from "./styles/LoginStyles.js"
+import { useForm } from 'react-hook-form';
 import logo from "@assets/images/logo-big.svg"
 import naver from "@assets/images/naver.svg"
 import kkt from "@assets/images/kkt.svg"
 import google from "@assets/images/google.svg"
 import apple from "@assets/images/apple.svg"
+import axios from 'axios';
 
+export default function Login() {
+    
+  const {
+    register,
+    handleSubmit,
+    formState: { errors },
+  } = useForm({
+    values: {
+    }
+  });
 
-function Login() {
-  
+  const onSubmit = async (formData) => {
+    try {
+      const response = await axios.post('https://market-lion.koyeb.app/api/users/login', formData);
+      alert(response.data.item.name + '님 로그인에 성공했습니다.');
+    } catch (error) {
+      console.error(error)
+    }
+  };
+
   return (
     <div>
       <StyledContainer>
         <LogoWrap>
           <img src={logo} alt="메이크어케이크" />
         </LogoWrap>
-      <form>
+      <form onSubmit={handleSubmit(onSubmit)}>
         <div>
-          <Input type="email" id="email" className="email" placeholder="이메일을 입력하세요." required/>
-          <ErrorWrap>올바른 이메일 주소를 입력해주세요.</ErrorWrap>
+          <Input type="email" id="email" className="email" placeholder="이메일을 입력하세요."
+           {...register('email', {
+            required: "이메일을 입력하세요.",
+            pattern: {
+              value: /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/,
+              message: "올바른 이메일 주소를 입력해주세요.",
+            },})} />
+        {errors.email && <Error>{errors.email.message}</Error>}
         </div>
         <div>
-          <Input type="password" id="password" className="password" placeholder="비밀번호를 입력하세요."/>
-          <ErrorWrap>비밀번호가 맞지 않습니다.</ErrorWrap>
+          <Input type="password" id="password" className="password" placeholder="비밀번호를 입력하세요."
+           {...register('password', {
+            required: "비밀번호를 입력하세요.",
+            minLength: {
+              value: 8,
+              message: "비밀번호 형식에 맞게 입력해 주세요.",
+            },})} />
+          {errors.password && <Error>{errors.password.message}</Error>}
         </div>
         <KeepLogin>
           <Checkbox type="checkbox" id="checkbox"/>
@@ -50,5 +80,3 @@ function Login() {
   </div>
   )
 };
-
-export default Login;

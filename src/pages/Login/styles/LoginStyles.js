@@ -3,13 +3,9 @@ import emailImg from "@assets/images/emailImg.svg"
 import pwImg from "@assets/images/pwImg.svg"
 
 export const StyledContainer = styled.div`
-    // box-shadow: inset 0 0 15px blue;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+   
     width: 100%;
-    height: 100vh;
+    min-height: 100vh;
     padding: 110px 24px 110px 24px;
     box-sizing: border-box;
     display: flex;
@@ -22,11 +18,8 @@ export const LogoWrap = styled.div`
     // box-shadow: inset 0 0 15px blue;
     display: flex;
     justify-content: center;
-    // width: 100%;
-    // zoom: 200%;
     margin: 0 auto;
     margin-bottom: 30px;    
-    // transform: scale(2);
 
 `;
 
@@ -55,7 +48,7 @@ export const Input = styled.input`
   }
 `
 
-export const ErrorWrap=styled.p`
+export const Error=styled.p`
   color: red;
   `
 
@@ -79,22 +72,6 @@ export const SnsWrap = styled.div`
   // gap: 10px;
 }
 
-& > div > p::before,p::after {
-  display: flex;
-
-  background-color: #000;
-  content: "";
-  display: inline-block;
-  height: 1px;
-  // position: relative;
-  vertical-align: middle;
-  width: 30%;
-}
-
-& > div > p {
-// margin: 0 10px;
-}
-
 & > ul {
   display: flex;
   justify-content: center;
@@ -102,11 +79,25 @@ export const SnsWrap = styled.div`
   margin-top: 20px;
   margin-bottom: 60px; 
 }
-& > p {
-  color: #AAAAAA;
-  font-size: 14px;
-text-align: center;
+& > div > p {
+  display: flex;
+  flex-basis: 100%;
+  align-items: center;
 }
+& > div > p::before {
+  content: '';
+  flex-grow: 1;
+  background: #AAAAAA;
+  height: 1px;
+  margin-right: 10px;
+  }
+  & > div > p::after {
+    content: '';
+    flex-grow: 1;
+    background: #AAAAAA;
+    height: 1px;
+    margin-left: 10px;
+    }
 `
 
 export const SignUpWrap = styled.div`
