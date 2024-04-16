@@ -7,6 +7,7 @@ import Main from '@pages/Main/Main'
 import Detail from "@pages/Detail/Detail";
 import Browse from "@pages/Browse/Browse";
 import SearchBox from "@components/SearchBox/SearchBox"; 
+import Footer from "@components/Footer/Footer";
 import './App.css'
 
 import { StyleSheetManager } from 'styled-components';
@@ -38,6 +39,7 @@ function App() {
       <Header onSearch={handleSearchOpen} searchOpen={searchOpen} onMenu={handleMenuToggle}  menuOpen={menuOpen}/>
       {searchOpen && <SearchBox onClose={handleSearchClose}/>}
       <Main />
+      <Footer />
     </StyleSheetManager>
   )
 }
