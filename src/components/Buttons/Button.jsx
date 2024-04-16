@@ -6,10 +6,9 @@ Button.propTypes = {
 }
 
 const StyledButtonWrap=styled.div`
-
-display: flex;
-justify-content:center;
-
+  display: flex;
+  justify-content:center;
+  margin-top: 10px;
 `;
 
 const StyledButton = styled.button`
@@ -29,13 +28,9 @@ const StyledButton = styled.button`
   }
 
   font-size: 16px;
-
   border: none;
-
   border-radius: 10px;
-
   font-weight: 600;
-
 `
 
 function Button({children}) {

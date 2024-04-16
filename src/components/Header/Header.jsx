@@ -1,19 +1,11 @@
-import {useState} from "react";
-
 import Menu from "./Menu.jsx";
 import {StyledHeader, StyledNav, StyledHome} from "./styles/HeaderStyles.js";
 
-export default function Header() {
-  const [open, setOpen] = useState(false);
-
-  function handleOpenMenu() {
-    setOpen(prev => !prev);
-  } 
-
+export default function Header({onSearch, onMenu, searchOpen, menuOpen}) {
     return (
         <StyledHeader>
-          <StyledNav onClick={handleOpenMenu} />
-          {open && <Menu open={open} />}
+          <StyledNav onClick={onMenu} />
+          {!searchOpen && menuOpen && <Menu onSelect={onSearch} />}
           <StyledHome />
         </StyledHeader>
     );

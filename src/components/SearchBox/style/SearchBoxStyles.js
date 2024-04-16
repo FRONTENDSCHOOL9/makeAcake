@@ -1,6 +1,8 @@
 import styled from "styled-components";
 
-export const SearchBoxDiv = styled.div`
+export const SearchBoxDiv = styled.div.attrs({
+  className: "search-modal"
+})`
   width: 80%;
   margin: 0 auto;
   display: flex;

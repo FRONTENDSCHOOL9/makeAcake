@@ -11,6 +11,7 @@ export const StyledCard = styled.li`
   gap: ${props => (isReserve(props.location) || isReview(props.location)) ? "20px" : "none"};
   
   & .imgBox {
+    position: relative;
 
     & > img {
       height: ${props => isMain(props.location) ? '212px' : '130px'};
