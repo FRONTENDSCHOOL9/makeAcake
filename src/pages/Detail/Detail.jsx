@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import likeDisabled from "@assets/images/like_disabled.svg"
-import Button from "@components/Buttons/Button";
-import { StyledDetail } from "@pages/Detail/styles/DetailStyles";
+import Button from "@components/Button/Button";
+import { DetailContainer, StyledDetail } from "@pages/Detail/styles/DetailStyles";
 
 function Detail() {
   const [ cakeInfo, setCakeInfo ] = useState({});
@@ -59,7 +59,7 @@ function Detail() {
   }, []);
 
   return (
-    <div>
+    <DetailContainer>
       <img src={placeholderImageUrl} alt="cakeImage" />
       <StyledDetail>
         <h3>{ cakeInfo.name }</h3>
@@ -83,7 +83,7 @@ function Detail() {
           <Button>예약하기</Button> 
         </div>
       </StyledDetail>
-    </div>
+    </DetailContainer>
   )
 }
 
