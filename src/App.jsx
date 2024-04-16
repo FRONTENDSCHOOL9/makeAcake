@@ -1,4 +1,7 @@
 import {useState} from "react";
+import { StyleSheetManager } from 'styled-components';
+import './App.css'
+
 
 import GlobalStyles from "@styles/GlobalStyle.js";
 import Header from "@components/Header/Header.jsx";
@@ -8,9 +11,9 @@ import Detail from "@pages/Detail/Detail";
 import Browse from "@pages/Browse/Browse";
 import SearchBox from "@components/SearchBox/SearchBox"; 
 import Footer from "@components/Footer/Footer";
-import './App.css'
+import Reservation from "@pages/Reservation/Reservation";
 
-import { StyleSheetManager } from 'styled-components';
+
 
 function App() {
   const shouldForwardProp = prop => prop != "isSelected";

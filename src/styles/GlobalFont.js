@@ -1,11 +1,11 @@
 
 
 import { createGlobalStyle } from "styled-components";
-import PretendardBoldWoff from '../assets/fonts/PretendardBold.woff';
-import PretendardLightWoff from '../assets/fonts/PretendardLight.woff';
-import PretendardRegularWoff from '../assets/fonts/PretendardRegular.woff';
-import PretendardSemiBoldWoff from '../assets/fonts/PretendardSemiBold.woff';
-import MontserratExtraLightWoff from '../assets/fonts/MontserratExtraLight.woff';
+import PretendardBoldWoff from '@assets/fonts/PretendardBold.woff';
+import PretendardLightWoff from '@assets/fonts/PretendardLight.woff';
+import PretendardRegularWoff from '@assets/fonts/PretendardRegular.woff';
+import PretendardSemiBoldWoff from '@assets/fonts/PretendardSemiBold.woff';
+import MontserratExtraLightWoff from '@assets/fonts/MontserratExtraLight.woff';
 
 
 const GlobalFont = createGlobalStyle `
