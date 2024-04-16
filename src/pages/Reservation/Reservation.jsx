@@ -9,9 +9,6 @@ function Reservation() {
   const [ cake, setCake ] = useState(null);
   const [ selectedOption, setSelectedOption ] = useState(null);
   const [ selectedTime, setSelectedTime ] = useState(null);
-  const [ firstCheck, setFirstCheck ] = useState(false);
-  const [ secondCheck, setSecondCheck ] = useState(false);
-  const [ thirdCheck, setThirdCheck ] = useState(false);
 
   const placeholderImageUrl = 'https://via.placeholder.com/360';
   useEffect(()=> {
@@ -96,12 +93,12 @@ function Reservation() {
           </div>
           <div className="main-check">
             <h4>3. 예약 확정 전 꼭 확인해 주세요.</h4>
-            <Checkbox id="checkbox1" checked={firstCheck} onChange={setFirstCheck}>입금 확인 후 취소가 불가합니다.</Checkbox>
-            <Checkbox id="checkbox2" checked={secondCheck} onChange={setSecondCheck}>픽업 시간을 꼭 지켜주세요.</Checkbox>
-            <Checkbox id="checkbox3" checked={thirdCheck} onChange={setThirdCheck}>예약 후 문자메시지를 확인해 주세요.</Checkbox>
+            <Checkbox id="checkbox1" checked={true}>입금 확인 후 취소가 불가합니다.</Checkbox>
+            <Checkbox id="checkbox2">픽업 시간을 꼭 지켜주세요.</Checkbox>
+            <Checkbox id="checkbox3 checked">예약 후 문자메시지를 확인해 주세요.</Checkbox>
           </div>
         </ReservationSection>
-        <Button disabled={!firstCheck && !secondCheck && !thirdCheck}>예약 및 결제</Button>
+        <Button>예약 및 결제</Button>
       </div>
     </StyledReservation>
   )

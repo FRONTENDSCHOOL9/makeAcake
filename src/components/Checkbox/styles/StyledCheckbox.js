@@ -24,10 +24,11 @@ export const HiddenCheckbox = styled.input.attrs({ type: 'checkbox' })`
 
 export const StyledCheckbox = styled.div`
   flex-shrink: 0;
-	background-image: url(${props => props.checked ? IconActive : IconDefault});
+	background-image: url(${props => props.checked === true ? IconActive : IconDefault});
   background-size: cover;
   width: 1rem;
   height: 1rem;
+
 `
 
 
