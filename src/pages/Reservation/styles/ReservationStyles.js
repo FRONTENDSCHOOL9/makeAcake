@@ -15,26 +15,22 @@ export const StyledReservation = styled.div`
       padding: 0 20px;
     }
   }
-
   .cakeImage {
     aspect-ratio: 1;
     width: 360px;
   }
 
   .main {
-    box-shadow: inset 0 0 20px red;
     padding: 30px 20px;
     width: 360px;
     box-sizing: border-box;
     & > h3 {
-      box-shadow: inset 0 0 20px purple;
       font-size: var(--font-size-xlarge);
     }
   }
 `
 
 export const ReservationSection = styled.div`
-  box-shadow: inset 0 0 20px green;
   display: flex;
   flex-direction: column;
   margin: 30px 0;
@@ -51,35 +47,45 @@ export const ReservationSection = styled.div`
       flex-wrap: wrap;
     }
   }
+  & h4 {
+    font-family: PretendardWoffSemiBold, sans-serif;
+  }
+`
 
-  & .main-form {
-    & > form {
-      padding: 5px 20px;
-      font-size: var(--font-size-medium);
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-      & .cake-option {
-        display: flex;
-        gap: 10px;
-      }
-      & button {
-        border: 1px solid var(--primary-black-color);
-        border-radius: 10px;
-        padding: 5px 10px;
-      }
-      & button:hover, button:active {
-        background-color: var(--primary-black-color);
-        color: var(--primary-white-color);
-      }
-      & input {
-        border: 0;
-        border-bottom: 1px solid var(--primary-black-color);
-        width: 80%;
-      }
-      & input:focus {
-        outline: none;
-      }
-    }
+export const ReservationForm = styled.form`
+  padding: 5px 20px;
+  font-size: var(--font-size-medium);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  & label {
+    display: inline-block;
+    margin-bottom: 10px;
+  }
+  & .cake-option {
+    display: flex;
+    gap: 10px;
+    margin-left: 20px;
+  }
+  & .selected {
+    background-color: var(--primary-black-color);
+    color: var(--primary-white-color);
+  }
+  & button {
+    border: 1px solid var(--gray-color-300);
+    border-radius: 10px;
+    padding: 5px 10px;
+  }
+  & button:hover {
+    border-color: var(--primary-black-color);
+  }
+  & input[type="text"] {
+    border: 0;
+    border-bottom: 1px solid var(--primary-black-color);
+    width: 80%;
+    margin-left: 20px;
+  }
+  & input[type="text"]:focus {
+    outline: none;
   }
 `

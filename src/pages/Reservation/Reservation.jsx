@@ -1,13 +1,18 @@
 import Button from "@components/Button/Button";
 import AppCalendar from "@components/Calendar/AppCalendar";
+import Checkbox from "@components/Checkbox/Checkbox";
 import GenerateTimeTable from "@pages/Reservation/GenerateTimeTable";
-import { ReservationSection, StyledReservation } from "@pages/Reservation/styles/ReservationStyles";
+import { ReservationForm, ReservationSection, StyledReservation } from "@pages/Reservation/styles/ReservationStyles";
 import { useEffect, useState } from "react";
 
 function Reservation() {
   const [ cake, setCake ] = useState(null);
   const [ selectedOption, setSelectedOption ] = useState(null);
   const [ selectedTime, setSelectedTime ] = useState(null);
+  const [ firstCheck, setFirstCheck ] = useState(false);
+  const [ secondCheck, setSecondCheck ] = useState(false);
+  const [ thirdCheck, setThirdCheck ] = useState(false);
+
   const placeholderImageUrl = 'https://via.placeholder.com/360';
   useEffect(()=> {
     const fakeCake = {
@@ -24,10 +29,13 @@ function Reservation() {
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
+    console.log(option);
   };
 
   const handleTimeClick = (time) => {
     setSelectedTime(time);
+    console.log('selectedTime', selectedTime);
+    console.log('tiem', time);
   };
 
   if(!cake || !cake.price) return null;
@@ -55,16 +63,17 @@ function Reservation() {
           </div>
           <div className="main-form">
             <h4>2. 예약 정보를 확인해 주세요.</h4>
-            <form>
+            <ReservationForm>
               <div>
                 <label htmlFor="size">1. 사이즈를 선택해 주세요.</label>
                 <div className="cake-option">
                   {Object.keys(cake.price).map((option, index) => (
                     <button
                       key={index}
-                      className={selectedOption === option ? 'cake-option-btn selected' : 'cake-option-btn'}
+                      className={selectedOption === option ? 'selected' : ''}
                       onClick={() => handleOptionClick(option)}
                       type="button"
+                      id="size"
                     >
                       {option !== 'mini' ? `${option}호` : '미니도시락'}
                     </button>
@@ -83,14 +92,16 @@ function Reservation() {
                 <label htmlFor="pickupName">4. 픽업하시는 분 성함을 입력해 주세요.</label>
                 <input type="text" id="pickupName" />
               </div>             
-            </form>
+            </ReservationForm>
           </div>
           <div className="main-check">
-            <label htmlFor="check">3. 예약 확정 전 꼭 확인해 주세요.</label>
-            <input type="checkbox" id="main-check-content"/>
+            <h4>3. 예약 확정 전 꼭 확인해 주세요.</h4>
+            <Checkbox id="checkbox1" checked={firstCheck} onChange={setFirstCheck}>입금 확인 후 취소가 불가합니다.</Checkbox>
+            <Checkbox id="checkbox2" checked={secondCheck} onChange={setSecondCheck}>픽업 시간을 꼭 지켜주세요.</Checkbox>
+            <Checkbox id="checkbox3" checked={thirdCheck} onChange={setThirdCheck}>예약 후 문자메시지를 확인해 주세요.</Checkbox>
           </div>
         </ReservationSection>
-        <Button>예약 및 결제</Button>
+        <Button disabled={!firstCheck && !secondCheck && !thirdCheck}>예약 및 결제</Button>
       </div>
     </StyledReservation>
   )
