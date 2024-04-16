@@ -1,6 +1,7 @@
 import Button from "@components/Button/Button.jsx";
 import {StyledMain } from "@pages/Main/styles/MainStyles";
 import { useEffect, useState } from "react";
+import { StyledFooter } from "@components/Footer/styles/FooterStyles";
 
 import MainSection from "./components/MainSection.jsx";
 
