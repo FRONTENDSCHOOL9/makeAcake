@@ -18,7 +18,7 @@ export const TimeTableListItem = styled.li`
     background-color: var(--primary-white-color);
   }
 
-  & button:active, button:hover, .selected {
+  & .selected-time-btn {
     background-color: var(--primary-black-color);
     color: var(--primary-white-color)
   }
