@@ -19,8 +19,8 @@ const shouldForwardProp = prop => prop != "isSelected";
       <Header/>
       {/* <MyPage/> */}
       {/* <Main/> */}
-      {/* <Detail/> */}
-      <MyPage/>
+      <Detail/>
+      {/* <MyPage/> */}
     </StyleSheetManager>
   )
 }
