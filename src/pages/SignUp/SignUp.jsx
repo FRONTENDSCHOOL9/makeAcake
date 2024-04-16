@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyledContainer, LogoWrap, Input, SignUpButton, SignUpType, NextButton, CurrentSignUpType, CheckSignUpType } from "./styles/SignUpStyles.js";
+import { StyledContainer, LogoWrap, Input, SignUpButton, SignUpType, NextButton, CurrentSignUpType, CheckSignUpType, AddressWrap } from "./styles/SignUpStyles.js";
 import logo from "@assets/images/logo_big.svg";
 
 function SignUp() {
@@ -33,8 +33,11 @@ function SignUp() {
           <Input type="text" id="shopname" name="shopname" placeholder="상호명" /></label>
           <label htmlFor="openinghours">
           <Input type="text" id="openinghours" name="openinghours" placeholder="영업시간" /></label>
-          <label htmlFor="address">
-          <Input type="text" id="address" name="address" placeholder="주소" /></label>
+          <AddressWrap>
+            <label htmlFor="address">
+            <Input type="text" id="address" name="address" placeholder="주소" /></label>
+            <button>주소 찾기</button>
+          </AddressWrap>
           <label htmlFor="addressDetail">
           <Input type="text" id="addressDetail" name="addressDetail" placeholder="상세 주소" /></label>
           <label htmlFor="phone">

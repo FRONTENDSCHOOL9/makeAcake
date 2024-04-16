@@ -19,7 +19,7 @@ export const LogoWrap = styled.div`
   margin-top: 82px;
   `;
 
-export const SignUpButton = styled.div`
+export const SignUpButton = styled.button`
   background-color: #000;
   &:hover {
     background-color: #E18585;
@@ -70,7 +70,7 @@ export const CurrentSignUpType = styled.h2`
   // margin-bottom: 20px;
 `;
 
-export const NextButton = styled.h2`
+export const NextButton = styled.button`
   background-color: #000;
   &:hover {
     background-color: #E18585;
@@ -109,5 +109,35 @@ export const Input = styled.input`
     // background-image: url()
     // background-repeat: no-repeat;
     // background-size: contain;
+  }
+`;
+
+export const AddressWrap = styled.div`
+  display: flex;
+  & > button {
+    background-color: #000;
+    &:hover {
+      background-color: #E18585;
+    }
+    &:active {
+      background-color: #000;
+    }
+    text-align: center;
+    color: #fff;
+    padding: 14px;
+    box-sizing: border-box;
+    border: none;
+    border-radius: 10px;
+    margin-left: auto;
+    margin-top: 20px;
+  }
+
+  & > label {
+    display: flex;
+  }
+
+  & input {
+    flex-grow: 1;
+    width: 100%; 
   }
 `;
