@@ -79,10 +79,15 @@ export const StyledCalender = styled(Calendar)`
   .react-calendar__tile--active {
     background-color: var(--pink-color-100);
     border-radius: 5px;
-    border: 2px solid var(--secondary-pink-color)
   }
 
-  .react-calendar__tile--active:enabled:hover {
+  .react-calendar__tile--active:enabled:hover,
+  .react-calendar__tile--active:enabled:focus {
+    background-color: var(--pink-color-200);
+  }
+
+  .react-calendar__tile--now:enabled:hover, 
+  .react-calendar__tile--now:enabled:focus {
     background-color: var(--pink-color-200);
   }
 `
