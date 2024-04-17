@@ -7,6 +7,7 @@ export const StyledHeading = styled.h1`
     padding: 17px 0;
     margin-top: 30px;
 `
+
 export const StyledGnb = styled.ul`
     display: flex;
     justify-content: center;
