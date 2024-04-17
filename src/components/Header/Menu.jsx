@@ -13,9 +13,9 @@ export default function Menu() {
   return (
     <StyledMenu>
       <StyledMenuContent onClick={openSearch}>SEARCH</StyledMenuContent>
-      <Link to="/products"><StyledMenuContent onClick={closeMenu}>BROWSE</StyledMenuContent></Link>
-      <Link to="/"><StyledMenuContent onClick={closeMenu}>WISHLIST</StyledMenuContent></Link>
-      <Link to="/mypage"><StyledMenuContent onClick={closeMenu}>MY PAGE</StyledMenuContent></Link>
+      <StyledMenuContent  StyledMenuContent as={Link} to="/products" onClick={closeMenu}>BROWSE</StyledMenuContent>
+      <StyledMenuContent as={Link} to="/" onClick={closeMenu}>WISHLIST</StyledMenuContent>
+      <StyledMenuContent as={Link} to="/mypage" onClick={closeMenu}>MY PAGE</StyledMenuContent>
     </StyledMenu>
   )
 }
