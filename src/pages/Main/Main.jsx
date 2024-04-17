@@ -1,9 +1,9 @@
 import Button from "@components/Buttons/Button.jsx";
-import {StyledMain } from "@pages/Main/styles/MainStyles";
+import {StyledMain} from "@pages/Main/styles/MainStyles";
 import { useEffect, useState } from "react";
-import { StyledFooter } from "@components/Footer/styles/FooterStyles";
-
+import { Link } from 'react-router-dom';
 import MainSection from "./components/MainSection.jsx";
+
 
 
 function Main() {

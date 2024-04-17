@@ -2,7 +2,6 @@ import styled from "styled-components"
 import logo from "@assets/images/logo.svg"
 import nav from "@assets/images/nav.svg"
 
-
 export const StyledHeader = styled.header`
   display: flex;
   justify-content: center;
@@ -27,7 +26,7 @@ export const StyledHome = styled.div`
   width: 91px;
   height: 35px;
   margin: auto;
-`;
+`
 
 export const StyledMenu = styled.div`
  width: 50vw;
@@ -38,7 +37,7 @@ export const StyledMenu = styled.div`
  flex-direction: column;
  gap: 10px;
  border-right: 1px solid #000;
- z-index: 1;
+ z-index: 2;
  position: absolute;
  top: 100px;
  bottom: 0;

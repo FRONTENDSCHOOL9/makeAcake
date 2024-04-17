@@ -1,52 +1,15 @@
-import {useState} from "react";
-import { StyleSheetManager } from 'styled-components';
-import './App.css'
+import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import "./App.css";
 
 
-import GlobalStyles from "@styles/GlobalStyle.js";
-import Header from "@components/Header/Header.jsx";
-import MyPage from "@pages/MyPage/MyPage.jsx";
-import Main from '@pages/Main/Main'
-import Detail from "@pages/Detail/Detail";
-import Browse from "@pages/Browse/Browse";
-import SearchBox from "@components/SearchBox/SearchBox"; 
-import Footer from "@components/Footer/Footer";
-import Reservation from "@pages/Reservation/Reservation";
-import Menu from "@components/Header/Menu.jsx";
+import routes from "./routesConfig"
 
 
-
+const router = createBrowserRouter(routes);
 
 function App() {
-  const shouldForwardProp = prop => prop != "isSelected";
-  const [searchOpen, setSearchOpen] = useState(false);
-  const [menuOpen, setMenuOpen] = useState(false);
-
-
-  function handleSearchOpen() {
-    console.log("searchOpen:" + searchOpen)
-    setSearchOpen(true);
-  }
-
-  function handleSearchClose() {
-    console.log("searchOpen:" + searchOpen)
-    setSearchOpen(false);
-    setMenuOpen(false);
-  }
-
-  function handleMenuToggle() {
-    setMenuOpen(prev => !prev);
-  } 
-
   return (
-    <StyleSheetManager shouldForwardProp={shouldForwardProp}>
-      <GlobalStyles />
-      <Header onMenu={handleMenuToggle} />
-      {!searchOpen && menuOpen && <Menu onSelect={handleSearchOpen} />}
-      {searchOpen && <SearchBox onClose={handleSearchClose}/>}
-      <Main />
-      <Footer />
-    </StyleSheetManager>
+    <RouterProvider router={router} />
   )
 }
 
