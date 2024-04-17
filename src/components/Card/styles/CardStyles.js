@@ -24,12 +24,12 @@ export const StyledCard = styled.li`
 
     & > h3 {
       font-size: 14px;
-      margin: 8px 0 5px 0;
+      margin-top: 8px;
     }
     
     & > p {
       font-size: 12px;
-      margin-bottom: 4px;
+      margin-top: 6px;
     }
 
     & > .price {
