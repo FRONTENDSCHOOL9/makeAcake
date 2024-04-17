@@ -8,20 +8,23 @@ import SearchBox from "@components/SearchBox/SearchBox";
 import {useState} from "react";
 import { StyleSheetManager } from 'styled-components';
 
-
+import { useHandleMenu } from "./hooks/useHandleMenu";
+ 
 function RootLayout() {
+  const {menuHandle, toggleMenu, closeMenu} = useHandleMenu();
+
   const shouldForwardProp = prop => prop != "isSelected";
   const [menuOpen, setMenuOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
   
 
-  function handleMenuToggle() {
+ /*  function handleMenuToggle() {
     setMenuOpen(prev => !prev);
   }
 
   function handleMenuClose() {
     setMenuOpen(false);
-  }
+  } */
 
   function handleSearchOpen() {
     console.log("searchOpen:" + searchOpen)
@@ -36,8 +39,8 @@ function RootLayout() {
 
   return (
       <StyleSheetManager shouldForwardProp={shouldForwardProp}>
-          <Header onMenu={handleMenuToggle} onMenuClose={handleMenuClose} />
-          {!searchOpen && menuOpen && <Menu onSearch={handleSearchOpen} onMenu={handleMenuToggle} />}
+          <Header />
+          {!searchOpen && menuHandle && <Menu onSearch={handleSearchOpen} />}
           {searchOpen && <SearchBox onClose={handleSearchClose}/>}
           <Outlet />
           <Footer />

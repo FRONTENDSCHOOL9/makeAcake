@@ -2,13 +2,17 @@ import PropTypes from "prop-types";
 import {StyledHeader, StyledNav, StyledHome} from "./styles/HeaderStyles.js";
 
 import {Link} from "react-router-dom";
+import { useHandleMenu } from "@hooks/useHandleMenu";
 
-export default function Header({onMenu, onMenuClose}) {
+
+export default function Header() {
+  const {toggleMenu, closeMenu} = useHandleMenu();
+
     return (
       <>
         <StyledHeader>
-          <StyledNav onClick={onMenu} />
-          <StyledHome as={Link} to="/" onClick={onMenuClose} />
+          <StyledNav onClick={toggleMenu} />
+          <StyledHome as={Link} to="/" onClick={closeMenu} />
         </StyledHeader>
       </>
     );

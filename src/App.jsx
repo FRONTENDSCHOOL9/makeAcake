@@ -1,15 +1,16 @@
 import {createBrowserRouter, RouterProvider} from "react-router-dom";
+import {RecoilRoot} from "recoil";
 import "./App.css";
 
-
-import routes from "./routesConfig"
-
+import routes from "./routesConfig.jsx";
 
 const router = createBrowserRouter(routes);
 
 function App() {
   return (
-    <RouterProvider router={router} />
+    <RecoilRoot >
+      <RouterProvider router={router} />
+    </RecoilRoot>
   )
 }
 
