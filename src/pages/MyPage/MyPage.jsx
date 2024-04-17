@@ -20,6 +20,7 @@ export default function MyPage() {
     const [selectedCategory, setSelectedCategory] = useState(categories[0].type);
     const [cakes, setCakes] = useState([]);
     const [toggleStates, setToggleStates] = useState({});
+    const [lastClickedId, setLastClickedId] = useState(null);
 
     /* 가라데이터 */
     /* 예약 데이터 */
@@ -39,10 +40,18 @@ export default function MyPage() {
 
     function handleCardClick(id, category) {
       if(category === "review") {
-        setToggleStates(prev => ({
-          ...prev,
-          [id]: !prev[id]
-        }));
+        setToggleStates(prev => {
+          const newStates = {...prev};
+
+          if(lastClickedId !== null && lastClickedId !== id) {
+            newStates[lastClickedId] = false;
+          }
+
+          newStates[id] = !prev[id];
+          return newStates;
+        });
+
+        setLastClickedId(id);
       }
     }
 
