@@ -5,13 +5,17 @@ import { Input, SearchBoxDiv, SearchDiv } from "@components/SearchBox/style/Sear
 import searchImage from "@assets/images/search.svg"
 import { useEffect } from "react";
 
-function SearchBox({onClose}) {
+import { useHandleSearch } from "@hooks/useHandleSearch";
+
+function SearchBox() {
+  const {closeSearch} = useHandleSearch();
+  
   const modalRef = useRef();
 
   useEffect(() => {
     function handleClickOutside(event) {
       if(modalRef.current && !modalRef.current.contains(event.target)) {
-        onClose();
+        closeSearch();
       }
     }
 
@@ -21,7 +25,7 @@ function SearchBox({onClose}) {
       document.removeEventListener("mousedown", handleClickOutside);
     }
 
-  }, [onClose]);
+  }, [closeSearch]);
 
   return createPortal(
     <SearchBoxDiv ref={modalRef}>
