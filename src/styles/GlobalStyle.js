@@ -35,6 +35,10 @@ const GlobalStyles = createGlobalStyle`
     font: inherit;
   }
 
+  #root {
+    min-width: 360px;
+  }
+  
   body {
     font-family: PretendardWoffRegular, sans-serif;
   }

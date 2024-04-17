@@ -1,7 +1,14 @@
 import styled from "styled-components";
 
+export const DetailContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+`
 
 export const StyledDetail = styled.div`
+  max-width: 360px;
+  flex-basis: 0;
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -45,9 +52,11 @@ export const StyledDetail = styled.div`
 
   & p {
     font-size: var(--font-size-medium);
+    line-height: 1.4;
   }
 
   & div:last-child {
+    margin-top: 1.8rem;
     display: flex;
     justify-content: space-between;
   }
