@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import likeDisabled from "@assets/images/like_disabled.svg"
-import Button from "@components/Button/Button";
+import Button from "@components/Buttons/Button";
 import { DetailContainer, StyledDetail } from "@pages/Detail/styles/DetailStyles";
 
 function Detail() {

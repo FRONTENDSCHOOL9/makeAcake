@@ -1,4 +1,4 @@
-import Button from "@components/Button/Button";
+import Button from "@components/Buttons/Button";
 import AppCalendar from "@components/Calendar/AppCalendar";
 import Checkbox from "@components/Checkbox/Checkbox";
 import GenerateTimeTable from "@pages/Reservation/GenerateTimeTable";

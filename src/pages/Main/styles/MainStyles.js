@@ -4,18 +4,17 @@ const gapSize = 10;
 
 export const StyledMain = styled.div`
   background-color: rgb(0,0,0,0.5);
-  width: 100vw;
-  height: calc(100vh - 70px);
+  height: calc(100vh - 100px);
 
   & > .title {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
     color: #fff;
     text-align: center;
     font-size: 2.5em;
     font-family: 'PretendardWoffBold', sans-serif;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 `
 export const StyledList = styled.div`
