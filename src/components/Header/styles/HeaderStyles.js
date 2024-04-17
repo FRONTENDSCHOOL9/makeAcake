@@ -4,66 +4,51 @@ import nav from "@assets/images/nav.svg"
 
 
 export const StyledHeader = styled.header`
-  background-color: #fff;
-  color: #fff;
-  height: 70px;
-  border-bottom: 1px solid #000;
- /*  position: absolute;
-  left: 0;
-  top: 0; */
-  width: 100%;
-  box-sizing: border-box;
-  // display: flex;
-  // /* flex: 1 1 0; */
-
-  display: grid;
-  grid-template-columns: 60px 1fr 60px;
+  display: flex;
+  justify-content: center;
   align-items: center;
-  padding: ;
+  height: 100px;
+  padding: 0 30px;
+  box-sizing: border-box;
+  border-bottom: 2px solid #000;
 `;
 
 export const StyledNav = styled.div`
-  margin: 5px 0 0 14px;
-
-  // box-shadow: inset 0 0 10px blue;
-  width: 14px;
-  height: 14px;
-  display: flex;
-  align-items: center;
   background-image: url(${nav});
-  background-size: 100%;
-  
-  // position: fixed;
+  background-repeat: no-repeat;
+  background-size: cover;
+  width: 23px;
+  height: 23px;
 `;
 
 export const StyledHome = styled.div`
-  // box-shadow: inset 0 0 10px red;
-  display: flex;
-  justify-content: center;
+  background-image: url(${logo});
+  background-size: cover;
   width: 91px;
   height: 35px;
   margin: auto;
-  background-image: url(${logo});
-  // background: no-repeat;
-  background-size: 100%;
 `;
-
 
 export const StyledMenu = styled.div`
-  width: 50vw;
-  height: 100%;
-  background-color: #fff;
-  color: #000;  
-  padding: 30px 20px 0 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 10px;
-  border-right: 1px solid #000;
-  z-index: 1;
-  position: absolute;
-  top: 70px;
+ width: 50vw;
+ background-color: #fff;
+ color: #222;  
+ padding: 30px 20px;
+ display: flex;
+ flex-direction: column;
+ gap: 10px;
+ border-right: 1px solid #000;
+ z-index: 1;
+ position: absolute;
+ top: 100px;
+ bottom: 0;
 `;
+
+/* 
+  height: 100%;
+  
+  top: 70px;
+*/
 
 export const StyledMenuContent = styled.div`
   font-family: MontserratWoffExtraLight, sans-serif;

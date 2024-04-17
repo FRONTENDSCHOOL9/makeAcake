@@ -33,6 +33,7 @@ const GlobalStyles = createGlobalStyle`
   html, body, #root {
     font-size: 100%;
     font: inherit;
+    background-color: transparent;
   }
 
   #root {

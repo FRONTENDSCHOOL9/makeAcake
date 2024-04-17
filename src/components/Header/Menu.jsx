@@ -1,5 +1,4 @@
 import PropTypes from "prop-types";
-import {useState} from "react"
 
 import {StyledMenu, StyledMenuContent} from "./styles/HeaderStyles.js"
 
@@ -16,5 +15,5 @@ export default function Menu({onSelect}) {
 }
 
 Menu.propTypes = {
-  open: PropTypes.bool.isRequired,
+  onSelect: PropTypes.func.isRequired,
 }

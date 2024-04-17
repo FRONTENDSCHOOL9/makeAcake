@@ -12,6 +12,8 @@ import Browse from "@pages/Browse/Browse";
 import SearchBox from "@components/SearchBox/SearchBox"; 
 import Footer from "@components/Footer/Footer";
 import Reservation from "@pages/Reservation/Reservation";
+import Menu from "@components/Header/Menu.jsx";
+
 
 
 
@@ -39,7 +41,8 @@ function App() {
   return (
     <StyleSheetManager shouldForwardProp={shouldForwardProp}>
       <GlobalStyles />
-      <Header onSearch={handleSearchOpen} searchOpen={searchOpen} onMenu={handleMenuToggle}  menuOpen={menuOpen}/>
+      <Header onMenu={handleMenuToggle} />
+      {!searchOpen && menuOpen && <Menu onSelect={handleSearchOpen} />}
       {searchOpen && <SearchBox onClose={handleSearchClose}/>}
       <Main />
       <Footer />
