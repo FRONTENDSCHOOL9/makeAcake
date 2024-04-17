@@ -4,6 +4,7 @@ import {StyledMenu, StyledMenuContent} from "./styles/HeaderStyles.js"
 import { Link } from "react-router-dom";
 
 export default function Menu({onSearch, onMenu}) {
+  
 
   return (
     <StyledMenu>
