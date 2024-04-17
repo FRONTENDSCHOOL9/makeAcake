@@ -10,6 +10,7 @@ export const StyledHeader = styled.header`
   padding: 0 30px;
   box-sizing: border-box;
   border-bottom: 2px solid #000;
+  background: #fff;
 `;
 
 export const StyledNav = styled.div`
@@ -43,11 +44,7 @@ export const StyledMenu = styled.div`
  bottom: 0;
 `;
 
-/* 
-  height: 100%;
-  
-  top: 70px;
-*/
+
 
 export const StyledMenuContent = styled.div`
   font-family: MontserratWoffExtraLight, sans-serif;
