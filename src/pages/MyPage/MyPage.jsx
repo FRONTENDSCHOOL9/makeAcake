@@ -7,6 +7,8 @@ import Gnb from "../../components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
 import ReviewForm from "@components/Review/ReviewForm.jsx";
 
+import fakeData from "../../fakeData.js"
+
 export default function MyPage() {
     const categories = [
         {name: "예약 내역", type: "reserve", },
@@ -18,36 +20,14 @@ export default function MyPage() {
     const [selectedCategory, setSelectedCategory] = useState(categories[0].type);
     const [cakes, setCakes] = useState([]);
     const [toggleStates, setToggleStates] = useState({});
+    const [lastClickedId, setLastClickedId] = useState(null);
 
     /* 가라데이터 */
     /* 예약 데이터 */
     useEffect(() => {
-        const fakeReservationData = [
-            {
-              id: 1,
-              name: "녹차케이크",
-              price: "48000",
-              address:"서울특별시 강남구 역삼동",
-              enrollDate: "2024-04-12 17:48",
-            },
-            {
-              id: 2,
-              name: "딸기케이크",
-              price: "50000",
-              address:"경기도 수원시 영통구 망포동",
-              enrollDate: "2024-04-10 12:35",
-            },
-            {
-              id: 3,
-              name: "초코케이크",
-              price: "52000",
-              address:"부산광역시 해운대구 우동",
-              enrollDate: "2024-04-08 08:55",
-            },
-        ];
-        setCakes(fakeReservationData);
+        setCakes(fakeData);
 
-        const initialToggleStates = fakeReservationData.reduce((acc, cake) => {
+        const initialToggleStates = fakeData.reduce((acc, cake) => {
           acc[cake.id] = false;
           return acc;
         }, {});
@@ -60,10 +40,18 @@ export default function MyPage() {
 
     function handleCardClick(id, category) {
       if(category === "review") {
-        setToggleStates(prev => ({
-          ...prev,
-          [id]: !prev[id]
-        }));
+        setToggleStates(prev => {
+          const newStates = {...prev};
+
+          if(lastClickedId !== null && lastClickedId !== id) {
+            newStates[lastClickedId] = false;
+          }
+
+          newStates[id] = !prev[id];
+          return newStates;
+        });
+
+        setLastClickedId(id);
       }
     }
 

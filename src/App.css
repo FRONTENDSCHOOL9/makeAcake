@@ -30,7 +30,11 @@ html, body, #root {
   padding: 0;
 }
 
-h1 {
+#root {
+  position: relative;
+}
+
+h1, h2, h3, p, a {
   margin: 0;
 }
 

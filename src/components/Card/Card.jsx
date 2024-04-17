@@ -33,7 +33,7 @@ export default function Card(data) {
       )}
 
       {
-        location === "wish" && (
+        (location === "wish" || location ==="browse") && (
           <>
              <div className="imgBox">
               <img src={placeholderImageUrl} alt={cake.name} />

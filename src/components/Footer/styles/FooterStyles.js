@@ -6,6 +6,7 @@ export const StyledFooter = styled.footer`
   height: 50px;
   margin-top: 50px;
   width: 100%;
-  // box-shadow: inset 0 0 10px blue;
-
+  position: absolute;
+  left: 0;
+  bottom: 0;
 `;

@@ -4,8 +4,10 @@ import {styled} from "styled-components";
 export const StyledHeading = styled.h1`
     font-size: 24px;
     text-align: center;
-    padding: 17px 0 17px;
+    padding: 17px 0;
+    margin-top: 30px;
 `
+
 export const StyledGnb = styled.ul`
     display: flex;
     justify-content: center;
