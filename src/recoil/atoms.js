@@ -8,4 +8,9 @@ export const MenuHandleAtom = atom({
 export const SearchHandleAtom = atom({
   key: "SearchHandleAtom",
   default: false
-})
+});
+
+export const LocationAtom = atom({
+  key: "LocationAtom",
+  default: "/"
+});

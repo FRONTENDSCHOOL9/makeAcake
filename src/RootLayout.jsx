@@ -10,6 +10,8 @@ import SearchBox from "@components/SearchBox/SearchBox";
 
 import { useHandleMenu } from "./hooks/useHandleMenu";
 import { useHandleSearch } from "./hooks/useHandleSearch";
+
+import LocationSetter from "@components/LocationSetter/LocationSetter.jsx";
  
 function RootLayout() {
   const { menuHandle } = useHandleMenu();
@@ -18,6 +20,8 @@ function RootLayout() {
   const shouldForwardProp = prop => prop != "isSelected";
 
   return (
+    <>
+      <LocationSetter/>
       <StyleSheetManager shouldForwardProp={shouldForwardProp}>
           <Header />
           {!searchHandle && menuHandle && <Menu />}
@@ -25,6 +29,8 @@ function RootLayout() {
           <Outlet />
           <Footer />
       </StyleSheetManager>
+    </>
+    
   );
 }
 

@@ -1,3 +1,4 @@
+import propTypes from "prop-types" 
 import {StyledList} from "@pages/Main/styles/MainStyles";
 import Card from "@components/Card/Card.jsx";
 
@@ -13,4 +14,9 @@ export default function MainSection({children, cakes}) {
           </ul>
         </StyledList>
     )
+}
+
+MainSection.propTypes = {
+  children: propTypes.node,
+  cakes: propTypes.array
 }
