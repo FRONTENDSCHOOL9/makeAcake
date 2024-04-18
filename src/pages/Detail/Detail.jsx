@@ -3,10 +3,17 @@ import likeDisabled from "@assets/images/like_disabled.svg"
 import Button from "@components/Buttons/Button";
 import { DetailContainer, StyledDetail } from "@pages/Detail/styles/DetailStyles";
 
+import { useNavigate } from "react-router";
+
 function Detail() {
+  const navigate = useNavigate();
   const [ cakeInfo, setCakeInfo ] = useState({});
   const [ like, setLike ] = useState(0);
   const placeholderImageUrl = 'https://via.placeholder.com/360';
+
+  const handleClick = () => {
+    navigate(`/products/1/reservation`);
+  }
 
   useEffect (() => {
     const fakeCake = {
@@ -80,7 +87,7 @@ function Detail() {
         <p>{ cakeInfo.content }</p>
         <div>
           <button type="button" onClick={ ()=> {setLike(like + 1)} }><img src={likeDisabled} alt="찜 추가"/></button>
-          <Button>예약하기</Button> 
+          <button onClick={handleClick}>예약하기</button> 
         </div>
       </StyledDetail>
     </DetailContainer>

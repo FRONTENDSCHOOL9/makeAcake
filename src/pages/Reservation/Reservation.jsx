@@ -4,11 +4,17 @@ import Checkbox from "@components/Checkbox/Checkbox";
 import GenerateTimeTable from "@pages/Reservation/GenerateTimeTable";
 import { ReservationForm, ReservationSection, StyledReservation } from "@pages/Reservation/styles/ReservationStyles";
 import { useEffect, useState } from "react";
+import { useNavigate } from "react-router";
 
 function Reservation() {
   const [ cake, setCake ] = useState(null);
   const [ selectedOption, setSelectedOption ] = useState(null);
   const [ selectedTime, setSelectedTime ] = useState(null);
+  const navigate =useNavigate();
+
+  const handleClick = () => {
+    navigate("/");
+  }
 
   const placeholderImageUrl = 'https://via.placeholder.com/360';
   useEffect(()=> {
@@ -98,7 +104,7 @@ function Reservation() {
             <Checkbox id="checkbox3 checked">예약 후 문자메시지를 확인해 주세요.</Checkbox>
           </div>
         </ReservationSection>
-        <Button>예약 및 결제</Button>
+        <button onClick={handleClick}>예약 및 결제</button>
       </div>
     </StyledReservation>
   )

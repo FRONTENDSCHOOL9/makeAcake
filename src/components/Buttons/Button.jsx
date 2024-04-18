@@ -5,7 +5,7 @@ import {Link} from "react-router-dom";
 
 
 Button.propTypes = {
-  children: PropTypes.node.isRequired
+  children: PropTypes.node.isRequired,
 }
 
 const StyledButtonWrap=styled.div`
