@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import logo from "@assets/images/logo.svg"
 import nav from "@assets/images/nav.svg"
+import { Link } from "react-router-dom";
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -44,7 +45,7 @@ export const StyledMenu = styled.div`
   bottom: 50px;
 `;
 
-export const StyledMenuContent = styled.div`
+export const StyledMenuContent = styled(Link)`
   font-family: MontserratWoffExtraLight, sans-serif;
   padding: 7px 30px 10px 0;
   font-size: 1.2rem;  
