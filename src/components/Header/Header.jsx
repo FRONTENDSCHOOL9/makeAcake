@@ -12,7 +12,8 @@ export default function Header() {
         <StyledHeader>
           <StyledNav onClick={toggleMenu} />
           <StyledHome as={Link} to="/" onClick={closeMenu} />
-          <StyledLogin as={Link} to="/"/>
+          {/* 회원구분은 추후 개발 */}
+          <StyledLogin as={Link} to="/login"/>
         </StyledHeader>
       </>
     );
