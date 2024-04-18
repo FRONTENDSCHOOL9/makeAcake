@@ -1,6 +1,11 @@
 import { atom } from "recoil";
 
 export const MenuHandleAtom = atom({
-  key: "MenuToggleAtom",
+  key: "MenuHandleAtom",
   default: false
 });
+
+export const SearchHandleAtom = atom({
+  key: "SearchHandleAtom",
+  default: false
+})

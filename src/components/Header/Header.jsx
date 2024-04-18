@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import {StyledHeader, StyledNav, StyledHome} from "./styles/HeaderStyles.js";
 
 import {Link} from "react-router-dom";
@@ -17,8 +16,3 @@ export default function Header() {
       </>
     );
 };
-
-Header.propTypes = {
-  onMenu: PropTypes.func.isRequired,
-  onMenuClose: PropTypes.func.isRequired
-}

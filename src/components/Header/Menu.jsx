@@ -1,22 +1,21 @@
-import PropTypes from "prop-types";
-
 import {StyledMenu, StyledMenuContent} from "./styles/HeaderStyles.js"
 import { Link } from "react-router-dom";
 
-export default function Menu({onSearch, onMenu}) {
+import { useHandleMenu } from "@hooks/useHandleMenu";
+import { useHandleSearch } from "@hooks/useHandleSearch";
+
+
+export default function Menu() {
+  const {closeMenu} = useHandleMenu();
+  const {openSearch} = useHandleSearch();
   
 
   return (
     <StyledMenu>
-      <StyledMenuContent onClick={onSearch}>SEARCH</StyledMenuContent>
-      <Link to="/products"><StyledMenuContent onClick={onMenu}>BROWSE</StyledMenuContent></Link>
-      <Link to="/"><StyledMenuContent onClick={onMenu}>WISHLIST</StyledMenuContent></Link>
-      <Link to="/mypage"><StyledMenuContent onClick={onMenu}>MY PAGE</StyledMenuContent></Link>
+      <StyledMenuContent onClick={openSearch}>SEARCH</StyledMenuContent>
+      <StyledMenuContent  StyledMenuContent as={Link} to="/products" onClick={closeMenu}>BROWSE</StyledMenuContent>
+      <StyledMenuContent as={Link} to="/" onClick={closeMenu}>WISHLIST</StyledMenuContent>
+      <StyledMenuContent as={Link} to="/mypage" onClick={closeMenu}>MY PAGE</StyledMenuContent>
     </StyledMenu>
   )
-}
-
-Menu.propTypes = {
-  onSearch: PropTypes.func.isRequired,
-  onMenu: PropTypes.func.isRequired
 }
