@@ -6,7 +6,8 @@ export const StyledFooter = styled.footer`
   height: 50px;
   margin-top: 50px;
   width: 100%;
-  position: absolute;
+  position: sticky;
   left: 0;
   bottom: 0;
+  z-index: 3;
 `;
