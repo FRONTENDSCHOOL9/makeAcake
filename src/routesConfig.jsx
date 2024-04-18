@@ -4,6 +4,7 @@ import Main from '@pages/Main/Main'
 import Browse from "@pages/Browse/Browse";
 import MyPage from "@pages/MyPage/MyPage.jsx";
 import Reservation from "@pages/Reservation/Reservation";
+import Login from "@pages/Login/Login"
 
 import Detail from "@pages/Detail/Detail";
  
@@ -27,7 +28,7 @@ const routes = [
           {path: "wishlist", element: < />} */
         ]
       },
-      // {path: "/login", element: <Login />},
+      {path: "/login", element: <Login />},
     ]
   }
 ];
