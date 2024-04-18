@@ -27,6 +27,7 @@ const routes = [
           {path: "wishlist", element: < />} */
         ]
       },
+      // {path: "/login", element: <Login />},
     ]
   }
 ];

@@ -12,10 +12,11 @@ export default function Menu() {
 
   return (
     <StyledMenu>
+      <StyledMenuContent to="/login" onClick={closeMenu}>LOGIN</StyledMenuContent>
       <StyledMenuContent onClick={openSearch}>SEARCH</StyledMenuContent>
-      <StyledMenuContent  StyledMenuContent as={Link} to="/products" onClick={closeMenu}>BROWSE</StyledMenuContent>
-      <StyledMenuContent as={Link} to="/" onClick={closeMenu}>WISHLIST</StyledMenuContent>
-      <StyledMenuContent as={Link} to="/mypage" onClick={closeMenu}>MY PAGE</StyledMenuContent>
+      <StyledMenuContent to="/products" onClick={closeMenu}>BROWSE</StyledMenuContent>
+      <StyledMenuContent to="/" onClick={closeMenu}>WISHLIST</StyledMenuContent>
+      <StyledMenuContent to="/mypage" onClick={closeMenu}>MY PAGE</StyledMenuContent>
     </StyledMenu>
   )
 }
