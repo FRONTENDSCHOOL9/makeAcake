@@ -3,12 +3,17 @@ import {useState, useEffect} from "react";
 import {StyledFilterLabel, StyledFilterSelect} from "./styles/BrowseStyles.js"
 import {StyledLayout, StyledContainer} from "@styles/LayoutStyled.js";
 
-import Gnb from "../../components/Gnb/Gnb.jsx";
+import Gnb from "@components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
 
 import fakeData from "../../fakeData.js"
 
 export default function Browse() {
+
+  // Browse 페이지의 탭을 누르면 탭의 id에 따라서 url이 바뀐다. 아마도 /:tabId
+  // 컴포넌트 따로 만들지 않을 예정이다. 탭은 단순히 필터링.
+  // 그러므로 Detail의 path는 /:tabId가 빠진 /:productId로.
+  // Browse 페이지에선 탭을 뜯어서 고쳐야한다.
     
     const categories = [
       {name: "전체보기", type: "all"},
@@ -27,30 +32,7 @@ export default function Browse() {
     const [selectedCategory, setSelectedCategory] = useState("all");
     const [selectedTaste, setSelectedTaste] = useState("none");
     const [cakes, setCakes] = useState([]);
-
-
-    /* useEffect: 통신 관련. 나중에 커스텀훅으로 뺄 예정 */
-    /* useEffect(() => {
-      async function fetchData() {
-        try {
-          const response = await fetch("API URL 여기 적으시면 됩니다~!");
-          const data = await response.json();
-          const formattedData = data.map(item => ({
-            name: item.title,
-            price: item.price,
-            address: item.address,
-            image: item.img
-          }));
-          setCakes(formattedData);
-        } catch(error) {
-          console.error("데이터를 불러오는 중 오류 발생:", error);
-        }
-      };
-
-      fetchData();
-    }, []); */
     
-    // 아래는 위의 통신 대신 임시 가짜 데이터 생성
     useEffect (() => {
       setCakes(fakeData);
     }, [])
@@ -61,7 +43,6 @@ export default function Browse() {
 
     function handleSelectTaste(event) {
       setSelectedTaste(event.target.value);
-      console.log(event.target.value);
     }
 
     let filteredCakes = cakes;
