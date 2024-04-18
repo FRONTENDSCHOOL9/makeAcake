@@ -1,4 +1,4 @@
-import {isReserve, isReview} from "@utils/cardLocation.js"
+import {isReserve, isReview, isInfo, isWish} from "@utils/cardLocation.js"
 
 import styled from "styled-components";
 
