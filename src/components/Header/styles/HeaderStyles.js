@@ -1,6 +1,7 @@
 import styled from "styled-components"
 import logo from "@assets/images/logo.svg"
 import nav from "@assets/images/nav.svg"
+import loginIcon from "@assets/images/loginIcon.svg"
 
 export const StyledHeader = styled.header`
   display: flex;
@@ -50,4 +51,10 @@ export const StyledMenuContent = styled.div`
   font-size: 1.2rem;  
   position: sticky;
 `
-
+export const StyledLogin = styled.div`
+background-image: url(${loginIcon});
+background-repeat: no-repeat;
+background-size: cover;
+width: 23px;
+height: 23px;
+`;
