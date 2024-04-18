@@ -1,10 +1,10 @@
 import { useEffect } from "react";
 import {useLocation} from "react-router-dom";
-import {useRecoilState} from "recoil";
+import {useSetRecoilState} from "recoil";
 import {LocationAtom} from "@recoil/atoms.js";
 
 export default function LocationSetter() {
-  const [currentLocation, setCurrentLocation] = useRecoilState(LocationAtom);
+  const setCurrentLocation = useSetRecoilState(LocationAtom);
   const location = useLocation();
 
   useEffect(() => {
