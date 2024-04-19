@@ -7,13 +7,13 @@ import {StyledLayout, StyledContainer} from "@styles/LayoutStyled.js";
 import Gnb from "@components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
 
-import {useCategorySelector} from "@hooks/useCategorySelector.js";
+import {useSelection} from "@hooks/useSelection.js";
 
 import fakeData from "../../fakeData.js"
 
 export default function Browse() {
-  const {selectedCategory, handleSelectCategory} = useCategorySelector("all");
-  const [selectedTaste, setSelectedTaste] = useState("none");
+  const {selectedValue: selectedCategory, handleSelectValue: handleSelectCategory} = useSelection("all");
+  const {selectedValue: selectedTaste, handleSelectValue: handleSelectTaste} = useSelection("none");
   const navigate = useNavigate();
 
   const categories = [
@@ -42,12 +42,12 @@ export default function Browse() {
     const tasteURL = params.get("taste") || "none";
 
     handleSelectCategory(categoryURL);
-    setSelectedTaste(tasteURL);
+    handleSelectTaste(tasteURL);
   }, [location])
 
   const updateFilters = (category, taste) => {
     handleSelectCategory(category);
-    setSelectedTaste(taste);
+    handleSelectTaste(taste);
     navigate(`/products?category=${category}&taste=${taste}`);
   }
 

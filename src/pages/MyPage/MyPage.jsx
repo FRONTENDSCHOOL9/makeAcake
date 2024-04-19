@@ -7,12 +7,12 @@ import Gnb from "@components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
 import ReviewForm from "@components/Review/ReviewForm.jsx";
 
-import {useCategorySelector} from "@hooks/useCategorySelector.js";
+import {useSelection} from "@hooks/useSelection.js";
 
 import fakeData from "../../fakeData.js"
 
 export default function MyPage() {
-  const {selectedCategory, handleSelectCategory} = useCategorySelector("예약 내역");
+  const {selectedValue: selectedCategory, handleSelectValue: handleSelectCategory} = useSelection("예약 내역");
 
     const categories = [
         {name: "예약 내역", type: "reserve", },
@@ -20,6 +20,7 @@ export default function MyPage() {
         {name: "리뷰 관리", type: "review", },
         {name: "정보 수정", type: "info", },
     ];
+    
     const [cakes, setCakes] = useState([]);
     const [toggleStates, setToggleStates] = useState({});
     const [lastClickedId, setLastClickedId] = useState(null);
