@@ -6,9 +6,9 @@ import backArrow from "@assets/images/backarrow.png";
 
 export const StyledContainer = styled.div`
    
-    width: 100%;
-    min-height: 100vh;
-    padding: 110px 24px 110px 24px;
+    width: 320px;
+    margin: 0 auto;
+    height: 100vh;
     box-sizing: border-box;
     display: flex;
     flex-direction: column;
