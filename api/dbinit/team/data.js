@@ -267,7 +267,7 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 도시락",
         extra: {
           depth: 2,
-          parent: 5,
+          parent: 6,
           size: "10cm",
           category: ["size", "size_xsmall"]
         },
@@ -296,7 +296,7 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 미니 케이크",
         extra: {
           depth: 2,
-          parent: 5,
+          parent: 6,
           size: "12cm",
           category: ["size", "size_mini"]
         },
@@ -325,7 +325,7 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 1호 케이크",
         extra: {
           depth: 2,
-          parent: 5,
+          parent: 6,
           size: "15cm",
           category: ["size", "size_1"]
         },
@@ -354,7 +354,7 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 2호 케이크",
         extra: {
           depth: 2,
-          parent: 5,
+          parent: 6,
           size: "20cm",
           category: ["size", "size_2"]
         },
