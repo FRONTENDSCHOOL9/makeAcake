@@ -5,7 +5,6 @@ import backArrow from "@assets/images/backarrow.png";
 
 
 export const StyledContainer = styled.div`
-   
     width: 320px;
     margin: 0 auto;
     height: 100vh;
@@ -119,9 +118,10 @@ export const SignUpWrap = styled.div`
   justify-content: center;
   gap: 5px;
   text-align: center;
-  & > p {
+  & > button {
     text-decoration: underline;
     font-weight: 600;
+    transform: translateY(-2px);
   }
 `
 

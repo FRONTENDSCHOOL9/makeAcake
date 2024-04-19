@@ -1,20 +1,38 @@
 import React, { useState } from 'react';
-import { StyledContainer, LogoWrap, Input, SignUpButton, SignUpType, NextButton, CurrentSignUpType, CheckSignUpType } from "./styles/SignUpStyles.js";
+import { StyledContainer, LogoWrap, Input, SignUpButton, SignUpType, NextButton, CurrentSignUpType, CheckSignUpType, BackIcon } from "./styles/SignUpStyles.js";
 import logo from "@assets/images/logo_big.svg";
+import { useNavigate } from "react-router";
 
 function SignUp() {
+  const navigate = useNavigate();
   const [currentSignUpType, setCurrentSignUpType] = useState(null);
   const [showForm, setShowForm] = useState(false);
   const [showCheckSignUpType, setShowCheckSignUpType] = useState(true);
+
   const signUpType = [
     { name: "판매자로 가입하기", type: "seller" },
     { name: "구매자로 가입하기", type: "user" }
   ];
+
+  const handleClickBackBtn = () => {
+    /* 데이터 소실 가능성 높으니 recoil / 쿼리 스트링 / 로컬 스토리지 중 하나 정해서 추후에 데이터 보존해야 함 */
+    navigate(-1);
+  }
+
   const handleSignUpTypeChange = (type) => {
     setCurrentSignUpType(type);
     setShowForm(true);
     setShowCheckSignUpType(false);
   };
+
+  const handleClickLogo = () => {
+    navigate("/");
+  }
+
+  const handleClickSubmit = () => {
+    /* 추후 로직 구현 */
+    navigate("/");
+  }
 
   const renderForm = () => {
     if (currentSignUpType === "seller") {
@@ -71,8 +89,9 @@ function SignUp() {
   return (
     <div>
       <StyledContainer>
+        <BackIcon onClick={handleClickBackBtn}/>
         <div>
-          <LogoWrap>
+          <LogoWrap onClick = {handleClickLogo}>
             <img src={logo} alt="메이크어케이크" />
           </LogoWrap>
         </div>
@@ -98,7 +117,7 @@ function SignUp() {
             <div>
               {renderForm()}
             </div>
-            <SignUpButton>회원가입</SignUpButton>
+            <SignUpButton onClick={handleClickSubmit}>회원가입</SignUpButton>
           </>
         )}
       </StyledContainer>

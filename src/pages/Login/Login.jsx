@@ -12,8 +12,13 @@ export default function Login() {
 
   const navigate = useNavigate();
 
-  const handleBackBtn = () => {
-    navigate("/");
+  const handleClickBackBtn = () => {
+    /* 데이터 소실 가능성 높으니 recoil / 쿼리 스트링 / 로컬 스토리지 중 하나 정해서 추후에 데이터 보존해야 함 */
+    navigate(-1);
+  }
+
+  const handleClickRegister = () => {
+    navigate("/register")
   }
     
   const {
@@ -37,7 +42,7 @@ export default function Login() {
   return (
     <>
       <StyledContainer>
-        <BackIcon onClick={handleBackBtn}/>
+        <BackIcon onClick={handleClickBackBtn}/>
         <LogoWrap>
           <img src={logo} alt="메이크어케이크" />
         </LogoWrap>
@@ -81,7 +86,7 @@ export default function Login() {
           </SnsWrap>
         </div>
         <div>
-          <SignUpWrap>계정이 없으신가요? <p>회원가입</p></SignUpWrap>
+          <SignUpWrap>계정이 없으신가요? <button type="button" onClick={handleClickRegister}>회원가입</button></SignUpWrap>
         </div>
       </form>
     </StyledContainer>

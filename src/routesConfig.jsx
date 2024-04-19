@@ -8,6 +8,7 @@ import Reservation from "@pages/Reservation/Reservation";
 import Login from "@pages/Login/Login"
 
 import Detail from "@pages/Detail/Detail";
+import SignUp from '@pages/SignUp/SignUp';
  
 
 const routes = [
@@ -42,7 +43,7 @@ const routes = [
     ]
   }, 
   {path: "/login", element: <Login />},
-
+  {path: "/register", element: <SignUp />}
 ];
 
 export default routes;

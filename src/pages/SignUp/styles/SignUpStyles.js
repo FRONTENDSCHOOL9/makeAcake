@@ -1,16 +1,29 @@
 import styled from "styled-components";
+import backArrow from "@assets/images/backarrow.png";
 
 export const StyledContainer = styled.div`
-  width: 100%;
+  width: 320px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   overflow-y: scroll;
-  padding: 0 24px;
+  margin: 0 auto;
   box-sizing: border-box;
   // align-items: center;
   min-height: 100vh;
 `;
+
+export const BackIcon = styled.button`
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(${backArrow});
+  background-repeat: no-repeat;
+  content: "";
+  top: 30px;
+  left: 15px;
+`
 
 export const LogoWrap = styled.div`
   // box-shadow: inset 0 0 15px blue;
@@ -47,7 +60,7 @@ export const CheckSignUpType = styled.h1`
 `;
 
 export const SignUpType = styled.h2`
-  font-size: 1.5rem;
+  font-size: 1.1rem;
   width: 100%;
   border: 1px solid #DADADA;
   border-radius: 6px;
@@ -88,7 +101,6 @@ export const NextButton = styled.button`
   width: 100%;
   font-weight: 500;
   margin-top: 87px;
-  margin-bottom: 48px;
 `;
 
 export const Input = styled.input`
