@@ -3,12 +3,14 @@ import PropTypes from "prop-types"
 import {StyledCard} from "@components/Card/styles/CardStyles.js";
 import LikeButton from "@components/Buttons/LikeButton";
 
-import { useNavigate } from "react-router";
+import {LocationAtom} from "@recoil/atoms.js"
+import { useRecoilValue } from "recoil";
 
 export default function Card(data) {
-  const navigate = useNavigate();
-  const {cake, location, onSelect} = data;
-  /* onClick추가 */
+
+  const location = useRecoilValue(LocationAtom);
+
+  const {cake, onSelect, onClick} = data;
 
   //placeholder 이미지 URL
   const placeholderImageUrl = 'https://via.placeholder.com/130';
@@ -20,27 +22,12 @@ export default function Card(data) {
   return (
     <StyledCard location = {location} onClick={handleClick}>
       { 
-        location === "main" && (
+        location === "/" && (
           <img src={placeholderImageUrl} alt={cake.name}/> 
       )}
 
       {
-        location === "reserve" && (
-          <>
-            <div className="imgBox">
-              <img src={placeholderImageUrl} alt={cake.name} />
-            </div>
-            <div className="descBox">
-                <h3 className="cardTitle">{cake.name}</h3>
-                <p className="price">₩{cake.price}</p>
-                <p className="pickDate">픽업 일시: {cake.count}</p>
-                <p className="address">픽업 장소: {cake.address}</p>
-            </div>
-          </>
-      )}
-
-      {
-        (location === "wish" || location ==="browse") && (
+        (location ==="/products") && (
           <>
              <div className="imgBox">
               <img src={placeholderImageUrl} alt={cake.name} />
@@ -53,8 +40,25 @@ export default function Card(data) {
             </div>
           </>
       )}
+      
 
-      {
+      {/* {
+        location === "/mypage" && (
+          <>
+            <div className="imgBox">
+              <img src={placeholderImageUrl} alt={cake.name} />
+            </div>
+            <div className="descBox">
+                <h3 className="cardTitle">{cake.name}</h3>
+                <p className="price">₩{cake.price}</p>
+                <p className="pickDate">픽업 일시: {cake.count}</p>
+                <p className="address">픽업 장소: {cake.address}</p>
+            </div>
+          </>
+      )}
+ */}
+
+      {/* {
         location === "review" && (
           <>
              <div className="imgBox">
@@ -68,7 +72,7 @@ export default function Card(data) {
             </div>
           </>
         )
-      }
+      } */}
     </StyledCard>
   )
 }

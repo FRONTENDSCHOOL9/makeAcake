@@ -8,8 +8,8 @@ import Menu from "@components/Header/Menu";
 import SearchBox from "@components/SearchBox/SearchBox";
 
 
-import { useHandleMenu } from "./hooks/useHandleMenu";
-import { useHandleSearch } from "./hooks/useHandleSearch";
+import { useHandleMenu } from "@hooks/useHandleMenu";
+import { useHandleSearch } from "@hooks/useHandleSearch";
 
 import LocationSetter from "@components/LocationSetter/LocationSetter.jsx";
  

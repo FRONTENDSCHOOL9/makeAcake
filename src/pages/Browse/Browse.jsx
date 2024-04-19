@@ -1,97 +1,84 @@
 import {useState, useEffect} from "react";
+import { useNavigate } from "react-router";
 
 import {StyledFilterLabel, StyledFilterSelect} from "./styles/BrowseStyles.js"
 import {StyledLayout, StyledContainer} from "@styles/LayoutStyled.js";
 
-import Gnb from "../../components/Gnb/Gnb.jsx";
+import Gnb from "@components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
+
+import {useSelection} from "@hooks/useSelection.js";
 
 import fakeData from "../../fakeData.js"
 
 export default function Browse() {
-    
-    const categories = [
-      {name: "전체보기", type: "all"},
-      {name: "레터링케이크", type: "lettering"},
-      {name: "포토케이크", type: "photo"},
-      {name: "기타케이크", type: "etc"}
-    ];
+  const {selectedValue: selectedCategory, handleSelectValue: handleSelectCategory} = useSelection("all");
+  const {selectedValue: selectedTaste, handleSelectValue: handleSelectTaste} = useSelection("none");
+  const navigate = useNavigate();
 
-    const tastes = [
-      {name: "없음", type: "none"},
-      {name: "초코", type: "chocolate"},
-      {name: "바닐라", type: "vanilla"},
-      {name: "딸기", type: "strawberry"}
-    ];
+  const categories = [
+    {name: "전체보기", type: "all"},
+    {name: "레터링케이크", type: "lettering"},
+    {name: "포토케이크", type: "photo"},
+    {name: "기타케이크", type: "etc"}
+  ];
 
-    const [selectedCategory, setSelectedCategory] = useState("all");
-    const [selectedTaste, setSelectedTaste] = useState("none");
-    const [cakes, setCakes] = useState([]);
+  const tastes = [
+    {name: "없음", type: "none"},
+    {name: "초코", type: "chocolate"},
+    {name: "바닐라", type: "vanilla"},
+    {name: "딸기", type: "strawberry"}
+  ];
 
+  const [cakes, setCakes] = useState([]);
+  
+  useEffect (() => {
+    setCakes(fakeData);
+  }, [])
 
-    /* useEffect: 통신 관련. 나중에 커스텀훅으로 뺄 예정 */
-    /* useEffect(() => {
-      async function fetchData() {
-        try {
-          const response = await fetch("API URL 여기 적으시면 됩니다~!");
-          const data = await response.json();
-          const formattedData = data.map(item => ({
-            name: item.title,
-            price: item.price,
-            address: item.address,
-            image: item.img
-          }));
-          setCakes(formattedData);
-        } catch(error) {
-          console.error("데이터를 불러오는 중 오류 발생:", error);
-        }
-      };
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const categoryURL = params.get("category") || "all";
+    const tasteURL = params.get("taste") || "none";
 
-      fetchData();
-    }, []); */
-    
-    // 아래는 위의 통신 대신 임시 가짜 데이터 생성
-    useEffect (() => {
-      setCakes(fakeData);
-    }, [])
+    handleSelectCategory(categoryURL);
+    handleSelectTaste(tasteURL);
+  }, [location])
 
-    function handleSelectCategory(category) {
-        setSelectedCategory(category);
-    }
+  const updateFilters = (category, taste) => {
+    handleSelectCategory(category);
+    handleSelectTaste(taste);
+    navigate(`/products?category=${category}&taste=${taste}`);
+  }
 
-    function handleSelectTaste(event) {
-      setSelectedTaste(event.target.value);
-      console.log(event.target.value);
-    }
+  let filteredCakes = cakes;
+  if(selectedCategory !== "all") {
+    filteredCakes = filteredCakes.filter(cake => cake.type === selectedCategory);
+  }
 
-    let filteredCakes = cakes;
-    if(selectedCategory !== "all") {
-      filteredCakes = filteredCakes.filter(cake => cake.type === selectedCategory);
-    }
-
-    if(selectedTaste !== "none") {
-      filteredCakes = filteredCakes.filter(cake => cake.taste === selectedTaste);
-    }
-    
-    return (
-        <StyledLayout>
-            <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>케이크 찾기</Gnb>
-            <StyledFilterLabel>
-              필터
-              <StyledFilterSelect value={selectedTaste} onChange={handleSelectTaste}>
-                {tastes.map(taste => (
-                  <option key={taste.type} value={taste.type}>
-                    {taste.type === "none" ? "없음" : taste.name}
-                  </option>
-                ))}
-              </StyledFilterSelect>
-            </StyledFilterLabel>
-
-            <StyledContainer>
-              {filteredCakes.map(cake => (
-                <Card key={cake.name} cake={cake} location="browse" />
+  if(selectedTaste !== "none") {
+    filteredCakes = filteredCakes.filter(cake => cake.taste === selectedTaste);
+  }
+  
+  return (
+      <StyledLayout>
+          <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={category => updateFilters(category, selectedTaste)}>케이크 찾기</Gnb>
+          <StyledFilterLabel>
+            필터
+            <StyledFilterSelect value={selectedTaste} onChange={e => updateFilters(selectedCategory, e.target.value)}>
+              {tastes.map(taste => (
+                <option key={taste.type} value={taste.type}>
+                  {taste.type === "none" ? "없음" : taste.name}
+                </option>
               ))}
-            </StyledContainer>
-        </StyledLayout> 
-    )
+            </StyledFilterSelect>
+          </StyledFilterLabel>
+
+          <StyledContainer>
+            {filteredCakes.map(cake => (
+              <Card key={cake.name} cake={cake}/>
+            ))}
+          </StyledContainer>
+      </StyledLayout> 
+  )
 }
