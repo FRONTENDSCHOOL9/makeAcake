@@ -3,21 +3,23 @@ import { useState, useEffect, Fragment } from "react";
 
 import { StyledLayout, StyledContainer } from "@styles/LayoutStyled";
 
-import Gnb from "../../components/Gnb/Gnb.jsx";
+import Gnb from "@components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
 import ReviewForm from "@components/Review/ReviewForm.jsx";
+
+import {useCategorySelector} from "@hooks/useCategorySelector.js";
 
 import fakeData from "../../fakeData.js"
 
 export default function MyPage() {
+  const {selectedCategory, handleSelectCategory} = useCategorySelector("예약 내역");
+
     const categories = [
         {name: "예약 내역", type: "reserve", },
         {name: "찜한 상품", type: "wish",  },
         {name: "리뷰 관리", type: "review", },
         {name: "정보 수정", type: "info", },
     ];
-
-    const [selectedCategory, setSelectedCategory] = useState(categories[0].type);
     const [cakes, setCakes] = useState([]);
     const [toggleStates, setToggleStates] = useState({});
     const [lastClickedId, setLastClickedId] = useState(null);
@@ -33,10 +35,6 @@ export default function MyPage() {
         }, {});
         setToggleStates(initialToggleStates);
     }, [])
-
-    function handleSelectCategory(category) {
-        setSelectedCategory(category);
-    }
 
     function handleCardClick(id, category) {
       if(category === "review") {
