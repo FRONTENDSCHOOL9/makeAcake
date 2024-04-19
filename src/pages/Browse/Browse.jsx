@@ -36,9 +36,14 @@ export default function Browse() {
     setCakes(fakeData);
   }, [])
 
-  const handleSelectTaste = event => {
-    setSelectedTaste(event.target.value);
-  }
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const categoryURL = params.get("category") || "all";
+    const tasteURL = params.get("taste") || "none";
+
+    handleSelectCategory(categoryURL);
+    setSelectedTaste(tasteURL);
+  }, [location])
 
   const updateFilters = (category, taste) => {
     handleSelectCategory(category);
