@@ -4,7 +4,7 @@ import {StyledCard} from "@components/Card/styles/CardStyles.js";
 import LikeButton from "@components/Buttons/LikeButton";
 
 import {LocationAtom} from "@recoil/atoms.js"
-import { useRecoilValue } from "recoil"; 
+import { useRecoilValue } from "recoil";
 
 export default function Card(data) {
 

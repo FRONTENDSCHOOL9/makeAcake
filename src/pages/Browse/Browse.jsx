@@ -1,18 +1,20 @@
 import {useState, useEffect} from "react";
+import { useNavigate } from "react-router";
 
 import {StyledFilterLabel, StyledFilterSelect} from "./styles/BrowseStyles.js"
 import {StyledLayout, StyledContainer} from "@styles/LayoutStyled.js";
 
 import Gnb from "@components/Gnb/Gnb.jsx";
 import Card from "@components/Card/Card.jsx";
+
 import {useCategorySelector} from "@hooks/useCategorySelector.js";
 
 import fakeData from "../../fakeData.js"
 
 export default function Browse() {
-
   const {selectedCategory, handleSelectCategory} = useCategorySelector("all");
   const [selectedTaste, setSelectedTaste] = useState("none");
+  const navigate = useNavigate();
 
   const categories = [
     {name: "전체보기", type: "all"},
@@ -34,8 +36,14 @@ export default function Browse() {
     setCakes(fakeData);
   }, [])
 
-  function handleSelectTaste(event) {
+  const handleSelectTaste = event => {
     setSelectedTaste(event.target.value);
+  }
+
+  const updateFilters = (category, taste) => {
+    handleSelectCategory(category);
+    setSelectedTaste(taste);
+    navigate(`/products?category=${category}&taste=${taste}`);
   }
 
   let filteredCakes = cakes;
@@ -49,10 +57,10 @@ export default function Browse() {
   
   return (
       <StyledLayout>
-          <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>케이크 찾기</Gnb>
+          <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={category => updateFilters(category, selectedTaste)}>케이크 찾기</Gnb>
           <StyledFilterLabel>
             필터
-            <StyledFilterSelect value={selectedTaste} onChange={handleSelectTaste}>
+            <StyledFilterSelect value={selectedTaste} onChange={e => updateFilters(selectedCategory, e.target.value)}>
               {tastes.map(taste => (
                 <option key={taste.type} value={taste.type}>
                   {taste.type === "none" ? "없음" : taste.name}
@@ -63,7 +71,7 @@ export default function Browse() {
 
           <StyledContainer>
             {filteredCakes.map(cake => (
-              <Card key={cake.name} cake={cake} location="browse"/>
+              <Card key={cake.name} cake={cake}/>
             ))}
           </StyledContainer>
       </StyledLayout> 
