@@ -6,7 +6,10 @@ import LikeButton from "@components/Buttons/LikeButton";
 import {LocationAtom} from "@recoil/atoms.js"
 import { useRecoilValue } from "recoil";
 
+import { useNavigate } from "react-router";
+
 export default function Card(data) {
+  const navigate = useNavigate();
 
   const location = useRecoilValue(LocationAtom);
 
