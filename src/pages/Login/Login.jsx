@@ -1,4 +1,4 @@
-import {Input, StyledContainer, LogoWrap, Checkbox, SnsWrap, SignUpWrap, KeepLogin, LoginButton, Error } from "./styles/LoginStyles.js"
+import {Input, StyledContainer, LogoWrap, Checkbox, SnsWrap, SignUpWrap, KeepLogin, LoginButton, Error, BackIcon } from "./styles/LoginStyles.js"
 import { useForm } from 'react-hook-form';
 import logo from "@assets/images/logo-big.svg"
 import naver from "@assets/images/naver.svg"
@@ -6,8 +6,15 @@ import kkt from "@assets/images/kkt.svg"
 import google from "@assets/images/google.svg"
 import apple from "@assets/images/apple.svg"
 import axios from 'axios';
+import { useNavigate } from "react-router";
 
 export default function Login() {
+
+  const navigate = useNavigate();
+
+  const handleBackBtn = () => {
+    navigate("/");
+  }
     
   const {
     register,
@@ -28,8 +35,9 @@ export default function Login() {
   };
 
   return (
-    <div>
+    <>
       <StyledContainer>
+        <BackIcon onClick={handleBackBtn}/>
         <LogoWrap>
           <img src={logo} alt="메이크어케이크" />
         </LogoWrap>
@@ -77,6 +85,6 @@ export default function Login() {
         </div>
       </form>
     </StyledContainer>
-  </div>
+    </>
   )
 };

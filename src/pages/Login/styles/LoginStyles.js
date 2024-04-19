@@ -1,6 +1,8 @@
 import styled from "styled-components";
 import emailImg from "@assets/images/emailImg.svg"
 import pwImg from "@assets/images/pwImg.svg"
+import backArrow from "@assets/images/backarrow.png";
+
 
 export const StyledContainer = styled.div`
    
@@ -13,6 +15,18 @@ export const StyledContainer = styled.div`
     justify-content: center;
     // text-align: center;
 `;
+
+export const BackIcon = styled.button`
+  position: absolute;
+  display: block;
+  width: 32px;
+  height: 32px;
+  background-image: url(${backArrow});
+  background-repeat: no-repeat;
+  content: "";
+  top: 30px;
+  left: 15px;
+`
 
 export const LogoWrap = styled.div`
     // box-shadow: inset 0 0 15px blue;

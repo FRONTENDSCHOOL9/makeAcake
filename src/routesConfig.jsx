@@ -39,9 +39,10 @@ const routes = [
           // 탭에 따라서 MyPage에서 분해된 컴포넌트로 라우팅되어야한다.
         ]
       },
-      {path: "/login", element: <Login />},
     ]
-  }
+  }, 
+  {path: "/login", element: <Login />},
+
 ];
 
 export default routes;
