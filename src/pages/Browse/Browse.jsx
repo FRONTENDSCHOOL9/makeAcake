@@ -15,6 +15,7 @@ export default function Browse() {
   const {selectedValue: selectedCategory, handleSelectValue: handleSelectCategory} = useSelection("all");
   const {selectedValue: selectedTaste, handleSelectValue: handleSelectTaste} = useSelection("none");
   const navigate = useNavigate();
+  const [cakes, setCakes] = useState([]);
 
   const categories = [
     {name: "전체보기", type: "all"},
@@ -29,8 +30,6 @@ export default function Browse() {
     {name: "바닐라", type: "vanilla"},
     {name: "딸기", type: "strawberry"}
   ];
-
-  const [cakes, setCakes] = useState([]);
   
   useEffect (() => {
     setCakes(fakeData);
