@@ -2,6 +2,7 @@ import {Outlet} from "react-router-dom";
 import Gnb from "@components/Gnb/Gnb";
 
 import {useSelection} from "@hooks/useSelection.js";
+import {StyledLayout} from "@styles/LayoutStyled";
 
 
 function MyPageLayout() {
@@ -14,10 +15,10 @@ function MyPageLayout() {
     {name: "정보 수정", type: "info", },
 ];
   return (
-    <> 
+    <StyledLayout> 
         <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={handleSelectCategory}>My Page</Gnb>
         <Outlet />
-    </>
+    </StyledLayout>
     
   );
 }

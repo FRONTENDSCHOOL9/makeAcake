@@ -4,23 +4,28 @@ import {StyledCard} from "@components/Card/styles/CardStyles.js";
 import LikeButton from "@components/Buttons/LikeButton";
 
 import {LocationAtom} from "@recoil/atoms.js"
-import { useRecoilValue } from "recoil";
+import {useRecoilValue} from "recoil";
 
 import { useNavigate } from "react-router";
 
+import {isReview} from "@utils/cardLocation.js"
+
 export default function Card(data) {
   const navigate = useNavigate();
-
   const location = useRecoilValue(LocationAtom);
 
-  const {cake, onSelect, onClick} = data;
+  const {cake, onSelect} = data;
 
   //placeholder 이미지 URL
   const placeholderImageUrl = 'https://via.placeholder.com/130';
 
   const handleClick = () => {
-    navigate(`/products/${cake.id}`)
+    if(!isReview(location)) {
+      navigate(`/products/${cake.id}`)
+    }
   }
+
+  /* location에 따른 핸들링 이벤트 변화 */
 
   return (
     <StyledCard location = {location} onClick={handleClick}>
@@ -45,8 +50,8 @@ export default function Card(data) {
       )}
       
 
-      {/* {
-        location === "/mypage" && (
+      {
+        (location === "/mypage/reserve" || location === "/mypage/wish") && (
           <>
             <div className="imgBox">
               <img src={placeholderImageUrl} alt={cake.name} />
@@ -59,10 +64,9 @@ export default function Card(data) {
             </div>
           </>
       )}
- */}
 
-      {/* {
-        location === "review" && (
+      {
+        location === "/mypage/review" && (
           <>
              <div className="imgBox">
               <img src={placeholderImageUrl} alt={cake.name} />
@@ -75,7 +79,7 @@ export default function Card(data) {
             </div>
           </>
         )
-      } */}
+      }
     </StyledCard>
   )
 }

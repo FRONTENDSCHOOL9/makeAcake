@@ -1,9 +1,8 @@
-import noneRequest from "../../assets/images/noneRequest2.png";
 import passwordcheck from "../../assets/images/passwordcheck.svg";
 import { useState, useEffect, Fragment } from "react";
 
-import { StyledLayout, StyledContainer } from "@styles/LayoutStyled";
 
+import { StyledLayout, StyledContainer } from "@styles/LayoutStyled";
 import Card from "@components/Card/Card.jsx";
 import ReviewForm from "@components/Review/ReviewForm.jsx";
 
@@ -74,14 +73,14 @@ const handlePasswordCheck = async () => {
             <img src={noneRequest} alt="None Request" />
             ) : cakes.map(cake => (
               <Fragment key = {cake.id}>
-                <Card cake={cake} location={category} onClick={() => handleCardClick(cake.id, category)}/>
+                <Card cake={cake} onClick={() => handleCardClick(cake.id, category)}/>
                 {category === "review" && toggleStates[cake.id] && <ReviewForm cake={cake} />}
               </Fragment> 
             )
          )}
          {category === "info" && (     
           <>
-           { !passwordCheck ?( 
+           { !passwordCheck ? ( 
           <InfoWrap>
             <div>
               <img src={passwordcheck} alt="None Request" />
