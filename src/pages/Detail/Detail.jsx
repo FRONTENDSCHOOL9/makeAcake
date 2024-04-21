@@ -1,90 +1,61 @@
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import likeDisabled from "@assets/images/like_disabled.svg"
-import Button from "@components/Buttons/Button";
 import { DetailContainer, StyledDetail } from "@pages/Detail/styles/DetailStyles";
+import parse from 'html-react-parser';
 
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
+import useCustomAxios from "@query/useCustomAxios.mjs";
+import { useQuery } from "@tanstack/react-query";
 
 function Detail() {
+  const axios = useCustomAxios();
+  const { productId } = useParams();
   const navigate = useNavigate();
-  const [ cakeInfo, setCakeInfo ] = useState({});
   const [ like, setLike ] = useState(0);
-  const placeholderImageUrl = 'https://via.placeholder.com/360';
 
   const handleClick = () => {
     navigate(`/products/1/reservation`);
   }
 
-  useEffect (() => {
-    const fakeCake = {
-      "_id": 2,
-      "seller_id": 2,
-      "price": 17260,
-      "shippingFees": 2500,
-      "show": true,
-      "active": true,
-      "name": "사조참치케이크",
-      "quantity": 200,
-      "buyQuantity": 198,
-      "address": "서울시 강남구 역삼동 123",
-      "sns": "instagram.com/sajotuna",
-      "mainImages": [
-        {
-          "path": "https://via.placeholder.com/360",
-          "name": "sample-diver.jpg",
-          "originalname": "cake.jpg"
-        }
-      ],
-      "content": "맛있는 초코케이크 맛있어요. 간단한 설명 예시 요약입니다. 맛있는 사조참치케이크 맛있는 초코케이크 맛있어요. 간단한 설명 예시 요약입니다. 맛있는 사조참치케이크",
-      "createdAt": "2024.03.04 09:54:38",
-      "updatedAt": "2024.03.09 14:59:38",
-      "extra": {
-        "isNew": false,
-        "isBest": true,
-        "sort": 4
-      },
-      "workingday": {
-        "day": "화요일",
-        "start": 10,
-        "end": 17
-      },
+  let firstRender = useRef(true);
 
-    };
-
-    setCakeInfo({
-      ...fakeCake,
-      mainImages: {
-        ...fakeCake.mainImages,
-      },
-      extra: {
-        ...fakeCake.extra,
-      },
-      workingday: {
-        ...fakeCake.workingday
-      }
-    });
+  useEffect(() => {
+    firstRender.current = false;
   }, []);
+
+  const { data } = useQuery({
+    queryKey: ['products', productId],
+    queryFn: () => 
+      axios.get(`/products/${productId}`, {
+        params: { incrementView: firstRender.current },
+      }),
+      select: (response) => response.data,
+      suspense: true,
+  })
+  
+  const item = data?.item;
+  console.log('item', item);
 
   return (
     <DetailContainer>
-      <img src={placeholderImageUrl} alt="cakeImage" />
+      <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImage?.path}`} alt={`${item.name} 이미지`}/>
       <StyledDetail>
-        <h3>{ cakeInfo.name }</h3>
+        <h3>{ item?.name }</h3>
         <div>
-          <dl>
+          {/* <dl>
             <dt>영 업 시 간</dt>
             <dd>{ cakeInfo.workingday?.start }시 ~ { cakeInfo.workingday?.end }시</dd>
-          </dl>
+          </dl> */}
           <dl>
             <dt>위 치</dt>
-            <dd>{ cakeInfo.address }</dd>
+            <dd>{ item.seller.address }</dd>
           </dl>
           <dl>
             <dt>S N S</dt>
-            <dd>{ cakeInfo.sns }</dd>
+            <dd>{ item.seller.email }</dd>
           </dl>
-        </div>
-        <p>{ cakeInfo.content }</p>
+        </div>        
+        { parse(item.content) }
         <div>
           <button type="button" onClick={ ()=> {setLike(like + 1)} }><img src={likeDisabled} alt="찜 추가"/></button>
           <button onClick={handleClick}>예약하기</button> 

@@ -1,4 +1,4 @@
-import { memberState } from '@recoil/user/atoms.mjs';
+import { memberState } from '@recoil/atoms.js';
 import axios from 'axios';
 import { useLocation, useNavigate } from 'react-router-dom';
 import { useRecoilState } from 'recoil';
