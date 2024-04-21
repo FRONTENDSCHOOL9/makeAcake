@@ -40,9 +40,8 @@ export const initData = async (nextSeq) => {
         name: "심플 레터링 케이크 - 초코",
         mainImages: [
           {
-                originalname: "cakeImage01.jpeg",
-                name: "YmxREu-Se.jpeg",
-                path: "/files/04-makeAcake/YmxREu-Se.jpeg"
+            name: 'cakeImage01.jpeg',
+            path: 'cakeImage01.jpeg'
           }
         ],
         content: `
@@ -213,9 +212,8 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기",
         mainImages: [
           {
-            "originalname": "cakeImage02.jpg",
-            "name": "QyHs9h1K0.jpg",
-            "path": "/files/04-makeAcake/QyHs9h1K0.jpg"
+            name: 'cakeImage02.jpg',
+            path: 'cakeImage02.jpg'
           }
         ],
         content: `
