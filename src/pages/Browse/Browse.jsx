@@ -39,10 +39,10 @@ export default function Browse() {
     const params = new URLSearchParams(location.search);
     const categoryURL = params.get("category") || "all";
     const tasteURL = params.get("taste") || "none";
-
+    
     handleSelectCategory(categoryURL);
     handleSelectTaste(tasteURL);
-  }, [location])
+  }, [location, handleSelectCategory, handleSelectTaste])
 
   const updateFilters = (category, taste) => {
     handleSelectCategory(category);
