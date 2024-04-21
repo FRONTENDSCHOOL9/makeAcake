@@ -47,9 +47,6 @@ function MyReview () {
         )
       }
     </StyledContainer>
-   // 1. 댓글창
-   // 2. 하트 클릭 -> 좋아요 -> 좋아요 상태 보관
-   // 3. 검색창
   )
 }
 
