@@ -13,7 +13,6 @@ function MyReview () {
   const [lastClickedId, setLastClickedId] = useState(null);
 
   const handleReviewClick = (id) => {
-    console.log("a");
     setToggleStates(prev => {
       const newStates = {...prev};
 
@@ -41,14 +40,16 @@ function MyReview () {
           <img src={noneRequest} alt="None Request" />
           ) : cakes.map(cake => (
             <Fragment key={cake.id}>
-              <Card cake={cake} onClick={() => handleReviewClick(cake.id)}/>
+              <Card cake={cake} onSelect={() => handleReviewClick(cake.id)}/>
               {toggleStates[cake.id] && <ReviewForm cake={cake}/>}
             </Fragment>
           )
         )
       }
     </StyledContainer>
-   
+   // 1. 댓글창
+   // 2. 하트 클릭 -> 좋아요 -> 좋아요 상태 보관
+   // 3. 검색창
   )
 }
 

@@ -22,6 +22,8 @@ export default function Card(data) {
   const handleClick = () => {
     if(!isReview(location)) {
       navigate(`/products/${cake.id}`)
+    } else {
+      onSelect();
     }
   }
 
