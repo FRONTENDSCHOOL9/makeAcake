@@ -15,7 +15,7 @@ export default function Menu() {
       <StyledMenuContent to="/login" onClick={closeMenu}>LOGIN</StyledMenuContent>
       <StyledMenuContent onClick={openSearch}>SEARCH</StyledMenuContent>
       <StyledMenuContent to="/products" onClick={closeMenu}>BROWSE</StyledMenuContent>
-      <StyledMenuContent to="/" onClick={closeMenu}>WISHLIST</StyledMenuContent>
+      <StyledMenuContent to="/mypage/wish" onClick={closeMenu}>WISHLIST</StyledMenuContent>
       <StyledMenuContent to="/mypage" onClick={closeMenu}>MY PAGE</StyledMenuContent>
     </StyledMenu>
   )

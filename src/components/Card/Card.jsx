@@ -51,12 +51,27 @@ export default function Card(data) {
           </>
       )}
       
-
       {
-        (location === "/mypage/reserve" || location === "/mypage/wish") && (
+        (location === "/mypage/reserve") && (
           <>
             <div className="imgBox">
               <img src={placeholderImageUrl} alt={cake.name} />
+            </div>
+            <div className="descBox">
+                <h3 className="cardTitle">{cake.name}</h3>
+                <p className="price">₩{cake.price}</p>
+                <p className="pickDate">픽업 일시: {cake.count}</p>
+                <p className="address">픽업 장소: {cake.address}</p>
+            </div>
+          </>
+      )}
+
+      {
+        (location === "/mypage/wish") && (
+          <>
+            <div className="imgBox">
+              <img src={placeholderImageUrl} alt={cake.name} />
+              <LikeButton location = "wish" onClick={onSelect} />
             </div>
             <div className="descBox">
                 <h3 className="cardTitle">{cake.name}</h3>
