@@ -47,15 +47,15 @@ function Detail() {
             <dd>{ cakeInfo.workingday?.start }시 ~ { cakeInfo.workingday?.end }시</dd>
           </dl> */}
           <dl>
-            <dt>위 치</dt>
+            <dt>위 치</dt><div/>
             <dd>{ item.seller.address }</dd>
           </dl>
           <dl>
-            <dt>S N S</dt>
+            <dt>S N S</dt><div/>
             <dd>{ item.seller.email }</dd>
           </dl>
         </div>        
-        { parse(item.content) }
+        { item.content && parse(item.content) }
         <div>
           <button type="button" onClick={ ()=> {setLike(like + 1)} }><img src={likeDisabled} alt="찜 추가"/></button>
           <button onClick={handleClick}>예약하기</button> 

@@ -22,32 +22,32 @@ export const StyledDetail = styled.div`
   & dl {
     margin-bottom: 5px;
     font-size: var(--font-size-medium);
+    display: flex;
   }
 
   & dt {
     position: relative;
     display: inline-block;
-    padding-right: 20px;
     text-align: justify;
-    width: 80px;
+    min-width: 40px;
   }
 
   & dt:after {
-    content: "";
+    content: '';
     display: inline-block;
-    margin-left: 10px;
-    width: 2px;
-    height: 80%;
-    background-color: var(--primary-black-color);
-    position: absolute;
-    right: 0;
-    top: 50%;
-    transform: translate(0,-50%);
+    width: 100%;
+  }
+
+  & div div {
+    border: 1px solid black;
+    height: 1rem;
+    margin-left: 15px;
   }
 
   & dd {
-    display: inline-block;
+    display: inline;
     margin-left: 20px;
+    overflow-wrap: break-word;
   }
 
   & p {
@@ -63,6 +63,19 @@ export const StyledDetail = styled.div`
 
   & button:not(:last-child) {
     padding: 0;
+    border: none;
+    outline: none;
   }
-  
+
+  & button:last-child {
+    border: none;
+    outline: none;
+    // border: 1px solid var(--gray-color-300);
+    border-radius: 10px;
+    color: #fff;
+    padding: 10px 30px;
+    background-color: #000;
+    font-family: PretendardWoffSemiBold, sans-serif;
+    font-size: 1rem; 
+  }
 `
