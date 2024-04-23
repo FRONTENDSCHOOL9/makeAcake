@@ -12,7 +12,7 @@ export const initData = async (nextSeq) => {
     // 회원
     user: [
       {
-        _id: await nextSeq('seller'),
+        _id: await nextSeq('user'),
         email: 'seller@market.com',
         password: '$2b$10$S.8GNMDyvUF0xzujPtHBu.j5gtS19.OhRmYbpJBnCHg2S83WLx1T2',
         name: '판매자 케이크',
