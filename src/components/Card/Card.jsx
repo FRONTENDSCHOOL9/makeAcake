@@ -10,20 +10,20 @@ import { useNavigate } from "react-router";
 
 import {isReview} from "@utils/cardLocation.js"
 
-export default function Card(data) {
+export default function Card({item}) {
+  console.log(item);
+
   const navigate = useNavigate();
   const location = useRecoilValue(LocationAtom);
 
-  const {cake, onSelect} = data;
+
 
   //placeholder 이미지 URL
   const placeholderImageUrl = 'https://via.placeholder.com/130';
 
   const handleClick = () => {
     if(!isReview(location)) {
-      navigate(`/products/${cake.id}`)
-    } else {
-      onSelect();
+      navigate(`/products/${item._id}`)
     }
   }
 
@@ -33,20 +33,20 @@ export default function Card(data) {
     <StyledCard location = {location} onClick={handleClick}>
       { 
         location === "/" && (
-          <img src={placeholderImageUrl} alt={cake.name}/> 
+          <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]}`} alt={item.name}/> 
       )}
 
       {
         (location ==="/products") && (
           <>
              <div className="imgBox">
-              <img src={placeholderImageUrl} alt={cake.name} />
-              <LikeButton location = "wish" onClick={onSelect} />
+              <img src={placeholderImageUrl} alt={item.name} />
+              <LikeButton location = "wish" />
             </div>
             <div className="descBox">
-              <h3 className="cardTitle">{cake.name}</h3>
-              <p className="price">₩{cake.price}</p>
-              <p className="address">{cake.address}</p>
+              <h3 className="cardTitle">{item.name}</h3>
+              <p className="price">₩{item.price}</p>
+              <p className="address">{item.address}</p>
             </div>
           </>
       )}
@@ -55,13 +55,13 @@ export default function Card(data) {
         (location === "/mypage/reserve") && (
           <>
             <div className="imgBox">
-              <img src={placeholderImageUrl} alt={cake.name} />
+              <img src={placeholderImageUrl} alt={item.name} />
             </div>
             <div className="descBox">
-                <h3 className="cardTitle">{cake.name}</h3>
-                <p className="price">₩{cake.price}</p>
-                <p className="pickDate">픽업 일시: {cake.count}</p>
-                <p className="address">픽업 장소: {cake.address}</p>
+                <h3 className="cardTitle">{item.name}</h3>
+                <p className="price">₩{item.price}</p>
+                <p className="pickDate">픽업 일시: {item.count}</p>
+                <p className="address">픽업 장소: {item.address}</p>
             </div>
           </>
       )}
@@ -70,14 +70,14 @@ export default function Card(data) {
         (location === "/mypage/wish") && (
           <>
             <div className="imgBox">
-              <img src={placeholderImageUrl} alt={cake.name} />
-              <LikeButton location = "wish" onClick={onSelect} />
+              <img src={placeholderImageUrl} alt={item.name} />
+              <LikeButton location = "wish" />
             </div>
             <div className="descBox">
-                <h3 className="cardTitle">{cake.name}</h3>
-                <p className="price">₩{cake.price}</p>
-                <p className="pickDate">픽업 일시: {cake.count}</p>
-                <p className="address">픽업 장소: {cake.address}</p>
+                <h3 className="cardTitle">{item.name}</h3>
+                <p className="price">₩{item.price}</p>
+                <p className="pickDate">픽업 일시: {item.count}</p>
+                <p className="address">픽업 장소: {item.address}</p>
             </div>
           </>
       )}
@@ -86,13 +86,13 @@ export default function Card(data) {
         location === "/mypage/review" && (
           <>
              <div className="imgBox">
-              <img src={placeholderImageUrl} alt={cake.name} />
+              <img src={placeholderImageUrl} alt={item.name} />
             </div>
             <div className="descBox">
-                <h3 className="cardTitle">{cake.name}</h3>
-                <p className="price">₩{cake.price}</p>
-                <p className="pickDate">주문 건수: {cake.count}</p>
-                <p className="address">등록 일자: {cake.enrollDate}</p>
+                <h3 className="cardTitle">{item.name}</h3>
+                <p className="price">₩{item.price}</p>
+                <p className="pickDate">주문 건수: {item.count}</p>
+                <p className="address">등록 일자: {item.enrollDate}</p>
             </div>
           </>
         )
@@ -102,5 +102,5 @@ export default function Card(data) {
 }
 
 Card.propTypes = {
-  cake: PropTypes.object.isRequired,
+  item: PropTypes.object
 }
