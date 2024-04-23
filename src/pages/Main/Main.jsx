@@ -20,13 +20,17 @@ function Main() {
     suspense: true,
   });
 
-  console.log(data);
+  // console.log(data);
   
   const bestProducts = data.filter(item => item.extra.isBest);
-  console.log('bestProducts', bestProducts);
+  // console.log('bestProducts', bestProducts);
 
   const newProducts = data.filter(item => item.extra.isNew);
-  console.log('newProducts', newProducts);
+  // console.log('newProducts', newProducts);
+
+  useEffect(()=> {
+    data;
+  },[])
 
   return (
     <>

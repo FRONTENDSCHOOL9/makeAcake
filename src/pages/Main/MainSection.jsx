@@ -4,7 +4,7 @@ import Card from "@components/Card/Card.jsx";
 
 export default function MainSection({sectionName, data}) {
     const location = "main";
-    console.log('data', data);
+    // console.log('data', data);
     return (
         <StyledList>
           <h3>{sectionName}</h3>
