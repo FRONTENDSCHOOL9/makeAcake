@@ -120,6 +120,7 @@ export const initData = async (nextSeq) => {
               </div>
           `,
         extra: {
+          isBest: true,
           depth: 1,
           category: ['type', 'type_lettering','taste', 'taste_choco'] // 모양 > 레터링, 맛 > 초코
         },
@@ -292,8 +293,9 @@ export const initData = async (nextSeq) => {
               </div>
           `,
         extra: {
+          isBest: true,
           depth: 1,
-          category: ['type', 'type_lettering','taste', 'taste_greentea'] // 모양 > 레터링, 맛 > 초코
+          category: ['type', 'type_lettering','taste', 'taste_greentea'] // 모양 > 레터링, 맛 > 녹차
         },
         show: true,
         seller_id: 1,
@@ -631,6 +633,7 @@ export const initData = async (nextSeq) => {
               </div>
           `,
         extra: {
+          isNew: true,
           depth: 1,
           category: ['type', 'type_lettering','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
         },
@@ -803,6 +806,7 @@ export const initData = async (nextSeq) => {
               </div>
           `,
         extra: {
+          isNew: true,
           depth: 1,
           category: ['type', 'type_photo','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
         },
@@ -975,6 +979,7 @@ export const initData = async (nextSeq) => {
               </div>
           `,
         extra: {
+          isNew: true,
           depth: 1,
           category: ['type', 'type_funny','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
         },
@@ -1152,6 +1157,8 @@ export const initData = async (nextSeq) => {
               </div>
           `,
         extra: {
+          isBest: true,
+          isNew: true,
           depth: 1,
           category: ['type', 'type_etc','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
         },
@@ -1267,6 +1274,704 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 26,
+          size: "20cm",
+          category: ['size', 'size_2']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'),
+        price: 0,
+        quantity: 10,
+        buyQuantity: 1,
+        name: "그라데이션 오로라 레터링 케이크",
+        mainImages: [
+          {
+            name: 'cakeImage07.jpg',
+            path: 'cakeImage07.jpg'
+          }
+        ],
+        content: `
+              <div class="product-content">
+                <p>
+                  그라데이션 오로라 케이크 - 초코 시트 + 크림 치즈 고정입니다.
+                </p>
+                <p>
+                  깔끔하고 예쁜 그라데이션 디자인입니다!
+                  <br>감성있는 오로라 레터링 케이크 어떠세요?
+                </p>
+                <p>
+                  글자 수는 20자 이내가 가장 예쁘답니다! 참고해주세요 ✨
+                </p>
+                <p>
+                  size별 가격대는 상이합니다. 유심히 보시고 선택해주세요!
+                </p>
+                <ul>
+                  <li>도시락 케이크: 지름 약 10cm - 1.5인분</li>
+                  <li>미니 케이크: 지름 약 12cm - 2인분</li>
+                  <li>1호: 지름 약 15cm - 3-4인분</li>
+                  <li>2호: 지름 약 20cm - 5인분 이상</li>
+                </ul>
+              </div>
+          `,
+        extra: {
+          isBest: true,
+          isNew: true,
+          depth: 1,
+          category: ['type', 'type_lettering','taste', 'taste_choco'] // 모양 > 레터링, 맛 > 우유
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        },
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 20000,
+        quantity: 3,
+        name: "그라데이션 오로라 레터링 케이크 - 도시락",
+        extra: {
+          depth: 2,
+          parent: 31,
+          size: "10cm",
+          category: ['size', 'size_xSmall'] // 사이즈 > 도시락
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 25000,
+        quantity: 3,
+        name: "그라데이션 오로라 레터링 케이크 - 미니",
+        extra: {
+          depth: 2,
+          parent: 31,
+          size: "12cm",
+          category: ['size', 'size_mini'] 
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 35000,
+        quantity: 1,
+        name: "그라데이션 오로라 레터링 케이크 - 1호",
+        extra: {
+          depth: 2,
+          parent: 31,
+          size: "15cm",
+          category: ['size', 'size_1']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 45000,
+        quantity: 3,
+        name: "그라데이션 오로라 레터링 케이크 - 2호",
+        extra: {
+          depth: 2,
+          parent: 31,
+          size: "20cm",
+          category: ['size', 'size_2']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'),
+        price: 0,
+        quantity: 10,
+        buyQuantity: 1,
+        name: "발레코어 레터링 레터링 케이크",
+        mainImages: [
+          {
+            name: 'cakeImage08.jpg',
+            path: 'cakeImage08.jpg'
+          }
+        ],
+        content: `
+              <div class="product-content">
+                <p>
+                  발레코어 레터링 케이크 - 바닐라 시트 + 딸기잼 고정입니다.
+                </p>
+                <p>
+                  요즘 핫한 발레코어!
+                  <br>케이크도 심플하게 발레코어 어떠세요? 🎀
+                </p>
+                <p>
+                  리본 색은 변경 불가하나 시트 색은 변경 가능합니다!
+                  <br> 이 점 참고하셔서 요청사항에 적어주세요 🥰
+                </p>
+                <p>
+                  size별 가격대는 상이합니다. 유심히 보시고 선택해주세요!
+                </p>
+                <ul>
+                  <li>도시락 케이크: 지름 약 10cm - 1.5인분</li>
+                  <li>미니 케이크: 지름 약 12cm - 2인분</li>
+                  <li>1호: 지름 약 15cm - 3-4인분</li>
+                  <li>2호: 지름 약 20cm - 5인분 이상</li>
+                </ul>
+              </div>
+          `,
+        extra: {
+          isBest: true,
+          isNew: true,
+          depth: 1,
+          category: ['type', 'type_lettering','taste', 'taste_strawberry'] 
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        },
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 20000,
+        quantity: 3,
+        name: "발레코어 레터링 케이크 - 도시락",
+        extra: {
+          depth: 2,
+          parent: 36,
+          size: "10cm",
+          category: ['size', 'size_xSmall'] // 사이즈 > 도시락
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 25000,
+        quantity: 3,
+        name: "발레코어 레터링 케이크 - 미니",
+        extra: {
+          depth: 2,
+          parent: 36,
+          size: "12cm",
+          category: ['size', 'size_mini'] 
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 35000,
+        quantity: 1,
+        name: "발레코어 레터링 케이크 - 1호",
+        extra: {
+          depth: 2,
+          parent: 36,
+          size: "15cm",
+          category: ['size', 'size_1']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 45000,
+        quantity: 3,
+        name: "발레코어 레터링 케이크 - 2호",
+        extra: {
+          depth: 2,
+          parent: 36,
+          size: "20cm",
+          category: ['size', 'size_2']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'),
+        price: 0,
+        quantity: 10,
+        buyQuantity: 1,
+        name: "손그림 케이크 - 우유",
+        mainImages: [
+          {
+            name: 'cakeImage09.jpg',
+            path: 'cakeImage09.jpg'
+          }
+        ],
+        content: `
+              <div class="product-content">
+                <p>
+                  손그림 케이크 - 바닐라 시트 + 우유 생크림 맛 입니다.
+                </p>
+                <p>
+                  나만의 손그림 케이크는 어떠세요?
+                  <br>어른들께도 인기 만점이랍니다 😋 효도점수 100점~!
+                </p>
+                <p>
+                  참고할 사진은 seller@market.com으로 보내주세요!
+                  <br> 메일 확인 후 작업이 진행됩니다. 사진이 없다면 요청사항에 자세히 적어주세요~
+                  <br> 요청사항 미기재 시 작업은 진행되지 않습니다. 이 점 유의해주세요 🙏
+                </p>
+                <p>
+                  size별 가격대는 상이합니다. 유심히 보시고 선택해주세요!
+                </p>
+                <ul>
+                  <li>도시락 케이크: 지름 약 10cm - 1.5인분</li>
+                  <li>미니 케이크: 지름 약 12cm - 2인분</li>
+                  <li>1호: 지름 약 15cm - 3-4인분</li>
+                  <li>2호: 지름 약 20cm - 5인분 이상</li>
+                </ul>
+              </div>
+          `,
+        extra: {
+          isBest: true,
+          depth: 1,
+          category: ['type', 'type_character','taste', 'taste_vanila'] 
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        },
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 20000,
+        quantity: 3,
+        name: "손그림 케이크(우유) - 도시락",
+        extra: {
+          depth: 2,
+          parent: 41,
+          size: "10cm",
+          category: ['size', 'size_xSmall'] // 사이즈 > 도시락
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 25000,
+        quantity: 3,
+        name: "손그림 케이크(우유) - 미니",
+        extra: {
+          depth: 2,
+          parent: 41,
+          size: "12cm",
+          category: ['size', 'size_mini'] 
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 35000,
+        quantity: 1,
+        name: "손그림 케이크(우유) - 1호",
+        extra: {
+          depth: 2,
+          parent: 41,
+          size: "15cm",
+          category: ['size', 'size_1']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 45000,
+        quantity: 3,
+        name: "손그림 케이크(우유) - 2호",
+        extra: {
+          depth: 2,
+          parent: 41,
+          size: "20cm",
+          category: ['size', 'size_2']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'),
+        price: 0,
+        quantity: 10,
+        buyQuantity: 1,
+        name: "손그림 케이크 - 녹차",
+        mainImages: [
+          {
+            name: 'cakeImage09.jpg',
+            path: 'cakeImage09.jpg'
+          }
+        ],
+        content: `
+              <div class="product-content">
+                <p>
+                  손그림 케이크 - 바닐라 시트 + 녹차 크림이 올라가 있어요~
+                </p>
+                <p>
+                  나만의 손그림 케이크는 어떠세요?
+                  <br>어른들께도 인기 만점이랍니다 😋 효도점수 100점~!
+                </p>
+                <p>
+                  참고할 사진은 seller@market.com으로 보내주세요!
+                  <br> 메일 확인 후 작업이 진행됩니다. 사진이 없다면 요청사항에 자세히 적어주세요~
+                  <br> 요청사항 미기재 시 작업은 진행되지 않습니다. 이 점 유의해주세요 🙏
+                </p>
+                <p>
+                  size별 가격대는 상이합니다. 유심히 보시고 선택해주세요!
+                </p>
+                <ul>
+                  <li>도시락 케이크: 지름 약 10cm - 1.5인분</li>
+                  <li>미니 케이크: 지름 약 12cm - 2인분</li>
+                  <li>1호: 지름 약 15cm - 3-4인분</li>
+                  <li>2호: 지름 약 20cm - 5인분 이상</li>
+                </ul>
+              </div>
+          `,
+        extra: {
+          depth: 1,
+          category: ['type', 'type_character','taste', 'taste_greentea'] 
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        },
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 20000,
+        quantity: 3,
+        name: "손그림 케이크(녹차) - 도시락",
+        extra: {
+          depth: 2,
+          parent: 46,
+          size: "10cm",
+          category: ['size', 'size_xSmall'] // 사이즈 > 도시락
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 25000,
+        quantity: 3,
+        name: "손그림 케이크(녹차)- 미니",
+        extra: {
+          depth: 2,
+          parent: 46,
+          size: "12cm",
+          category: ['size', 'size_mini'] 
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 35000,
+        quantity: 1,
+        name: "손그림 케이크(녹차)- 1호",
+        extra: {
+          depth: 2,
+          parent: 46,
+          size: "15cm",
+          category: ['size', 'size_1']
+        },
+        show: true,
+        seller_id: 1,
+        active: true,
+        buyQuantity: 0,
+        createdAt: getTime(-4, -60* 60 * 3),
+        updatedAt: getTime(-4, -60* 60 * 3),
+        seller: {
+          _id: 1,
+          email: "seller@market.com",
+          name: "판매자",
+          phone: "01011112222",
+          address: "서울특별시 종로구 종로3길 17 광화문 D타워 17층",
+          type: "seller",
+          log5nType: "email",
+          cre5tedAt: getTime(-5, -60 * 60 * 3),
+          updatedAt: getTime(-5, -60 * 60 * 3)
+        }
+      },
+      {
+        _id: await nextSeq('product'), 
+        price: 45000,
+        quantity: 3,
+        name: "손그림 케이크(녹차)- 2호",
+        extra: {
+          depth: 2,
+          parent: 46,
           size: "20cm",
           category: ['size', 'size_2']
         },
