@@ -14,7 +14,7 @@ function Detail() {
   const [ like, setLike ] = useState(0);
 
   const handleClick = () => {
-    navigate(`/products/1/reservation`);
+    navigate(`/products/${productId}/reservation`);
   }
 
   let firstRender = useRef(true);
@@ -38,7 +38,7 @@ function Detail() {
 
   return (
     <DetailContainer>
-      <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImage?.path}`} alt={`${item.name} 이미지`}/>
+      <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={`${item.name} 이미지`}/>
       <StyledDetail>
         <h3>{ item?.name }</h3>
         <div>
