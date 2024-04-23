@@ -834,7 +834,7 @@ export const initData = async (nextSeq) => {
         name: "포토 케이크 - 도시락",
         extra: {
           depth: 2,
-          parent: 16,
+          parent: 21,
           size: "10cm",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
@@ -863,7 +863,7 @@ export const initData = async (nextSeq) => {
         name: "포토 케이크 - 미니",
         extra: {
           depth: 2,
-          parent: 16,
+          parent: 21,
           size: "12cm",
           category: ['size', 'size_mini'] 
         },
@@ -892,7 +892,7 @@ export const initData = async (nextSeq) => {
         name: "포토 케이크 - 1호",
         extra: {
           depth: 2,
-          parent: 16,
+          parent: 21,
           size: "15cm",
           category: ['size', 'size_1']
         },
@@ -921,7 +921,7 @@ export const initData = async (nextSeq) => {
         name: "포토 케이크 - 2호",
         extra: {
           depth: 2,
-          parent: 16,
+          parent: 21,
           size: "20cm",
           category: ['size', 'size_2']
         },
@@ -1007,7 +1007,7 @@ export const initData = async (nextSeq) => {
         name: "소주 케이크 - 도시락",
         extra: {
           depth: 2,
-          parent: 21,
+          parent: 26,
           size: "10cm",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
@@ -1036,7 +1036,7 @@ export const initData = async (nextSeq) => {
         name: "소주 케이크 - 미니",
         extra: {
           depth: 2,
-          parent: 21,
+          parent: 26,
           size: "12cm",
           category: ['size', 'size_mini'] 
         },
@@ -1065,7 +1065,7 @@ export const initData = async (nextSeq) => {
         name: "소주 케이크 - 1호",
         extra: {
           depth: 2,
-          parent: 21,
+          parent: 26,
           size: "15cm",
           category: ['size', 'size_1']
         },
@@ -1094,7 +1094,7 @@ export const initData = async (nextSeq) => {
         name: "소주 케이크 - 2호",
         extra: {
           depth: 2,
-          parent: 21,
+          parent: 26,
           size: "20cm",
           category: ['size', 'size_2']
         },
@@ -1186,7 +1186,7 @@ export const initData = async (nextSeq) => {
         name: "티아라 케이크 - 도시락",
         extra: {
           depth: 2,
-          parent: 26,
+          parent: 31,
           size: "10cm",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
@@ -1215,7 +1215,7 @@ export const initData = async (nextSeq) => {
         name: "티아라 케이크 - 미니",
         extra: {
           depth: 2,
-          parent: 26,
+          parent: 31,
           size: "12cm",
           category: ['size', 'size_mini'] 
         },
@@ -1244,7 +1244,7 @@ export const initData = async (nextSeq) => {
         name: "티아라 케이크 - 1호",
         extra: {
           depth: 2,
-          parent: 26,
+          parent: 31,
           size: "15cm",
           category: ['size', 'size_1']
         },
@@ -1273,7 +1273,7 @@ export const initData = async (nextSeq) => {
         name: "티아라 케이크 - 2호",
         extra: {
           depth: 2,
-          parent: 26,
+          parent: 31,
           size: "20cm",
           category: ['size', 'size_2']
         },
@@ -1360,7 +1360,7 @@ export const initData = async (nextSeq) => {
         name: "그라데이션 오로라 레터링 케이크 - 도시락",
         extra: {
           depth: 2,
-          parent: 31,
+          parent: 36,
           size: "10cm",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
@@ -1389,7 +1389,7 @@ export const initData = async (nextSeq) => {
         name: "그라데이션 오로라 레터링 케이크 - 미니",
         extra: {
           depth: 2,
-          parent: 31,
+          parent: 36,
           size: "12cm",
           category: ['size', 'size_mini'] 
         },
@@ -1418,7 +1418,7 @@ export const initData = async (nextSeq) => {
         name: "그라데이션 오로라 레터링 케이크 - 1호",
         extra: {
           depth: 2,
-          parent: 31,
+          parent: 36,
           size: "15cm",
           category: ['size', 'size_1']
         },
@@ -1447,7 +1447,7 @@ export const initData = async (nextSeq) => {
         name: "그라데이션 오로라 레터링 케이크 - 2호",
         extra: {
           depth: 2,
-          parent: 31,
+          parent: 36,
           size: "20cm",
           category: ['size', 'size_2']
         },
@@ -1535,7 +1535,7 @@ export const initData = async (nextSeq) => {
         name: "발레코어 레터링 케이크 - 도시락",
         extra: {
           depth: 2,
-          parent: 36,
+          parent: 41,
           size: "10cm",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
@@ -1564,7 +1564,7 @@ export const initData = async (nextSeq) => {
         name: "발레코어 레터링 케이크 - 미니",
         extra: {
           depth: 2,
-          parent: 36,
+          parent: 41,
           size: "12cm",
           category: ['size', 'size_mini'] 
         },
@@ -1593,7 +1593,7 @@ export const initData = async (nextSeq) => {
         name: "발레코어 레터링 케이크 - 1호",
         extra: {
           depth: 2,
-          parent: 36,
+          parent: 41,
           size: "15cm",
           category: ['size', 'size_1']
         },
@@ -1622,7 +1622,7 @@ export const initData = async (nextSeq) => {
         name: "발레코어 레터링 케이크 - 2호",
         extra: {
           depth: 2,
-          parent: 36,
+          parent: 41,
           size: "20cm",
           category: ['size', 'size_2']
         },
@@ -1710,7 +1710,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(우유) - 도시락",
         extra: {
           depth: 2,
-          parent: 41,
+          parent: 46,
           size: "10cm",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
@@ -1739,7 +1739,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(우유) - 미니",
         extra: {
           depth: 2,
-          parent: 41,
+          parent: 46,
           size: "12cm",
           category: ['size', 'size_mini'] 
         },
@@ -1768,7 +1768,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(우유) - 1호",
         extra: {
           depth: 2,
-          parent: 41,
+          parent: 46,
           size: "15cm",
           category: ['size', 'size_1']
         },
@@ -1797,7 +1797,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(우유) - 2호",
         extra: {
           depth: 2,
-          parent: 41,
+          parent: 46,
           size: "20cm",
           category: ['size', 'size_2']
         },
@@ -1884,7 +1884,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(녹차) - 도시락",
         extra: {
           depth: 2,
-          parent: 46,
+          parent: 51,
           size: "10cm",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
@@ -1913,7 +1913,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(녹차)- 미니",
         extra: {
           depth: 2,
-          parent: 46,
+          parent: 51,
           size: "12cm",
           category: ['size', 'size_mini'] 
         },
@@ -1942,7 +1942,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(녹차)- 1호",
         extra: {
           depth: 2,
-          parent: 46,
+          parent: 51,
           size: "15cm",
           category: ['size', 'size_1']
         },
@@ -1971,7 +1971,7 @@ export const initData = async (nextSeq) => {
         name: "손그림 케이크(녹차)- 2호",
         extra: {
           depth: 2,
-          parent: 46,
+          parent: 51,
           size: "20cm",
           category: ['size', 'size_2']
         },
@@ -2099,12 +2099,6 @@ export const initData = async (nextSeq) => {
           {
             code: 'taste_strawberry',
             value: '딸기맛',
-            depth: 2,
-            parent: 'taste'
-          },
-          {
-            code: 'taste_vanila',
-            value: '바닐라맛',
             depth: 2,
             parent: 'taste'
           },
