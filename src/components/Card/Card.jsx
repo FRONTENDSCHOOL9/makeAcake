@@ -6,7 +6,7 @@ import LikeButton from "@components/Buttons/LikeButton";
 import {LocationAtom} from "@recoil/atoms.js"
 import {useRecoilValue} from "recoil";
 
-import { useNavigate } from "react-router";
+import { useNavigate, useParams } from "react-router";
 
 import {isReview} from "@utils/cardLocation.js"
 
@@ -15,11 +15,10 @@ export default function Card({item}) {
 
   const navigate = useNavigate();
   const location = useRecoilValue(LocationAtom);
-
-
+  const { _id } = useParams();
 
   //placeholder 이미지 URL
-  const placeholderImageUrl = 'https://via.placeholder.com/130';
+  const imgSrc = `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`;
 
   const handleClick = () => {
     if(!isReview(location)) {
@@ -27,26 +26,27 @@ export default function Card({item}) {
     }
   }
 
+
   /* location에 따른 핸들링 이벤트 변화 */
 
   return (
-    <StyledCard location = {location} onClick={handleClick}>
+    <StyledCard location = {location} onClick={() => { navigate(`/products/${_id}`)}}>
       { 
         location === "/" && (
-          <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0]}`} alt={item.name}/> 
+          <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name}/> 
       )}
 
       {
         (location ==="/products") && (
           <>
-             <div className="imgBox">
-              <img src={placeholderImageUrl} alt={item.name} />
+            <div className="imgBox">
+              <img src={imgSrc} alt={item.name} />
               <LikeButton location = "wish" />
             </div>
             <div className="descBox">
               <h3 className="cardTitle">{item.name}</h3>
               <p className="price">₩{item.price}</p>
-              <p className="address">{item.address}</p>
+              <p className="address">{item.seller.address}</p>
             </div>
           </>
       )}
@@ -55,7 +55,7 @@ export default function Card({item}) {
         (location === "/mypage/reserve") && (
           <>
             <div className="imgBox">
-              <img src={placeholderImageUrl} alt={item.name} />
+              <img src={imgSrc} alt={item.name} />
             </div>
             <div className="descBox">
                 <h3 className="cardTitle">{item.name}</h3>
@@ -70,7 +70,7 @@ export default function Card({item}) {
         (location === "/mypage/wish") && (
           <>
             <div className="imgBox">
-              <img src={placeholderImageUrl} alt={item.name} />
+              <img src={imgSrc} alt={item.name} />
               <LikeButton location = "wish" />
             </div>
             <div className="descBox">
@@ -85,8 +85,8 @@ export default function Card({item}) {
       {
         location === "/mypage/review" && (
           <>
-             <div className="imgBox">
-              <img src={placeholderImageUrl} alt={item.name} />
+            <div className="imgBox">
+              <img src={imgSrc} alt={item.name} />
             </div>
             <div className="descBox">
                 <h3 className="cardTitle">{item.name}</h3>

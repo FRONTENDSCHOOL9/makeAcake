@@ -10,30 +10,43 @@ import Card from "@components/Card/Card.jsx";
 import {useSelection} from "@hooks/useSelection.js";
 
 import fakeData from "../../fakeData.js"
+import { useQuery } from "@tanstack/react-query";
+import useCustomAxios from "@query/useCustomAxios.mjs";
 
 export default function Browse() {
   const {selectedValue: selectedCategory, handleSelectValue: handleSelectCategory} = useSelection("all");
   const {selectedValue: selectedTaste, handleSelectValue: handleSelectTaste} = useSelection("none");
   const navigate = useNavigate();
-  const [cakes, setCakes] = useState([]);
+  const axios = useCustomAxios();
+
+  const { data } = useQuery({
+    queryKey: ['products'],
+    queryFn: () => axios.get('/products'),
+    select: (response) => response.data.item,
+    suspense: true,
+  });
+  
+  console.log(data);
+
 
   const categories = [
     {name: "전체보기", type: "all"},
-    {name: "레터링케이크", type: "lettering"},
-    {name: "포토케이크", type: "photo"},
-    {name: "기타케이크", type: "etc"}
+    {name: "레터링", type: "type_lettering"},
+    {name: "포토", type: "type_photo"},
+    {name: "캐릭터", type: "type_character"},
+    {name: "엽기", type: "type_funny"},
+    {name: "기타", type: "type_etc"}
   ];
 
   const tastes = [
     {name: "없음", type: "none"},
-    {name: "초코", type: "chocolate"},
-    {name: "바닐라", type: "vanilla"},
-    {name: "딸기", type: "strawberry"}
+    {name: "초코", type: "taste_chocolate"},
+    {name: "바닐라", type: "taste_vanilla"},
+    {name: "딸기", type: "taste_strawberry"},
+    {name: "녹차", type: "taste_greentea"}
   ];
   
-  useEffect (() => {
-    setCakes(fakeData);
-  }, [])
+
 
   useEffect(() => {
     const params = new URLSearchParams(location.search);
@@ -50,15 +63,21 @@ export default function Browse() {
     navigate(`/products?category=${category}&taste=${taste}`);
   }
 
-  let filteredCakes = cakes;
+  let filteredCakes = data;
   if(selectedCategory !== "all") {
-    filteredCakes = filteredCakes.filter(cake => cake.type === selectedCategory);
+    filteredCakes = filteredCakes.filter(cake => {
+      return cake.extra.category.indexOf(selectedCategory) > -1
+    })
   }
+  console.log('filteredCakes', filteredCakes);
 
   if(selectedTaste !== "none") {
-    filteredCakes = filteredCakes.filter(cake => cake.taste === selectedTaste);
+    filteredCakes = filteredCakes.filter(cake => {
+      console.log("cake.extra.category ", cake.extra.category);
+      return cake.extra.category.indexOf(selectedCategory) > -1
+    })
   }
-  
+
   return (
       <StyledLayout>
           <Gnb categories={categories} selectedCategory={selectedCategory} onSelect={category => updateFilters(category, selectedTaste)}>케이크 찾기</Gnb>
@@ -74,8 +93,8 @@ export default function Browse() {
           </StyledFilterLabel>
 
           <StyledContainer>
-            {filteredCakes.map(cake => (
-              <Card key={cake.name} cake={cake}/>
+            {filteredCakes && filteredCakes.map(cake => (
+              <Card key={cake.name} item={cake} />
             ))}
           </StyledContainer>
       </StyledLayout> 
