@@ -60,11 +60,11 @@ function Detail() {
             <dd>{ cakeInfo.workingday?.start }시 ~ { cakeInfo.workingday?.end }시</dd>
           </dl> */}
           <dl>
-            <dt>위 치</dt>
+            <dt>위 치</dt><div/>
             <dd>{ item.seller.address }</dd>
           </dl>
           <dl>
-            <dt>S N S</dt>
+            <dt>S N S</dt><div/>
             <dd>{ item.seller.email }</dd>
           </dl>
         </div>        
