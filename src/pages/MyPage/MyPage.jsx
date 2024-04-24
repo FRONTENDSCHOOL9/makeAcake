@@ -10,7 +10,7 @@ import fakeData from "../../fakeData.js"
 import {InfoWrap, Input, FormWrap, Form, } from "./styles/MyPageStyles.js";
 import OkButton from "@components/Buttons/OkButton";
 import axios from 'axios';
-
+import noneRequest from "@assets/images/noneRequest2.png"
 
 export default function MyPage() {    
     const [cakes, setCakes] = useState([]);
@@ -121,7 +121,7 @@ const handlePasswordCheck = async () => {
 
     return (
         <StyledLayout>
-            {renderContent(selectedCategory)}
+            {renderContent}
         </StyledLayout>
     )
 }

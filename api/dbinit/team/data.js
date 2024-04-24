@@ -100,7 +100,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 1,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -129,7 +129,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 1,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini']
         },
         show: true,
@@ -158,7 +158,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 1,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -187,7 +187,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 1,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -274,7 +274,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 6,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -303,7 +303,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 6,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini']
         },
         show: true,
@@ -332,7 +332,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 6,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -361,7 +361,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 6,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -446,8 +446,8 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 도시락",
         extra: {
           depth: 2,
-          parent: 6,
-          size: "10cm",
+          parent: 11,
+          size: "도시락",
           category: ["size", "size_xsmall"]
         },
         show: true,
@@ -475,8 +475,8 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 미니 케이크",
         extra: {
           depth: 2,
-          parent: 6,
-          size: "12cm",
+          parent: 11,
+          size: "미니",
           category: ["size", "size_mini"]
         },
         show: true,
@@ -504,8 +504,8 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 1호 케이크",
         extra: {
           depth: 2,
-          parent: 6,
-          size: "15cm",
+          parent: 11,
+          size: "1호",
           category: ["size", "size_1"]
         },
         show: true,
@@ -533,8 +533,8 @@ export const initData = async (nextSeq) => {
         name: "짱구 캐릭터 케이크 - 딸기 2호 케이크",
         extra: {
           depth: 2,
-          parent: 6,
-          size: "20cm",
+          parent: 11,
+          size: "2호",
           category: ["size", "size_2"]
         },
         show: true,
@@ -620,7 +620,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 16,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -649,7 +649,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 16,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -678,7 +678,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 16,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -707,7 +707,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 16,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -796,7 +796,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 21,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -825,7 +825,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 21,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -854,7 +854,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 21,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -883,7 +883,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 21,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -972,7 +972,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 26,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -1001,7 +1001,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 26,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -1030,7 +1030,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 26,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -1059,7 +1059,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 26,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -1154,7 +1154,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 31,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -1183,7 +1183,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 31,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -1212,7 +1212,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 31,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -1241,7 +1241,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 31,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -1331,7 +1331,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 36,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -1360,7 +1360,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 36,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -1389,7 +1389,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 36,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -1418,7 +1418,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 36,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -1509,7 +1509,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 41,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -1538,7 +1538,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 41,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -1567,7 +1567,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 41,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -1596,7 +1596,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 41,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -1687,7 +1687,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 46,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -1716,7 +1716,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 46,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -1745,7 +1745,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 46,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -1774,7 +1774,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 46,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,
@@ -1864,7 +1864,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 51,
-          size: "10cm",
+          size: "도시락",
           category: ['size', 'size_xSmall'] // 사이즈 > 도시락
         },
         show: true,
@@ -1893,7 +1893,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 51,
-          size: "12cm",
+          size: "미니",
           category: ['size', 'size_mini'] 
         },
         show: true,
@@ -1922,7 +1922,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 51,
-          size: "15cm",
+          size: "1호",
           category: ['size', 'size_1']
         },
         show: true,
@@ -1951,7 +1951,7 @@ export const initData = async (nextSeq) => {
         extra: {
           depth: 2,
           parent: 51,
-          size: "20cm",
+          size: "2호",
           category: ['size', 'size_2']
         },
         show: true,

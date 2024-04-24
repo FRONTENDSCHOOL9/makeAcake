@@ -58,6 +58,7 @@ export const ReservationForm = styled.form`
   display: flex;
   flex-direction: column;
   gap: 10px;
+
   & label {
     display: inline-block;
     margin-bottom: 10px;
@@ -88,4 +89,24 @@ export const ReservationForm = styled.form`
   & input[type="text"]:focus {
     outline: none;
   }
+  & .error-message {
+    font-family: PretendardWoffSemiBold, sans-serif;
+    margin-left: 20px;
+    color: var(--secondary-pink-color);
+  }
+`
+
+export const SelectSizeForm = styled.div`
+  & .form-size-label {
+    display: block;
+    margin-bottom: 10px;
+  }
+
+  & input[type="radio"] {
+    display: inline;
+  }
+`
+export const Label = styled.label`
+  display: inline-block;
+  width: fit-content;
 `

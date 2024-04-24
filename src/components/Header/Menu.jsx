@@ -21,7 +21,7 @@ export default function Menu() {
       { user ? 
         <>
           <StyledMenuContent to="/mypage/wish" onClick={closeMenu}>WISHLIST</StyledMenuContent>
-          <StyledMenuContent to="/mypage" onClick={closeMenu}>MY PAGE</StyledMenuContent>
+          {/* <StyledMenuContent to="/mypage" onClick={closeMenu}>MY PAGE</StyledMenuContent> */}
         </>
         : <></>  
       }
