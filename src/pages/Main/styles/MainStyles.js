@@ -17,8 +17,11 @@ export const StyledMain = styled.div`
     align-items: center;
   }
 `
+
 export const StyledList = styled.div`
   padding: 30px 20px;
+  max-width: 600px;
+  margin: 0 auto;
   &:last-child {
     padding-top: 0;
   }
