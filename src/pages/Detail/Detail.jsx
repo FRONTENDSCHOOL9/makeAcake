@@ -13,6 +13,7 @@ function Detail() {
   const navigate = useNavigate();
   const [ like, setLike ] = useState(0);
 
+  console.log(productId);
   const handleClick = () => {
     navigate(`/products/${productId}/reservation`);
   }
@@ -30,14 +31,16 @@ function Detail() {
         params: { incrementView: firstRender.current },
       }),
       select: (response) => response.data,
-      suspense: true,
+      suspense: false,
   })
   
   const item = data?.item;
   console.log('item', item);
 
   return (
-    <DetailContainer>
+    <>
+    {data &&
+      <DetailContainer>
       <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={`${item.name} 이미지`}/>
       <StyledDetail>
         <h3>{ item?.name }</h3>
@@ -62,6 +65,8 @@ function Detail() {
         </div>
       </StyledDetail>
     </DetailContainer>
+    }
+    </>
   )
 }
 

@@ -15,22 +15,22 @@ export default function Card({item}) {
 
   const navigate = useNavigate();
   const location = useRecoilValue(LocationAtom);
-  const { _id } = useParams();
+  const { productId } = useParams();
 
   //placeholder 이미지 URL
   const imgSrc = `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`;
 
   const handleClick = () => {
     if(!isReview(location)) {
+      console.log(item._id);
       navigate(`/products/${item._id}`)
     }
   }
 
-
   /* location에 따른 핸들링 이벤트 변화 */
 
   return (
-    <StyledCard location = {location} onClick={() => { navigate(`/products/${_id}`)}}>
+    <StyledCard location = {location} onClick={handleClick}>
       { 
         location === "/" && (
           <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name}/> 
