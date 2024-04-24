@@ -6,7 +6,6 @@ import MainSection from "./MainSection.jsx";
 
 import useCustomAxios from "@query/useCustomAxios.mjs";
 import { useQuery } from "@tanstack/react-query";
-import Card from "@components/Card/Card.jsx";
 
 const mostCake = "인기 케이크"
 
