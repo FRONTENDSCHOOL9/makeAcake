@@ -37,6 +37,7 @@ export default function Card({item}) {
         (location === "/") && (
           <div className="imgBox">
             <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name}/> 
+            <p className="main-name">{item.name}</p>
           </div>
       )}
 

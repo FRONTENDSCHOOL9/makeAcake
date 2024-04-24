@@ -18,6 +18,14 @@ export const StyledCard = styled.li`
       height: ${props => isMain(props.location) ? '130px' : '130px'};
       margin: 0 auto;
       display: block;
+      aspect-ratio: 1/1;
+    }
+
+    & > .main-name {
+      font-size: var(--font-size-medium);
+      text-align: center;
+      font-family: PretendardWoffBold, sans-serif;
+      color: var(--gray-color-700);
     }
   }
 

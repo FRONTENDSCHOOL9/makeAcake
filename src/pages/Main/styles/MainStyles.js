@@ -5,6 +5,8 @@ const gapSize = 10;
 export const StyledMain = styled.div`
   background-color: rgb(0,0,0,0.5);
   height: calc(100vh - 100px);
+  max-width: 600px;
+  margin: 0 auto;
 
   & > .title {
     color: #fff;
