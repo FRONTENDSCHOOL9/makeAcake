@@ -4,6 +4,10 @@ export const DetailContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+
+  & img {
+    max-width: 360px;
+  }
 `
 
 export const StyledDetail = styled.div`
