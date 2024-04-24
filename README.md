@@ -167,7 +167,7 @@
 
 |     마이페이지-리뷰 관리     |     마이페이지-정보 수정     |                                                           Error page                                                           |
 | :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
-| <img width="200px" src="" /> | <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/0e31f940-90a2-45b3-9f2a-0a0b81c9c05a" /> |
+| <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/b8d198bc-f8a8-4865-9ef5-499538d89175" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/0e31f940-90a2-45b3-9f2a-0a0b81c9c05a" /> |
 
 <br>
 
