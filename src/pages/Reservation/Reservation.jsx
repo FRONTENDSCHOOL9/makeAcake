@@ -42,9 +42,9 @@ function Reservation() {
       navigate("/login")
     }
     try {
-
       const res = await axios.post('/orders', formData);
       console.log('formData: ', formData);
+      alert("예약이 완료되었습니다 🎉")
       navigate("/");
     } catch (err) {
       if (err.response?.data.erros) {
@@ -111,7 +111,7 @@ function Reservation() {
                       <label htmlFor="size">1. 사이즈를 선택해 주세요.</label>
                       <div className="cake-option">
                         { size?.map((item, index) => (
-                          <button key={index}>{item}</button>
+                          <button type="button" key={index}>{item}</button>
                         ))}
                         {/* {Object.keys(options).map((name, index) => (
                           <button
@@ -153,13 +153,9 @@ function Reservation() {
                         placeholder="픽업하시는 분의 본명을 적어주세요."
                         { ...register('pickupName', {
                           required: "픽업자 명은 꼭 남겨주셔야 합니다.",
-                          minLength: {
-                            value: 1,
-                            message: "픽업자 성함은 꼭 적어주셔야 합니다."
-                          }
                         })}
                       />
-                      { errors.pickupName && <p>{errors.pickupName.message}</p>}
+                      { errors.pickupName && <p className="error-message">{errors.pickupName.message}</p>}
                     </div>             
                     <div className="main-check">
                       <h4>3. 예약 확정 전 꼭 확인해 주세요.</h4>
@@ -167,7 +163,7 @@ function Reservation() {
                       <Checkbox id="checkbox2">픽업 시간을 꼭 지켜주세요.</Checkbox>
                       <Checkbox id="checkbox3 checked">예약 후 문자메시지를 확인해 주세요.</Checkbox>
                     </div>
-                    <Button type="submit">예약 및 결제</Button>
+                    <Button type="submit">예약</Button>
                   </ReservationForm>
                 </div>
 

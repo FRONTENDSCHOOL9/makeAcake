@@ -88,4 +88,9 @@ export const ReservationForm = styled.form`
   & input[type="text"]:focus {
     outline: none;
   }
+  & .error-message {
+    font-family: PretendardWoffSemiBold, sans-serif;
+    margin-left: 20px;
+    color: var(--secondary-pink-color);
+  }
 `
