@@ -18,6 +18,11 @@ export const LocationAtom = atom({
   default: "/"
 });
 
+export const bookmarkState = atom({
+  key: 'bookmarkState',
+  default: [],
+})
+
 const { persistAtom } = recoilPersist({
   key: 'saveUser',
   storage: sessionStorage,
@@ -27,4 +32,4 @@ export const memberState = atom({
   key: "userState",
   default: null,
   effects: [persistAtom]
-})
+});
