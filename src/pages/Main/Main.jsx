@@ -19,14 +19,13 @@ function Main() {
     suspense: true,
   });
 
-  
+  useEffect(()=> {
+    data;
+  },[]);
+
   const bestProducts = data.filter(item => item.extra.isBest);
 
   const newProducts = data.filter(item => item.extra.isNew);
-
-  useEffect(()=> {
-    data;
-  },[])
 
   return (
     <>

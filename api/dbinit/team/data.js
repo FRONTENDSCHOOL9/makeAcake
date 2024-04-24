@@ -88,7 +88,7 @@ export const initData = async (nextSeq) => {
     product: [ // 상품 등록하고 시작
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 10000,
         quantity: 10,
         buyQuantity: 5,
         name: "심플 레터링 케이크 - 초코",
@@ -148,7 +148,7 @@ export const initData = async (nextSeq) => {
       // 1번 상품의 하위 상품
       {
         _id: await nextSeq('product'), 
-        price: 15000,
+        price: 20000,
         quantity: 3,
         name: "심플 레터링 케이크 - 초코 도시락",
         extra: {
@@ -177,7 +177,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 30000,
+        price: 27000,
         quantity: 1,
         name: "심플 레터링 케이크 - 초코 미니 케이크",
         extra: {
@@ -206,7 +206,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 45000,
+        price: 30000,
         quantity: 3,
         name: "심플 레터링 케이크 - 초코 1호 케이크",
         extra: {
@@ -235,7 +235,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 50000,
+        price: 35000,
         quantity: 3,
         name: "심플 레터링 케이크 - 초코 2호 케이크",
         extra: {
@@ -264,7 +264,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 10000,
         quantity: 10,
         buyQuantity: 1,
         name: "심플 레터링 케이크 - 녹차",
@@ -322,7 +322,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 15000,
+        price: 20000,
         quantity: 3,
         name: "심플 레터링 케이크 - 녹차 도시락",
         extra: {
@@ -351,7 +351,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 30000,
+        price: 27000,
         quantity: 1,
         name: "심플 레터링 케이크 - 녹차 미니 케이크",
         extra: {
@@ -380,7 +380,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 45000,
+        price: 30000,
         quantity: 3,
         name: "심플 레터링 케이크 - 녹차 1호 케이크",
         extra: {
@@ -409,7 +409,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 50000,
+        price: 35000,
         quantity: 3,
         name: "심플 레터링 케이크 - 녹차 2호 케이크",
         extra: {
@@ -438,7 +438,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 15000,
         quantity: 10,
         buyQuantity: 1,
         name: "짱구 캐릭터 케이크 - 딸기",
@@ -611,7 +611,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 16000,
         quantity: 10,
         buyQuantity: 1,
         name: "그림일기 레터링 케이크",
@@ -784,7 +784,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 20000,
         quantity: 10,
         buyQuantity: 1,
         name: "포토 케이크",
@@ -844,7 +844,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 20000,
+        price: 10000,
         quantity: 3,
         name: "포토 케이크 - 도시락",
         extra: {
@@ -873,7 +873,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 25000,
+        price: 17000,
         quantity: 3,
         name: "포토 케이크 - 미니",
         extra: {
@@ -902,7 +902,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 35000,
+        price: 25000,
         quantity: 1,
         name: "포토 케이크 - 1호",
         extra: {
@@ -931,7 +931,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 45000,
+        price: 40000,
         quantity: 3,
         name: "포토 케이크 - 2호",
         extra: {
@@ -960,7 +960,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 18000,
         quantity: 10,
         buyQuantity: 1,
         name: "소주 케이크",
@@ -1020,7 +1020,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 20000,
+        price: 15000,
         quantity: 3,
         name: "소주 케이크 - 도시락",
         extra: {
@@ -1049,7 +1049,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 25000,
+        price: 23000,
         quantity: 3,
         name: "소주 케이크 - 미니",
         extra: {
@@ -1078,7 +1078,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 35000,
+        price: 30000,
         quantity: 1,
         name: "소주 케이크 - 1호",
         extra: {
@@ -1107,7 +1107,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 45000,
+        price: 40000,
         quantity: 3,
         name: "소주 케이크 - 2호",
         extra: {
@@ -1136,7 +1136,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 30000,
         quantity: 10,
         buyQuantity: 1,
         name: "티아라 케이크",
@@ -1202,7 +1202,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 20000,
+        price: 15000,
         quantity: 3,
         name: "티아라 케이크 - 도시락",
         extra: {
@@ -1231,7 +1231,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'), 
-        price: 25000,
+        price: 23000,
         quantity: 3,
         name: "티아라 케이크 - 미니",
         extra: {
@@ -1318,7 +1318,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 15000,
         quantity: 10,
         buyQuantity: 1,
         name: "그라데이션 오로라 레터링 케이크",
@@ -1495,7 +1495,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 18000,
         quantity: 10,
         buyQuantity: 1,
         name: "발레코어 레터링 레터링 케이크",
@@ -1673,7 +1673,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 20000,
         quantity: 10,
         buyQuantity: 1,
         name: "손그림 케이크 - 우유",
@@ -1851,7 +1851,7 @@ export const initData = async (nextSeq) => {
       },
       {
         _id: await nextSeq('product'),
-        price: 0,
+        price: 20000,
         quantity: 10,
         buyQuantity: 1,
         name: "손그림 케이크 - 녹차",
@@ -2059,19 +2059,44 @@ export const initData = async (nextSeq) => {
       {
         _id: await nextSeq('bookmark'),
         user_id: 2,
-        product_id: 1,
+        type: 'product',
+        target_id: 1,
+        memo: '',
+        createdAt: getTime(-3, -60 * 60 * 2),
+      },
+      {
+        _id: await nextSeq('bookmark'),
+        user_id: 2,
+        type: 'product',
+        target_id: 6,
+        createdAt: getTime(-3, -60 * 60 * 2),
+      },
+      {
+        _id: await nextSeq('bookmark'),
+        user_id: 2,
+        type: 'product',
+        target_id: 11,
+        createdAt: getTime(-3, -60 * 60 * 2),
+      },
+      {
+        _id: await nextSeq('bookmark'),
+        user_id: 2,
+        type: 'product',
+        target_id: 16,
         createdAt: getTime(-3, -60 * 60 * 2),
       },
       {
         _id: await nextSeq('bookmark'),
         user_id: 4,
-        product_id: 21,
+        type: 'product',
+        target_id: 21,
         createdAt: getTime(-3, -60 * 60 * 2),
       },
       {
         _id: await nextSeq('bookmark'),
         user_id: 4,
-        product_id: 26,
+        type: 'product',
+        target_id: 26,
         createdAt: getTime(-3, -60 * 60 * 2),
       },
     ],

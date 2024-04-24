@@ -16,8 +16,11 @@ export default function Card({item}) {
   const location = useRecoilValue(LocationAtom);
   const { productId } = useParams();
 
-  //placeholder 이미지 URL
-  const imgSrc = `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`;
+  // console.log('item: ', item);
+  // console.log('item.product', item.product);
+  // console.log('item.product.image', item.product.image.name);
+
+  // const imgSrc = `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`;
 
   const handleClick = () => {
     if(!isReview(location)) {
@@ -41,7 +44,7 @@ export default function Card({item}) {
         (location ==="/products") && (
           <>
             <div className="imgBox">
-              <img src={imgSrc} alt={item.name} />
+              <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name} />
               <LikeButton location = "wish" />
             </div>
             <div className="descBox">
@@ -56,7 +59,7 @@ export default function Card({item}) {
         (location === "/mypage/reserve") && (
           <>
             <div className="imgBox">
-              <img src={imgSrc} alt={item.name} />
+              <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name} />
             </div>
             <div className="descBox">
                 <h3 className="cardTitle">{item.name}</h3>
@@ -71,14 +74,14 @@ export default function Card({item}) {
         (location === "/mypage/wish") && (
           <>
             <div className="imgBox">
-              <img src={imgSrc} alt={item.name} />
+              <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.product.image.name}`} alt={item.name} />
               <LikeButton location = "wish" />
             </div>
             <div className="descBox">
-                <h3 className="cardTitle">{item.name}</h3>
-                <p className="price">₩{item.price}</p>
-                <p className="pickDate">픽업 일시: {item.count}</p>
-                <p className="address">픽업 장소: {item.address}</p>
+                <h3 className="cardTitle">{item.product.name}</h3>
+                <p className="price">₩{item.product.price}</p>
+                {/* <p className="pickDate">픽업 일시: {item.count}</p> */}
+                {/* <p className="address">픽업 장소: {item.address}</p> */}
             </div>
           </>
       )}
@@ -87,7 +90,7 @@ export default function Card({item}) {
         location === "/mypage/review" && (
           <>
             <div className="imgBox">
-              <img src={imgSrc} alt={item.name} />
+              <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name} />
             </div>
             <div className="descBox">
                 <h3 className="cardTitle">{item.name}</h3>
