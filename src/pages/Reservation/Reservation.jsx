@@ -164,7 +164,7 @@ function Reservation() {
                           id="pickupDate" 
                           placeholder="픽업하시는 분의 본명을 적어주세요."
                           { ...register('pickupDate', {
-                            required: "픽업자 명은 꼭 남겨주셔야 합니다.",
+                            required: "픽업 날짜는 꼭 선택해 주셔야 합니다.",
                           })}
                         />
                         { errors.pickupName && <p className="error-message">{errors.pickupName.message}</p>}
