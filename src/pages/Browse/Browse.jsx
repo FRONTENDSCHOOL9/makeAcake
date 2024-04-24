@@ -26,9 +26,6 @@ export default function Browse() {
     suspense: true,
   });
   
-  console.log(data);
-
-
   const categories = [
     {name: "전체보기", type: "all"},
     {name: "레터링", type: "type_lettering"},
@@ -66,15 +63,13 @@ export default function Browse() {
   let filteredCakes = data;
   if(selectedCategory !== "all") {
     filteredCakes = filteredCakes.filter(cake => {
-      return cake.extra.category.indexOf(selectedCategory) > -1
+      return cake.extra.category.type === selectedCategory;
     })
   }
-  console.log('filteredCakes', filteredCakes);
 
   if(selectedTaste !== "none") {
     filteredCakes = filteredCakes.filter(cake => {
-      console.log("cake.extra.category ", cake.extra.category);
-      return cake.extra.category.indexOf(selectedCategory) > -1
+      return cake.extra.category.taste === selectedTaste;
     })
   }
 

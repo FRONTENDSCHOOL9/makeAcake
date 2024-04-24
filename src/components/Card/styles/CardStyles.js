@@ -37,7 +37,7 @@ export const StyledCard = styled.li`
     }
 
     & > .address {
-      height: 30px;
+      /* height: 30px; */
     }
   }
 `
