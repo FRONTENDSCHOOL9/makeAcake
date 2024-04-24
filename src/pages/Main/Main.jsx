@@ -19,13 +19,10 @@ function Main() {
     suspense: true,
   });
 
-  // console.log(data);
   
   const bestProducts = data.filter(item => item.extra.isBest);
-  // console.log('bestProducts', bestProducts);
 
   const newProducts = data.filter(item => item.extra.isNew);
-  // console.log('newProducts', newProducts);
 
   useEffect(()=> {
     data;
@@ -38,10 +35,10 @@ function Main() {
       </StyledMain>
       <div>
         { bestProducts && 
-          <MainSection location={location} data={bestProducts} sectionName={mostCake} />
+          <MainSection data={bestProducts} sectionName={mostCake} />
         }
         { newProducts && 
-          <MainSection location={location} data={newProducts} sectionName={mostCake} />
+          <MainSection data={newProducts} sectionName={mostCake} />
         }
         <Button>더 알아보기</Button>
       </div>

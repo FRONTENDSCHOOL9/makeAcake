@@ -11,7 +11,6 @@ import { useNavigate, useParams } from "react-router";
 import {isReview} from "@utils/cardLocation.js"
 
 export default function Card({item}) {
-  console.log(item);
 
   const navigate = useNavigate();
   const location = useRecoilValue(LocationAtom);
@@ -32,8 +31,10 @@ export default function Card({item}) {
   return (
     <StyledCard location = {location} onClick={handleClick}>
       { 
-        location === "/" && (
-          <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name}/> 
+        (location === "/") && (
+          <div className="imgBox">
+            <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={item.name}/> 
+          </div>
       )}
 
       {
