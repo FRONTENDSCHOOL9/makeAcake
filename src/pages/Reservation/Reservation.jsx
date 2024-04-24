@@ -4,25 +4,29 @@ import Checkbox from "@components/Checkbox/Checkbox";
 import GenerateTimeTable from "@pages/Reservation/GenerateTimeTable";
 import { ReservationForm, ReservationSection, StyledReservation } from "@pages/Reservation/styles/ReservationStyles";
 import useCustomAxios from "@query/useCustomAxios.mjs";
-import { useQueries, useQuery } from "@tanstack/react-query";
+import { useQuery } from "@tanstack/react-query";
 import { useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router";
 import { useRecoilValue } from "recoil";
 import { memberState } from "@recoil/atoms";
+import { useForm } from "react-hook-form";
+import { Error } from "@pages/Login/styles/LoginStyles";
 
 function Reservation() {
   const user = useRecoilValue(memberState);
   const { productId } = useParams();
   const axios = useCustomAxios();
 
-  const [ cake, setCake ] = useState(null);
+  // const [ cake, setCake ] = useState(null);
   const [ selectedOption, setSelectedOption ] = useState(null);
   const [ selectedTime, setSelectedTime ] = useState(null);
   const navigate =useNavigate();
-
-  const handleClick = () => {
-    navigate("/");
-  }
+  const { 
+    register, 
+    handleSubmit, 
+    formState: { errors },
+    setError
+  } = useForm();
 
   const { data } = useQuery({
     queryKey: ['products', productId],
@@ -31,27 +35,48 @@ function Reservation() {
     suspense: false
   });
 
+  const onSubmit = async (formData) => {
+    console.log('formData: ', formData);
+    if (!user) {
+      confirm("로그인 후 이용 가능합니다. \n 로그인 하시겠습니까?");
+      navigate("/login")
+    }
+    try {
+
+      const res = await axios.post('/orders', formData);
+      console.log('formData: ', formData);
+      navigate("/");
+    } catch (err) {
+      if (err.response?.data.erros) {
+        err.response?.data.errors.forEach((error) => setError(error.path, { message: error.msg}));
+      } else if (err.response?.data.message) {
+        console.log(err.response?.data.message);
+      }
+    }
+  }
+
   console.log('data: ', data);
   const item = data?.item;
   console.log('item: ',item);
   console.log('option: ', item?.options);
-  const size = item?.options;
+  const options = item?.options;
+  console.log(options);
 
   const imgSrc = item && `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`
 
   // const placeholderImageUrl = 'https://via.placeholder.com/360';
-  useEffect(()=> {
-    const fakeCake = {
-      name: '사조참치케이크', 
-      price: {
-        mini: 20000,
-        1: 30000,
-        2: 40000,
-        3: 50000
-      }
-    }
-    setCake({ ...fakeCake, price: {...fakeCake.price} });
-  }, []);
+  // useEffect(()=> {
+  //   const fakeCake = {
+  //     name: '사조참치케이크', 
+  //     price: {
+  //       mini: 20000,
+  //       1: 30000,
+  //       2: 40000,
+  //       3: 50000
+  //     }
+  //   }
+  //   setCake({ ...fakeCake, price: {...fakeCake.price} });
+  // }, []);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -64,7 +89,7 @@ function Reservation() {
     console.log('time', time);
   };
 
-  if(!cake || !cake.price) return null;
+  // if(!cake || !cake.price) return null;
 
   return (
     <StyledReservation>
@@ -91,45 +116,70 @@ function Reservation() {
                 </div>
                 <div className="main-form">
                   <h4>2. 예약 정보를 확인해 주세요.</h4>
-                  <ReservationForm>
+                  <ReservationForm  onSubmit={handleSubmit(onSubmit)}>
                     <div>
                       <label htmlFor="size">1. 사이즈를 선택해 주세요.</label>
                       <div className="cake-option">
-                        {Object.keys(item.price).map((option, index) => (
+                        {Object.keys(options).map((name, index) => (
                           <button
                             key={index}
-                            className={selectedOption === option ? 'selected' : ''}
-                            onClick={() => handleOptionClick(option)}
+                            className={selectedOption === name ? 'selected' : ''}
+                            onClick={() => handleOptionClick(name)}
                             type="button"
                             id="size"
                           >
-                            {option !== 'mini' ? `${option}호` : '미니도시락'}
+                            {name !== 'mini' ? `${+name+1}호` : '미니도시락'}
                           </button>
                         ))}
                       </div>
                     </div>
                     <div>
                       <label htmlFor="lettering">2. 레터링 정보를 기입해 주세요.</label>
-                      <input type="text" id="lettering"/>
+                      <input 
+                        type="text" 
+                        id="lettering" 
+                        placeholder="레터링 이름/문구를 적어주세요."
+                        { ...register('lettering')}
+                      />
+                      { errors.lettering && <Error>{errors.lettering.message}</Error>}
                     </div>
                     <div>
                       <label htmlFor="request">3. 요청 사항이 있다면 남겨주세요.</label>
-                      <input type="text" id="request"/>
+                      <input 
+                        type="text" 
+                        id="request"
+                        placeholder="요청 사항을 적어주세요"
+                        { ...register('request')}
+                      />
                     </div>
                     <div>
                       <label htmlFor="pickupName">4. 픽업하시는 분 성함을 입력해 주세요.</label>
-                      <input type="text" id="pickupName" />
+                      <input 
+                        type="text" 
+                        id="pickupName" 
+                        placeholder="픽업하시는 분의 본명을 적어주세요."
+                        { ...register('pickupName', {
+                          required: "픽업자 명은 꼭 남겨주셔야 합니다.",
+                          minLength: {
+                            value: 1,
+                            message: "픽업자 성함은 꼭 적어주셔야 합니다."
+                          }
+                        })}
+                      />
+                      { errors.pickupName && <p>{errors.pickupName.message}</p>}
                     </div>             
+                    <div className="main-check">
+                      <h4>3. 예약 확정 전 꼭 확인해 주세요.</h4>
+                      <Checkbox id="checkbox1" checked={true}>입금 확인 후 취소가 불가합니다.</Checkbox>
+                      <Checkbox id="checkbox2">픽업 시간을 꼭 지켜주세요.</Checkbox>
+                      <Checkbox id="checkbox3 checked">예약 후 문자메시지를 확인해 주세요.</Checkbox>
+                    </div>
+                    <Button type="submit">예약 및 결제</Button>
                   </ReservationForm>
                 </div>
-                <div className="main-check">
-                  <h4>3. 예약 확정 전 꼭 확인해 주세요.</h4>
-                  <Checkbox id="checkbox1" checked={true}>입금 확인 후 취소가 불가합니다.</Checkbox>
-                  <Checkbox id="checkbox2">픽업 시간을 꼭 지켜주세요.</Checkbox>
-                  <Checkbox id="checkbox3 checked">예약 후 문자메시지를 확인해 주세요.</Checkbox>
-                </div>
+
+
               </ReservationSection>
-              <Button onClick={handleClick}>예약 및 결제</Button>
             </div>
         </>
       }
