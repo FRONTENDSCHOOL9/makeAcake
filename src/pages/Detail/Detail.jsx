@@ -33,7 +33,7 @@ function Detail() {
         params: { incrementView: firstRender.current },
       }),
       select: (response) => response.data,
-      suspense: true,
+      suspense: false,
   })
   
   const item = data?.item;
@@ -67,8 +67,10 @@ function Detail() {
   }
 
   return (
-    <DetailContainer>
-      <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImage?.path}`} alt={`${item.name} 이미지`}/>
+    <>
+    {data &&
+      <DetailContainer>
+      <img src={`${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`} alt={`${item.name} 이미지`}/>
       <StyledDetail>
         <h3>{ item?.name }</h3>
         <div>
@@ -92,6 +94,8 @@ function Detail() {
         </div>
       </StyledDetail>
     </DetailContainer>
+    }
+    </>
   )
 }
 

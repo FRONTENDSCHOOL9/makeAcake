@@ -19,5 +19,4 @@ export const StyledContainer = styled.div`
   margin-top: 30px;
   gap: 13px;
   flex-wrap: wrap;
-  min-height: 100vh;
 `

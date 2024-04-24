@@ -14,7 +14,10 @@ export const StyledCard = styled.li`
     position: relative;
 
     & > img {
-      height: ${props => isMain(props.location) ? '212px' : '130px'};
+      width: ${props => isMain(props.location) ? "150px" : ""};
+      height: ${props => isMain(props.location) ? '130px' : '130px'};
+      margin: 0 auto;
+      display: block;
     }
   }
 
@@ -37,7 +40,7 @@ export const StyledCard = styled.li`
     }
 
     & > .address {
-      height: 30px;
+      /* height: 30px; */
     }
   }
 `
