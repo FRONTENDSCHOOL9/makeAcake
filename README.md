@@ -1,7 +1,7 @@
 # 🍰 메이크어케이크 | makeAcake 🍰
 
 <div>
-    <img src=""/>
+    <img src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/3c7d1a59-b906-447b-8402-c27acefdcd9b"/>
 </div>
 
 <div align="center">
@@ -43,8 +43,8 @@
 
 <div align="center">
 
-| 이미지 | 이미지 | 이미지 |
-| :----: | :----: | :----: |
+| <img width="120px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/a30bdf91-c0bc-4cb9-8a8d-3fa234d4d2f1"/> | <img width="120px" src="" /> | <img width="120px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/26101c2e-48fd-423d-b3da-4043df21c3d4"/> |
+| :---------------------------------------------------------------------------------------------------------------------------: | :--------------------------: | :---------------------------------------------------------------------------------------------------------------------------: |
 
 | ![👩🏻‍💻박가희](https://github.com/
 godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | ![👩🏻‍💻서지원](https://https://github.com/strdxtq) |
@@ -53,8 +53,6 @@ godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | !
 <br />
 
 ## <span id="technology-stack">3. ⛏️기술 스택</span>
-
-### 기술 스택
 
 <table>
 	<tr>
@@ -104,8 +102,6 @@ godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | !
 </table>
 
 <br>
-여기다가
-<br>
 
 <br>
 
@@ -116,6 +112,8 @@ godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | !
 #### 전체 UI
 
 #### 디자인 컴포넌트
+
+<img src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/f9c4d532-1cce-4f74-9dec-2d19634bd2de">
 
 <br>
 
@@ -158,21 +156,21 @@ godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | !
 
 예약 내역/찜한 상품/리뷰 관리/정보 수정으로 이루어져 있습니다. 예약 내역과 찜한 상품 탭에서는 사용자의 상품 예약 내역 및 찜한 상품 리스트를 보여줍니다. 리뷰 관리 탭에서는 사용자가 구매한 상품의 리스트가 표시되고 리뷰 작성 기능이 활성화됩니다. 정보 수정 탭에서는 사용자의 개인정보 수정이 가능합니다.
 
-|       main        |       회원가입        |       로그인        |
-| :---------------: | :-------------------: | :-----------------: |
-| ![main](https://) | ![회원가입](https://) | ![로그인](https://) |
+|             main             |           회원가입           |                                                             로그인                                                             |
+| :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+| <img width="200px" src="" /> | <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/a5482bdb-04f2-45ac-abe4-04da63be368b" /> |
 
-|       search        |        browse         |   상세보기 페이지   |
-| :-----------------: | :-------------------: | :-----------------: |
-| ![search](https://) | ![상세보기](https://) | ![browse](https://) |
+|            search            |            browse            |                                                        상세보기 페이지                                                         |
+| :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+| <img width="200px" src="" /> | <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/fd687ec3-44a0-4df9-be30-843dee5222fc" /> |
 
-|       예약 페이지        |       마이페이지-예약내역        |       마이페이지-찜한 상품        |
-| :----------------------: | :------------------------------: | :-------------------------------: |
-| ![예약 페이지](https://) | ![마이페이지-예약내역](https://) | ![마이페이지-찜한 상품](https://) |
+|         예약 페이지          |     마이페이지-예약내역      |                                                      마이페이지-찜한 상품                                                      |
+| :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+| <img width="200px" src="" /> | <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/c3d05638-5460-4a37-8061-aa62d0a24316" /> |
 
-|       마이페이지-리뷰 관리        |       마이페이지-정보 수정        |     Error page     |
-| :-------------------------------: | :-------------------------------: | :----------------: |
-| ![마이페이지-리뷰 관리](https://) | ![마이페이지-정보 수정](https://) | ![Error](https://) |
+|     마이페이지-리뷰 관리     |     마이페이지-정보 수정     |                                                           Error page                                                           |
+| :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
+| <img width="200px" src="" /> | <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/0e31f940-90a2-45b3-9f2a-0a0b81c9c05a" /> |
 
 <br>
 
@@ -327,9 +325,11 @@ godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | !
 
 ### notion
 
-![image](https://)
+![notion](https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/58f225c1-fdb8-4553-9fc7-b73f2117e8a5)
 
 [_노션 링크_](https://www.notion.so/6d19640cf057417f9b1bffe1e2cf22e5)
+
+- 노션을 활용하여 기능 명세 작성, 회의록을 지속적으로 공유
 
 <br>
 
@@ -347,7 +347,7 @@ godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | !
 
 ### Discord
 
-![image](https://)
+![image](https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/b1f670b3-7101-4e63-8f3a-77709ad5bcc7)
 
 - commit 등을 실시간으로 알림 받도록 디스코드를 이용하여 소통
 
