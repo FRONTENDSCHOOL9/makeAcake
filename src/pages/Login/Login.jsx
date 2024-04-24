@@ -31,8 +31,8 @@ export default function Login() {
     setError
   } = useForm({
     values: {
-      email: '',
-      password: ''
+      email: 'user@market.com',
+      password: '11111111'
     }
   });
 
@@ -46,7 +46,7 @@ export default function Login() {
         token: response.data.item.token,
         type: response.data.item.type
       });
-      alert(response.data.item.name + '님 로그인 되었습니다.');
+      alert(response.data.item.name + '님 로그인 되었습니다!');
       navigate(location.state?.from || '/'); // 메인으로 이동
     } catch (error) {
       // AxiosError(네트워크 에러: response가 없음, 서버의 4xx, 5xx 응답 상태 코드를 받았을 때: response 있음)
