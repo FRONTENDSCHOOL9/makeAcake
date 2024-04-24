@@ -7,7 +7,8 @@ import MainSection from "./MainSection.jsx";
 import useCustomAxios from "@query/useCustomAxios.mjs";
 import { useQuery } from "@tanstack/react-query";
 
-const mostCake = "인기 케이크"
+const mostCake = "인기 케이크";
+const newestCake = "최신 케이크";
 
 function Main() {
   const axios = useCustomAxios();
@@ -37,7 +38,7 @@ function Main() {
           <MainSection data={bestProducts} sectionName={mostCake} />
         }
         { newProducts && 
-          <MainSection data={newProducts} sectionName={mostCake} />
+          <MainSection data={newProducts} sectionName={newestCake} />
         }
         <Button>더 알아보기</Button>
       </div>
