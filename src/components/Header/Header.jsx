@@ -24,13 +24,19 @@ export default function Header() {
           {/* 회원구분은 추후 개발 */}
           {user ? (
             <div>
-              {user.name}님,
-              <button onClick={handleLogout}>로그아웃</button>
+              {user.name}님 👋<br/>
+              <button className="header-button" onClick={handleLogout}>로그아웃</button>
             </div>
           )
-            : <button onClick={() => navigate('/login')}>로그인</button>
+            : (
+              <>
+                <button className="header-button" onClick={() => navigate('/login')}>로그인</button>
+                <StyledLogin as={Link} to="/login"/>
+              </>
+              
+            )
           }
-          <StyledLogin as={Link} to="/login"/>
+          
         </StyledHeader>
       </>
     );
