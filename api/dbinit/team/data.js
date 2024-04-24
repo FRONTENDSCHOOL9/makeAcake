@@ -122,7 +122,10 @@ export const initData = async (nextSeq) => {
         extra: {
           isBest: true,
           depth: 1,
-          category: ['type', 'type_lettering','taste', 'taste_choco'] // 모양 > 레터링, 맛 > 초코
+          category: {
+            "type": "type_lettering",
+            "taste": "taste_chocolate",
+          }
         },
         show: true,
         seller_id: 1,
@@ -295,7 +298,10 @@ export const initData = async (nextSeq) => {
         extra: {
           isBest: true,
           depth: 1,
-          category: ['type', 'type_lettering','taste', 'taste_greentea'] // 모양 > 레터링, 맛 > 녹차
+          category: {
+            "type": "type_lettering",
+            "taste": "taste_greentea",
+          }
         },
         show: true,
         seller_id: 1,
@@ -465,7 +471,10 @@ export const initData = async (nextSeq) => {
         `,
         extra: {
           depth: 1,
-          category: ['type', 'type_charactor','taste', 'taste_strawberry'] // 모양 > 캐릭터, 맛 > 딸기
+          category: {
+            "type": "type_charactor",
+            "taste": "taste_strawberry",
+          }
         },
         show: true,
         seller_id: 1,
@@ -635,7 +644,10 @@ export const initData = async (nextSeq) => {
         extra: {
           isNew: true,
           depth: 1,
-          category: ['type', 'type_lettering','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
+          category: {
+            "type": "type_lettering",
+            "taste": "taste_vanilla",
+          }
         },
         show: true,
         seller_id: 1,
@@ -808,7 +820,10 @@ export const initData = async (nextSeq) => {
         extra: {
           isNew: true,
           depth: 1,
-          category: ['type', 'type_photo','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
+          category: {
+            "type": "type_photo",
+            "taste": "taste_vanilla",
+          }
         },
         show: true,
         seller_id: 1,
@@ -981,7 +996,10 @@ export const initData = async (nextSeq) => {
         extra: {
           isNew: true,
           depth: 1,
-          category: ['type', 'type_funny','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
+          category: {
+            "type": "type_funny",
+            "taste": "taste_vanilla",
+          }
         },
         show: true,
         seller_id: 1,
@@ -1160,7 +1178,10 @@ export const initData = async (nextSeq) => {
           isBest: true,
           isNew: true,
           depth: 1,
-          category: ['type', 'type_etc','taste', 'taste_vanila'] // 모양 > 레터링, 맛 > 우유
+          category: {
+            "type": "type_etc",
+            "taste": "taste_vanilla",
+          }
         },
         show: true,
         seller_id: 1,
@@ -1334,7 +1355,10 @@ export const initData = async (nextSeq) => {
           isBest: true,
           isNew: true,
           depth: 1,
-          category: ['type', 'type_lettering','taste', 'taste_choco'] // 모양 > 레터링, 맛 > 우유
+          category: {
+            "type": "type_lettering",
+            "taste": "taste_chocolate",
+          }
         },
         show: true,
         seller_id: 1,
@@ -1509,7 +1533,10 @@ export const initData = async (nextSeq) => {
           isBest: true,
           isNew: true,
           depth: 1,
-          category: ['type', 'type_lettering','taste', 'taste_strawberry'] 
+          category: {
+            "type": "type_lettering",
+            "taste": "taste_strawberry",
+          }
         },
         show: true,
         seller_id: 1,
@@ -1684,7 +1711,10 @@ export const initData = async (nextSeq) => {
         extra: {
           isBest: true,
           depth: 1,
-          category: ['type', 'type_character','taste', 'taste_vanila'] 
+          category: {
+            "type": "type_character",
+            "taste": "taste_vanilla",
+          }
         },
         show: true,
         seller_id: 1,
@@ -1858,7 +1888,10 @@ export const initData = async (nextSeq) => {
           `,
         extra: {
           depth: 1,
-          category: ['type', 'type_character','taste', 'taste_greentea'] 
+          category: {
+            "type": "type_character",
+            "taste": "taste_greentea",
+          }
         },
         show: true,
         seller_id: 1,
@@ -2091,7 +2124,7 @@ export const initData = async (nextSeq) => {
             depth: 1
           },
           {
-            code: 'taste_choco',
+            code: 'taste_chocolate',
             value: '초코맛',
             depth: 2,
             parent: 'taste'
@@ -2103,7 +2136,7 @@ export const initData = async (nextSeq) => {
             parent: 'taste'
           },
           {
-            code: 'taste_vanila',
+            code: 'taste_vanilla',
             value: '바닐라맛',
             depth: 2,
             parent: 'taste'
