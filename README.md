@@ -158,11 +158,11 @@ godheezzang) | ![👩🏻‍💻신재훈](https://github.com/happinessPooh) | !
 
 |             main             |           회원가입           |                                                             로그인                                                             |
 | :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
-| <img width="200px" src="" /> | <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/a5482bdb-04f2-45ac-abe4-04da63be368b" /> |
+| <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/005dfa0f-b869-4da7-af57-85b97fd149a1" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/ec4b1df4-e166-4485-8e90-2a0a69fdb4e8" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/a5482bdb-04f2-45ac-abe4-04da63be368b" /> |
 
 |            search            |            browse            |                                                        상세보기 페이지                                                         |
 | :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
-| <img width="200px" src="" /> | <img width="200px" src="" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/fd687ec3-44a0-4df9-be30-843dee5222fc" /> |
+| <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/6afcee6b-15a1-4df9-9f67-d138fd5d34d9" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/a3afeefe-1d5d-4399-a3b3-cc213e0d104e" /> | <img width="200px" src="https://github.com/FRONTENDSCHOOL9/makeAcake/assets/153144202/fd687ec3-44a0-4df9-be30-843dee5222fc" /> |
 
 |         예약 페이지          |     마이페이지-예약내역      |                                                      마이페이지-찜한 상품                                                      |
 | :--------------------------: | :--------------------------: | :----------------------------------------------------------------------------------------------------------------------------: |
