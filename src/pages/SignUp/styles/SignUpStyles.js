@@ -6,7 +6,6 @@ export const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  overflow-y: scroll;
   margin: 0 auto;
   box-sizing: border-box;
   // align-items: center;

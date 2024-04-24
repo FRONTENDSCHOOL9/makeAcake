@@ -31,6 +31,7 @@ function SignUp() {
 
   const handleClickSubmit = () => {
     /* 추후 로직 구현 */
+    alert("회원가입이 완료되었습니다")
     navigate("/");
   }
 
@@ -56,9 +57,9 @@ function SignUp() {
           <label htmlFor="addressDetail">
           <Input type="text" id="addressDetail" name="addressDetail" placeholder="상세 주소" /></label>
           <label htmlFor="phone">
-          <Input type="number" id="phone" name="phone" placeholder="휴대폰 번호" /></label>
+          <Input type="text" id="phone" name="phone" placeholder="휴대폰 번호" /></label>
           <label htmlFor="tel">
-          <Input type="number" id="tel" name="tel" placeholder="유선전화 (선택)" /></label>
+          <Input type="text" id="tel" name="tel" placeholder="유선전화 (선택)" /></label>
         </form>
         </>
       );
@@ -77,7 +78,7 @@ function SignUp() {
           <label htmlFor="nickname">
           <Input type="text" id="nickname" name="nickname" placeholder="닉네임" /></label>
           <label htmlFor="phone">
-          <Input type="number" id="phone" name="phone" placeholder="휴대폰 번호" /></label>
+          <Input type="text" id="phone" name="phone" placeholder="휴대폰 번호" /></label>
         </form>
         </>
       );
