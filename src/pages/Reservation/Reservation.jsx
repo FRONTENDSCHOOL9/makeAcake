@@ -58,25 +58,16 @@ function Reservation() {
   console.log('data: ', data);
   const item = data?.item;
   console.log('item: ',item);
-  console.log('option: ', item?.options);
   const options = item?.options;
-  console.log(options);
+  console.log('options: ', options);
+
+  const extra = options?.map(item => item.extra);
+  console.log('extra: ', extra);
+  const size = extra?.map(item => item.size);
+  console.log('size: ', size);
 
   const imgSrc = item && `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`
 
-  // const placeholderImageUrl = 'https://via.placeholder.com/360';
-  // useEffect(()=> {
-  //   const fakeCake = {
-  //     name: '사조참치케이크', 
-  //     price: {
-  //       mini: 20000,
-  //       1: 30000,
-  //       2: 40000,
-  //       3: 50000
-  //     }
-  //   }
-  //   setCake({ ...fakeCake, price: {...fakeCake.price} });
-  // }, []);
 
   const handleOptionClick = (option) => {
     setSelectedOption(option);
@@ -89,7 +80,6 @@ function Reservation() {
     console.log('time', time);
   };
 
-  // if(!cake || !cake.price) return null;
 
   return (
     <StyledReservation>
@@ -120,7 +110,10 @@ function Reservation() {
                     <div>
                       <label htmlFor="size">1. 사이즈를 선택해 주세요.</label>
                       <div className="cake-option">
-                        {Object.keys(options).map((name, index) => (
+                        { size?.map((item, index) => (
+                          <button key={index}>{item}</button>
+                        ))}
+                        {/* {Object.keys(options).map((name, index) => (
                           <button
                             key={index}
                             className={selectedOption === name ? 'selected' : ''}
@@ -130,7 +123,7 @@ function Reservation() {
                           >
                             {name !== 'mini' ? `${+name+1}호` : '미니도시락'}
                           </button>
-                        ))}
+                        ))} */}
                       </div>
                     </div>
                     <div>
