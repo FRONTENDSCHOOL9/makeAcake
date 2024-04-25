@@ -19,8 +19,8 @@ function Reservation() {
   const { _id } = useParams();
 
   // const [ cake, setCake ] = useState(null);
-  const [ selectedOption, setSelectedOption ] = useState(null);
-  const [ selectedTime, setSelectedTime ] = useState(null);
+  // const [ selectedOption, setSelectedOption ] = useState(null);
+  // const [ selectedTime, setSelectedTime ] = useState(null);
   const navigate =useNavigate();
   const { 
     register, 
@@ -43,9 +43,17 @@ function Reservation() {
       navigate("/login")
     } else {
       try {
-        formData.type = 'product';
-        const res = await axios.post('/orders', formData);
-        console.log('formData: ', formData);
+        // formData.type = 'product';
+        const data = {
+          products: [
+            {
+              _id: +productId,
+              quantity: 1
+            }
+          ],
+          extra: formData
+        };
+        const res = await axios.post('/orders', data);
         alert("예약이 완료되었습니다 🎉")
         navigate("/");
       } catch (err) {
@@ -74,10 +82,6 @@ function Reservation() {
   const imgSrc = item && `${import.meta.env.VITE_API_SERVER}/files/${import.meta.env.VITE_CLIENT_ID}/${item.mainImages[0].name}`
 
 
-  const handleOptionClick = (option) => {
-    setSelectedOption(option);
-    console.log(option);
-  };
 
   // const handleTimeClick = (time) => {
   //   setSelectedTime(time);
@@ -158,7 +162,7 @@ function Reservation() {
                           })}
                         />
                         { errors.pickupName && <p className="error-message">{errors.pickupName.message}</p>}
-                        <label htmlFor="pickupDate">5. 픽업 날짜와 시간을 선택해 주세요.</label>
+                        <label htmlFor="pickupDate">5. 픽업 날짜를 선택해 주세요.</label>
                         <input 
                           type="date" 
                           id="pickupDate" 
