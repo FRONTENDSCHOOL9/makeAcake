@@ -18,10 +18,10 @@ function MyPageLayout() {
   }, [location, handleSelectCategory]);
 
   const categories = [
-    {name: "예약 내역", type: "reserve", },
+    /* {name: "예약 내역", type: "reserve", }, */
     {name: "찜한 상품", type: "wish",  },
-    {name: "리뷰 관리", type: "review", },
-    {name: "정보 수정", type: "info", },
+    /* {name: "리뷰 관리", type: "review", },
+    {name: "정보 수정", type: "info", }, */
 ];
 
   return (
