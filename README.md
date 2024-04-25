@@ -309,9 +309,6 @@
 
 <br>
 
-<br>
-
-## <span id="important-code">5. ❗핵심 코드</span>
 
 <br>
 
