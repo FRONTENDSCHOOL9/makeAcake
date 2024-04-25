@@ -1,7 +1,7 @@
 import styled from "styled-components"
 import logo from "@assets/images/logo.svg"
-import nav from "@assets/images/nav.svg"
-import loginIcon from "@assets/images/loginIcon.svg"
+import nav from "../../../../public/nav.svg"
+import loginIcon from "../../../../public/loginIcon.svg"
 import { Link } from "react-router-dom";
 
 export const StyledHeader = styled.header`
